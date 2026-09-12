@@ -1,0 +1,10 @@
+{
+  "eyjafjallajokull": {
+    "phoneme_ipa": "ˈeɪjaˌfjatlaˈjoʊkʏtl",
+    "text_fallback": "ay-ya-fyat-la-yo-kutl"
+  },
+  "kirkcudbright": {
+    "phoneme_ipa": "kərˈkuːbri",
+    "text_fallback": "kur-koo-bree"
+  }
+}
