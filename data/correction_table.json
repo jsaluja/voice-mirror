@@ -6,5 +6,9 @@
   "kirkcudbright": {
     "phoneme_ipa": "kərˈkuːbri",
     "text_fallback": "kur-koo-bree"
+  },
+  "typesafe": {
+    "phoneme_ipa": "taɪpseɪf",
+    "text_fallback": "TYPE-sayf"
   }
 }

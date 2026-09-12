@@ -1,0 +1,12 @@
+# Sample canned voice-bot script library for the pronunciation linter.
+# One prompt per line. Lines starting with '#' (and blank lines) are ignored.
+# This stands in for a real voice IVR/support bot's canned response set --
+# lint this file before deploying to catch mispronunciations up front.
+
+Welcome to CoreWeave support. How can I help you today?
+Your flight has a layover in Kirkcudbright before continuing to Edinburgh.
+The Eyjafjallajokull volcano eruption in 2010 disrupted air travel across Europe.
+Your order will be delivered by Wednesday.
+Thanks for calling TypeSafe AI support, your case number has been logged.
+Please hold while I transfer you to a specialist.
+Your account balance is up to date.

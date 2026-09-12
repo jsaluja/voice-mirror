@@ -110,3 +110,14 @@ def full_turn(user_text: str, correction_table: CorrectionTable) -> TurnResult:
     """ASR1 (assumed already text here) -> LLM -> process_turn."""
     response_text = generate_response(user_text)
     return process_turn(response_text, correction_table)
+
+
+@weave.op()
+def speak(text: str, correction_table: CorrectionTable) -> bytes:
+    """Zero-latency runtime path: apply the already-validated correction table
+    and synthesize once. No self-listen ASR call, no retry loop -- this is
+    what a live voice agent actually calls after `process_turn` has vetted
+    the script at lint time. Latency here is identical to a plain TTS call.
+    """
+    rendered, used_ssml = build_ssml(text, correction_table)
+    return synthesize_speech(rendered, is_ssml=used_ssml)

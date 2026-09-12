@@ -1,32 +1,66 @@
-# Self-Correcting Voice Agent — CoreWeave Hacks (Sep 12-13, 2026)
+# Voice Pronunciation CI Linter — CoreWeave Hacks (Sep 12-13, 2026)
 
-A voice agent that verifies its own spoken output by listening to itself,
-catching pronunciation errors before the user hears them, and permanently
-fixing them so it never makes the same mistake twice.
+A build-time QA tool for voice agents: before a bot's canned prompts/scripts
+ever reach production, run each one through a self-listen check (synthesize
+→ transcribe the synthesized audio → diff against the intended text), catch
+mispronunciations, and auto-generate a validated pronunciation correction
+lexicon. The runtime voice agent never pays for any of this -- it just plays
+audio using the pre-validated corrections, so there's zero added latency on
+a live call.
 
-## The loop
+## Business scenario
 
-1. **User speaks** → ASR transcribes → LLM generates a text response.
-2. **TTS synthesizes** the response into audio.
-3. **Self-listen step:** feed that synthesized audio back through ASR (or a
-   forced-alignment/confidence model) to get a "what a listener would
-   actually hear" transcript.
+Voice AI systems (IVR, support bots, voice assistants) fail in a specific,
+recurring way: the TTS voice mispronounces a name, brand, or technical term,
+and nobody notices until a customer hears it on a live call. Today the fix
+is reactive -- an engineer has to notice the complaint, then manually add a
+pronunciation-dictionary entry.
+
+This flips that from *reactive* to *shift-left*: like a spell-checker or
+linter that runs in CI before code ships, this runs before a voice bot's
+scripts ship. Feed it the bot's canned prompt library (or a batch of
+LLM-generated responses used in testing); it flags every line where the TTS
+voice is likely to be misheard, and produces a corrected pronunciation table
+the bot loads at runtime. A failing line can even fail the build, the same
+way a linter error would.
+
+**Why this avoids the latency problem a live/runtime version has:** the
+expensive part (TTS → self-listen ASR → diff → retry loop) only ever runs
+offline, against a script library, with no user waiting on the other end.
+At runtime, the voice agent does a single TTS call using whatever correction
+the lint step already validated -- no self-listen ASR call, no retry loop,
+no added latency versus a plain TTS integration.
+
+## The pipeline
+
+**Lint time (offline, no latency constraint):**
+1. Read a script library: canned prompts / LLM response samples the voice
+   agent might say.
+2. For each line: **TTS synthesizes** the audio.
+3. **Self-listen step:** feed that synthesized audio back through ASR to get
+   a "what a listener would actually hear" transcript.
 4. **Compare** the round-trip transcript against the intended text:
    - Word-level diff (Levenshtein / WER via `jiwer`)
    - Flag mispronunciations of names, numbers, acronyms, domain terms
-   - Flag low ASR confidence spans (indicates ambiguous/mumbled audio)
 5. **Decision gate:**
-   - Divergence below threshold → play audio to user, log success.
-   - Divergence above threshold → don't play it yet. Instead:
-     - Rewrite the response using a correction (SSML `<phoneme>` override or
-       plain-text substitution)
-     - Re-synthesize and re-check (bounded retry, max 2-3 attempts)
+   - Divergence below threshold → line passes, log success.
+   - Divergence above threshold → generate a correction (SSML `<phoneme>`
+     override or plain-text substitution), re-synthesize and re-check
+     (bounded retry, max 2-3 attempts). If still diverging after retries,
+     the line is flagged as a lint failure for a human to review.
 6. **Log every attempt** (original text, audio, round-trip transcript, diff
-   score, action taken) as a Weave trace so the correction is fully visible
-   and replayable.
-7. **Learn across turns/sessions:** maintain a persistent correction table —
-   once a word fails, permanently store its fix so future turns don't need
-   the retry loop at all.
+   score, action taken) as a Weave trace so every lint run is fully visible
+   and replayable, and every failing line has evidence attached.
+7. **Persist the correction table:** once a word's fix is validated, it's
+   stored permanently -- future lint runs (and the live runtime path) reuse
+   it for free.
+
+**Runtime (live, latency-sensitive):**
+1. LLM generates a response (or a canned prompt is selected).
+2. Apply the already-validated correction table (no ASR, no retry).
+3. TTS synthesizes and plays -- a single API call, same latency as a voice
+   agent with no pronunciation checking at all.
+
 
 ## Correction table
 
@@ -73,42 +107,51 @@ Phonetic spellings for the correction table can come from:
 
 ```mermaid
 flowchart TD
-    Mic[User audio in] --> ASR1[ASR: transcribe user speech]
-    ASR1 --> LLM[LLM: generate response text]
-    LLM --> Rewrite{Correction table\nhas overrides?}
-    Rewrite -->|yes| Apply[Apply phoneme / text-fallback overrides]
-    Rewrite -->|no| TTS
-    Apply --> TTS[TTS: synthesize audio]
-    TTS --> ASR2[Self-listen ASR: transcribe own audio]
-    ASR2 --> Diff[Diff round-trip transcript vs intended text\n+ ASR confidence check]
-    Diff --> Gate{Divergence\nbelow threshold?}
-    Gate -->|yes| Play[Play audio to user]
-    Gate -->|no, retries left| Learn[Generate new correction\nphoneme/text-fallback]
-    Learn --> CorrectionTable[(Persistent correction table\nJSON)]
-    CorrectionTable --> Rewrite
-    Gate -->|no, retries exhausted| BestEffort[Play best-effort audio\n+ log unresolved]
+    subgraph LintTime[Lint time -- offline, batch, no latency constraint]
+      Script[Script library:\ncanned prompts / sample LLM responses] --> TTS1[TTS: synthesize audio]
+      Rewrite{Correction table\nhas overrides?} --> TTS1
+      TTS1 --> ASR2[Self-listen ASR: transcribe own audio]
+      ASR2 --> Diff[Diff round-trip transcript vs intended text]
+      Diff --> Gate{Divergence\nbelow threshold?}
+      Gate -->|yes| Pass[Line passes lint]
+      Gate -->|no, retries left| Learn[Generate new correction\nphoneme/text-fallback]
+      Learn --> CorrectionTable[(Persistent correction table\nJSON)]
+      CorrectionTable --> Rewrite
+      Gate -->|no, retries exhausted| Fail[Line flagged: lint failure]
+    end
+
+    subgraph Runtime[Runtime -- live, latency-sensitive]
+      LLM[LLM: generate response text] --> Apply[Apply validated\ncorrection table]
+      Apply --> TTS2[TTS: synthesize audio]
+      TTS2 --> Play[Play audio to user]
+    end
+
+    CorrectionTable -.->|read-only, no ASR call| Apply
 
     subgraph Observability
-      Weave[Weave traces: every op above]
-      Marimo[marimo dashboard: correction rate,\nbefore/after audio player]
+      Weave[Weave traces: every lint-time op above]
+      Marimo[marimo dashboard: lint report,\nbefore/after audio player]
     end
-    ASR1 -.-> Weave
-    LLM -.-> Weave
-    TTS -.-> Weave
+    TTS1 -.-> Weave
     ASR2 -.-> Weave
     Diff -.-> Weave
     Weave -.-> Marimo
 ```
 
 Key components:
-- **Pipeline core** (ASR1 → LLM → TTS → ASR2 → Diff → Gate): a linear,
-  synchronous turn processor — simplest thing that can work.
-- **Correction table**: a small persisted JSON store, read before every TTS
-  call and written to after every failed check. This is the actual "memory"
-  that makes the loop cumulative rather than one-shot.
-- **Observability layer**: every stage wrapped in `weave.op()`; marimo reads
-  the Weave client/API to render live charts, decoupled from the pipeline
-  itself so it can't add latency to the voice loop.
+- **Lint pipeline** (Script → TTS → Self-listen ASR → Diff → Gate): the same
+  synchronous, bounded-retry loop as before, just run offline against a
+  script library instead of blocking a live turn.
+- **Correction table**: a small persisted JSON store, read at runtime (no
+  ASR call, just a lookup) and written to only during lint runs. This is the
+  bridge between the two halves: lint-time is where it's built, runtime is
+  where it's consumed for free.
+- **Runtime path**: a single TTS call using whatever the correction table
+  already says -- no self-listen, no retry, no added latency versus a plain
+  TTS integration.
+- **Observability layer**: every lint-time stage wrapped in `weave.op()`;
+  marimo reads the Weave client/API to render a lint report, decoupled from
+  the runtime path entirely.
 
 ## Strengths
 
@@ -133,11 +176,13 @@ Key components:
   TTS was wrong. Mitigate by using the same (or a stronger) ASR model for
   self-listening as for user input, and by requiring the mismatch to persist
   across 2 consecutive self-listen passes before trusting it.
-- **Added latency per turn:** self-check + possible retries adds one extra
-  ASR pass (and up to 2 more TTS+ASR round trips on failure) before the user
-  hears anything. For a live demo this can feel sluggish — keep clips short
-  and consider only self-checking sentences containing a "risky" token
-  (number, proper noun, acronym) rather than every single response.
+- **Lint coverage is only as good as the script library:** if a live LLM
+  response says something never seen in the lint corpus, the runtime path
+  has no correction for it (same blind spot a spell-checker has for words
+  outside its dictionary). Mitigate by periodically lint-testing sampled
+  live responses in a batch job, not just a fixed canned-prompt set, so
+  coverage grows over time rather than staying frozen at whatever was
+  linted once.
 - **LLM-generated IPA may itself be wrong:** don't trust it blindly for the
   demo — pre-validate the phonetic spelling for your chosen trap words
   ahead of time; only rely on live LLM/G2P generation for the "looks
@@ -173,15 +218,18 @@ Key components:
 
 ## MVP scope (~24hr hackathon)
 
-- Turn-by-turn processing (record → process → respond), no streaming.
+- Batch lint processing over a script library (read line → lint → report),
+  no streaming, no live user in the loop during the expensive part.
 - Hardcode a small set of "trap words" (numbers, tricky names/acronyms) to
   reliably trigger visible corrections during the demo.
-- Cap retries at 2 attempts to keep latency reasonable.
+- Cap retries at 2 attempts per line to keep lint runs fast.
 - Correction-table persistence as a simple JSON file keyed by word →
-  override; nothing fancier needed.
-- Reserve the last few hours for the marimo dashboard + a clean demo script:
-  say a tricky word → show the catch + fix → say it again later and show
-  it's instant the second time (already in the correction table).
+  override; nothing fancier needed. This is what the runtime path reads.
+- A separate, deliberately minimal runtime playback path (no ASR, no retry)
+  to make the "zero added latency live" claim concrete and measurable.
+- Reserve the last few hours for the marimo dashboard (lint report) + a
+  clean demo script: lint a script library → show the catch + fix → show
+  the runtime path replaying the same line with no self-listen call at all.
 
 ## Sponsor fit
 
@@ -202,11 +250,14 @@ Key components:
   audio player for before/after clips. If GPU-hungry (local Whisper/G2P),
   use molab's free cloud GPUs so the dashboard doesn't depend on a laptop's
   local compute. Targets **Best Use of marimo**.
-- **TypeSafe AI:** use their model specifically for the structured-output
-  step — generating correction-table entries (phoneme spelling + fallback
-  text) as schema-validated JSON, since that's a natural fit for a model
-  built for reliable structured/native tool-calling. Targets **Best Use of
-  TypeSafe AI** without forcing it into a place it doesn't belong.
+- **TypeSafe AI:** TypeSafe's System One models (Choice/Score/Noul) are
+  judgment primitives, not free-text generators, so they don't fit
+  "generate a correction" -- they fit deciding *between* already-generated
+  candidates. Used as a `Choice` critic inside the lint retry loop: given a
+  phoneme override that still diverged, judge whether escalating to the
+  plain-text fallback is actually likely to help, instead of blindly always
+  escalating (this caught and fixed a real regression during testing).
+  Targets **Best Use of TypeSafe AI** with a genuine, narrow judgment call.
 - **CoreWeave GPU compute:** if running ASR/TTS models locally (e.g.
   faster-whisper, an open TTS model) rather than pure API calls, hosting
   them on CoreWeave infra reinforces the **Most Production-Ready** angle
@@ -252,10 +303,12 @@ Key components:
 
 ## Demo script
 
-1. Say a name/number that's known to trip up the TTS.
-2. Show the round-trip ASR catching the mismatch (live trace in Weave/marimo).
-3. Show the `<phoneme>` (or text-fallback) correction being generated and
-   applied, and play the corrected audio.
-4. Later in the same session, say the same word again — show it's now
-   correct on the first try, no retry needed, because it's already in the
-   correction table.
+1. Run the linter against a sample voice-bot script library containing a
+   name/number known to trip up the TTS.
+2. Show the round-trip ASR catching the mismatch (live trace in Weave/marimo
+   lint report), the correction being generated, retried, and the TypeSafe
+   critic judging whether to escalate.
+3. Show the validated correction landing in the persistent correction table.
+4. Show the **runtime path** speaking the same line: a single TTS call, no
+   ASR, no retry -- same latency as a plain TTS integration -- because the
+   correction was already validated at lint time.

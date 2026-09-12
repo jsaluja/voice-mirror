@@ -1,0 +1,118 @@
+[
+  {
+    "text": "Welcome to CoreWeave support. How can I help you today?",
+    "success": true,
+    "attempts": 1,
+    "final_wer": 0.0,
+    "attempt_log": [
+      {
+        "attempt": 0,
+        "wer": 0.0,
+        "diverged": false,
+        "heard": "Welcome to CoreWeave support. How can I help you today?"
+      }
+    ]
+  },
+  {
+    "text": "Your flight has a layover in Kirkcudbright before continuing to Edinburgh.",
+    "success": false,
+    "attempts": 3,
+    "final_wer": 0.09090909090909091,
+    "attempt_log": [
+      {
+        "attempt": 0,
+        "wer": 0.09090909090909091,
+        "diverged": true,
+        "heard": "Your flight has a layover in Kirkhubri before continuing to Edinburgh."
+      },
+      {
+        "attempt": 1,
+        "wer": 0.09090909090909091,
+        "diverged": true,
+        "heard": "Your flight has a layover in Kirkhubri before continuing to Edinburgh."
+      },
+      {
+        "attempt": 2,
+        "wer": 0.09090909090909091,
+        "diverged": true,
+        "heard": "Your flight has a layover in Kirkhubri before continuing to Edinburgh."
+      }
+    ]
+  },
+  {
+    "text": "The Eyjafjallajokull volcano eruption in 2010 disrupted air travel across Europe.",
+    "success": true,
+    "attempts": 1,
+    "final_wer": 0.0,
+    "attempt_log": [
+      {
+        "attempt": 0,
+        "wer": 0.0,
+        "diverged": false,
+        "heard": "The Eyjafjallajokull volcano eruption in 2010 disrupted air travel across Europe."
+      }
+    ]
+  },
+  {
+    "text": "Your order will be delivered by Wednesday.",
+    "success": true,
+    "attempts": 1,
+    "final_wer": 0.0,
+    "attempt_log": [
+      {
+        "attempt": 0,
+        "wer": 0.0,
+        "diverged": false,
+        "heard": "Your order will be delivered by Wednesday."
+      }
+    ]
+  },
+  {
+    "text": "Thanks for calling TypeSafe AI support, your case number has been logged.",
+    "success": true,
+    "attempts": 2,
+    "final_wer": 0.0,
+    "attempt_log": [
+      {
+        "attempt": 0,
+        "wer": 0.16666666666666666,
+        "diverged": true,
+        "heard": "Thanks for calling Type Safe AI support. Your case number has been logged."
+      },
+      {
+        "attempt": 1,
+        "wer": 0.0,
+        "diverged": false,
+        "heard": "Thanks for calling TypeSafe AI support. Your case number has been logged."
+      }
+    ]
+  },
+  {
+    "text": "Please hold while I transfer you to a specialist.",
+    "success": true,
+    "attempts": 1,
+    "final_wer": 0.0,
+    "attempt_log": [
+      {
+        "attempt": 0,
+        "wer": 0.0,
+        "diverged": false,
+        "heard": "Please hold while I transfer you to a specialist."
+      }
+    ]
+  },
+  {
+    "text": "Your account balance is up to date.",
+    "success": true,
+    "attempts": 1,
+    "final_wer": 0.0,
+    "attempt_log": [
+      {
+        "attempt": 0,
+        "wer": 0.0,
+        "diverged": false,
+        "heard": "Your account balance is up to date."
+      }
+    ]
+  }
+]
