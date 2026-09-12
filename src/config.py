@@ -32,7 +32,7 @@ MAX_RETRIES = 2  # bounded retry per plan MVP scope
 TRAP_WORDS = {
     w.strip().lower()
     for w in os.environ.get(
-        "TRAP_WORDS", "coreweave,typesafe,marimo,aria,kirkcudbright,eyjafjallajokull"
+        "TRAP_WORDS", "coreweave,typesafe,marimo,aria,kirkcudbright,eyjafjallajokull,rybelsus,vraylar"
     ).split(",")
     if w.strip()
 }

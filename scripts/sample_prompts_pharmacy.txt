@@ -1,0 +1,12 @@
+# Sample pharmacy/telehealth refill IVR script -- a strong real-world use
+# case for this linter: mispronouncing a drug name isn't just embarrassing,
+# it's a known patient-safety issue (FDA/ISMP track "look-alike, sound-alike"
+# drug name confusion). Trap words below (rybelsus, vraylar) were empirically
+# validated to trip up our TTS/ASR pipeline -- see src/config.py TRAP_WORDS.
+
+Your prescription for Levothyroxine is ready for pickup.
+Your refill of Metoprolol Succinate has been approved by your doctor.
+Your Atorvastatin dosage has changed from 20 milligrams to 40 milligrams.
+Your Semaglutide prescription requires prior authorization.
+Your Rybelsus prescription is ready for pickup.
+Your Vraylar dosage has changed this month.

@@ -1,0 +1,110 @@
+[
+  {
+    "text": "Your prescription for Levothyroxine is ready for pickup.",
+    "success": true,
+    "attempts": 1,
+    "final_wer": 0.0,
+    "attempt_log": [
+      {
+        "attempt": 0,
+        "wer": 0.0,
+        "diverged": false,
+        "heard": "Your prescription for levothyroxine is ready for pickup."
+      }
+    ]
+  },
+  {
+    "text": "Your refill of Metoprolol Succinate has been approved by your doctor.",
+    "success": true,
+    "attempts": 1,
+    "final_wer": 0.0,
+    "attempt_log": [
+      {
+        "attempt": 0,
+        "wer": 0.0,
+        "diverged": false,
+        "heard": "Your refill of metoprolol succinate has been approved by your doctor."
+      }
+    ]
+  },
+  {
+    "text": "Your Atorvastatin dosage has changed from 20 milligrams to 40 milligrams.",
+    "success": true,
+    "attempts": 1,
+    "final_wer": 0.18181818181818182,
+    "attempt_log": [
+      {
+        "attempt": 0,
+        "wer": 0.18181818181818182,
+        "diverged": false,
+        "heard": "Your atorvastatin dosage has changed from twenty milligrams to forty milligrams."
+      }
+    ]
+  },
+  {
+    "text": "Your Semaglutide prescription requires prior authorization.",
+    "success": true,
+    "attempts": 1,
+    "final_wer": 0.0,
+    "attempt_log": [
+      {
+        "attempt": 0,
+        "wer": 0.0,
+        "diverged": false,
+        "heard": "Your semaglutide prescription requires prior authorization."
+      }
+    ]
+  },
+  {
+    "text": "Your Rybelsus prescription is ready for pickup.",
+    "success": false,
+    "attempts": 3,
+    "final_wer": 0.14285714285714285,
+    "attempt_log": [
+      {
+        "attempt": 0,
+        "wer": 0.14285714285714285,
+        "diverged": true,
+        "heard": "Your roebelsus prescription is ready for pickup."
+      },
+      {
+        "attempt": 1,
+        "wer": 0.14285714285714285,
+        "diverged": true,
+        "heard": "Your roebelsus prescription is ready for pickup."
+      },
+      {
+        "attempt": 2,
+        "wer": 0.14285714285714285,
+        "diverged": true,
+        "heard": "Your roebelsus prescription is ready for pickup."
+      }
+    ]
+  },
+  {
+    "text": "Your Vraylar dosage has changed this month.",
+    "success": false,
+    "attempts": 3,
+    "final_wer": 0.14285714285714285,
+    "attempt_log": [
+      {
+        "attempt": 0,
+        "wer": 0.14285714285714285,
+        "diverged": true,
+        "heard": "Your regular dosage has changed this month."
+      },
+      {
+        "attempt": 1,
+        "wer": 0.14285714285714285,
+        "diverged": true,
+        "heard": "Your regular dosage has changed this month."
+      },
+      {
+        "attempt": 2,
+        "wer": 0.14285714285714285,
+        "diverged": true,
+        "heard": "Your regular dosage has changed this month."
+      }
+    ]
+  }
+]

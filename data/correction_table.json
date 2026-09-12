@@ -7,8 +7,16 @@
     "phoneme_ipa": "kərˈkuːbri",
     "text_fallback": "kur-koo-bree"
   },
+  "rybelsus": {
+    "phoneme_ipa": "rɑɪˈbɛlsəs",
+    "text_fallback": "rye-BELL-sus"
+  },
   "typesafe": {
     "phoneme_ipa": "taɪpseɪf",
     "text_fallback": "TYPE-sayf"
+  },
+  "vraylar": {
+    "phoneme_ipa": "vɹeɪlɚ",
+    "text_fallback": "VRAY-lar"
   }
 }
