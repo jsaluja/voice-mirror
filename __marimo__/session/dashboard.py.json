@@ -1,0 +1,102 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.24.2",
+    "script_metadata_hash": null
+  },
+  "cells": [
+    {
+      "id": "Hbol",
+      "code_hash": "cfe86de207188a69de74e5ad625caffa",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "MJUe",
+      "code_hash": "c26d5ff096386b92b50416f3b3a10267",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h1 id=\"pronunciation-lint-report\">Pronunciation Lint Report</h1>\n<span class=\"paragraph\">Reads lint-time self-listen traces from Weave: pass/fail rate per script\nline, retries used, and before/after audio for each catch. The live\nruntime path never runs this loop -- see <code>src.pipeline.speak</code>.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "vblA",
+      "code_hash": "3da09e4ad706f4bec86d505b2597aa67",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "bkHC",
+      "code_hash": "d71b23d0f71c3bb5a1be41fda15569e7",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "lEQa",
+      "code_hash": "0d10ca3fb594db9e946954172ff22ee1",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "PKri",
+      "code_hash": "23dff18e522fe5e3354f521ee5ef345e",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "Xref",
+      "code_hash": "08cc3e12782615c5f74ad65dbc640353",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "SFPL",
+      "code_hash": "dbe470a1799fc26a776a2ce45024889c",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"lint-metrics\">Lint Metrics</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "BYtC",
+      "code_hash": "6acb4136c61f6856258053a9ee0b7f93",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "RGSE",
+      "code_hash": "abb0c192ab8bc8ca82b5ade8fad1b7fd",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"before-after-audio\">Before / After Audio</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Kclp",
+      "code_hash": "3cac278e964598d4e1617d66ea54ecc5",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "emfo",
+      "code_hash": "a5b0af938ab920188cab639ac5866c99",
+      "outputs": [],
+      "console": []
+    }
+  ]
+}
