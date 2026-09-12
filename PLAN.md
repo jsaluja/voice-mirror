@@ -106,12 +106,11 @@ Phonetic spellings for the correction table can come from:
 
 ## Stack
 
-- **ASR:** faster-whisper or Deepgram/AssemblyAI streaming (need word-level
-  confidence scores for the divergence check)
-- **TTS:** Google Cloud TTS / Amazon Polly / Azure TTS (full SSML incl.
-  `<phoneme>`) — ElevenLabs has weak/no SSML support, use text-fallback path
-  if using it
-- **LLM:** response generation + "rewrite on failure" step
+- **ASR:** Google Cloud Speech-to-Text (word-level confidence scores for the
+  divergence check)
+- **TTS:** Google Cloud TTS (full SSML incl. `<phoneme>`) — ElevenLabs has
+  weak/no SSML support, use text-fallback path if using it
+- **LLM:** Gemini via Vertex AI — response generation + "rewrite on failure" step
 - **Tracing:** Weave (`weave.op()` around transcribe / generate / synthesize
   / self-check / rewrite)
 - **Dashboard:** marimo notebook reading from Weave — plot correction rate
@@ -214,8 +213,8 @@ Key components:
   ones with an unambiguous correct reading (proper nouns are safer than
   numbers for this reason).
 - **Word-level ASR confidence isn't available from every provider** (plain
-  Whisper doesn't expose it natively; faster-whisper/Deepgram/AssemblyAI do,
-  in different forms) — confirm the chosen ASR gives you what the diff
+  Whisper doesn't expose it natively; Google Cloud Speech-to-Text does via
+  `enable_word_confidence`) — confirm the chosen ASR gives you what the diff
   logic needs before committing to it.
 - **Retries can still be exhausted:** always have a defined "give up"
   behavior (play best-effort audio + log as unresolved) rather than letting

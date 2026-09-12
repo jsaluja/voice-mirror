@@ -13,14 +13,12 @@ WEAVE_PROJECT = os.environ.get("WEAVE_PROJECT", "voice-self-correct-loop")
 TYPESAFE_API_KEY = os.environ.get("TYPESAFE_API_KEY", "")
 
 GOOGLE_CLOUD_PROJECT = os.environ.get("GOOGLE_CLOUD_PROJECT", "")
+GOOGLE_CLOUD_LOCATION = os.environ.get("GOOGLE_CLOUD_LOCATION", "us-central1")
 TTS_VOICE_NAME = os.environ.get("TTS_VOICE_NAME", "en-US-Neural2-C")
 TTS_LANGUAGE_CODE = os.environ.get("TTS_LANGUAGE_CODE", "en-US")
 
-# LLM: Azure OpenAI (plain OPENAI_API_KEY was invalid; Azure creds were ready in shell)
-AZURE_OPENAI_API_KEY = os.environ.get("AZURE_OPENAI_API_KEY") or os.environ.get("AZURE_API_KEY", "")
-AZURE_OPENAI_ENDPOINT = os.environ.get("AZURE_ENDPOINT", "")
-AZURE_OPENAI_API_VERSION = os.environ.get("AZURE_API_VERSION", "2024-04-01-preview")
-LLM_MODEL = os.environ.get("AZURE_OPENAI_DEPLOYMENT_NAME") or os.environ.get("AZURE_DEPLOYMENT", "gpt-4.1-mini")
+# LLM: Gemini via Vertex AI (uses the same ADC credentials as TTS/ASR, no API key needed)
+LLM_MODEL = os.environ.get("LLM_MODEL", "gemini-2.5-flash")
 
 MAX_RETRIES = 2  # bounded retry per plan MVP scope
 

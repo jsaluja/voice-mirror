@@ -1,34 +1,22 @@
 """LLM: response generation + IPA/text-fallback generation for new corrections."""
 import weave
-from openai import AzureOpenAI
+from google import genai
 
-from src.config import (
-    AZURE_OPENAI_API_KEY,
-    AZURE_OPENAI_API_VERSION,
-    AZURE_OPENAI_ENDPOINT,
-    LLM_MODEL,
-)
+from src.config import GOOGLE_CLOUD_LOCATION, GOOGLE_CLOUD_PROJECT, LLM_MODEL
 
-_client = AzureOpenAI(
-    api_key=AZURE_OPENAI_API_KEY,
-    azure_endpoint=AZURE_OPENAI_ENDPOINT,
-    api_version=AZURE_OPENAI_API_VERSION,
-)
+_client = genai.Client(vertexai=True, project=GOOGLE_CLOUD_PROJECT, location=GOOGLE_CLOUD_LOCATION)
 
 
 @weave.op()
 def generate_response(user_text: str) -> str:
-    completion = _client.chat.completions.create(
+    response = _client.models.generate_content(
         model=LLM_MODEL,
-        messages=[
-            {
-                "role": "system",
-                "content": "You are a helpful voice assistant. Keep replies to 1-2 short spoken sentences.",
-            },
-            {"role": "user", "content": user_text},
-        ],
+        contents=user_text,
+        config={
+            "system_instruction": "You are a helpful voice assistant. Keep replies to 1-2 short spoken sentences.",
+        },
     )
-    return completion.choices[0].message.content.strip()
+    return response.text.strip()
 
 
 @weave.op()
@@ -41,11 +29,8 @@ def generate_correction(word: str) -> dict[str, str]:
         f'stressed syllable in CAPS, e.g. "Worcestershire" -> "WUUS-ter-sher", '
         f'"CoreWeave" -> "Core-Weave". Must differ from the original spelling.>'
     )
-    completion = _client.chat.completions.create(
-        model=LLM_MODEL,
-        messages=[{"role": "user", "content": prompt}],
-    )
-    content = completion.choices[0].message.content.strip()
+    response = _client.models.generate_content(model=LLM_MODEL, contents=prompt)
+    content = response.text.strip()
     ipa, respell = "", ""
     for line in content.splitlines():
         if line.strip().lower().startswith("ipa:"):
