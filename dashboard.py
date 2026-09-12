@@ -106,6 +106,18 @@ def _(base64, client, fetch_button, pd):
                 'after_audio': after_audio,
             })
 
+    # calls are newest-first, so keep only each line's most recent lint run --
+    # otherwise repeated test runs of the same script line (e.g. trap words
+    # tested many times during development) clutter the report with duplicates.
+    _seen_texts = set()
+    _deduped = []
+    for _r in lines_data:
+        if _r['intended_text'] in _seen_texts:
+            continue
+        _seen_texts.add(_r['intended_text'])
+        _deduped.append(_r)
+    lines_data = _deduped
+
     calls_df = pd.DataFrame([{k: v for k, v in r.items() if k not in ('before_audio', 'after_audio')} for r in lines_data])
     calls_df
     return calls_df, lines_data
