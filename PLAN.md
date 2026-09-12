@@ -10,11 +10,27 @@ a live call.
 
 ## Business scenario
 
-Voice AI systems (IVR, support bots, voice assistants) fail in a specific,
-recurring way: the TTS voice mispronounces a name, brand, or technical term,
-and nobody notices until a customer hears it on a live call. Today the fix
-is reactive -- an engineer has to notice the complaint, then manually add a
-pronunciation-dictionary entry.
+**Primary vertical: pharmacy / telehealth refill IVR.** Voice bots that read
+back drug names (refill reminders, prior-auth notices, pharmacist callback
+lines) have a sharper failure mode than generic voice bots: a mispronounced
+or confused drug name isn't just embarrassing, it's a known patient-safety
+issue. The FDA and ISMP maintain running lists of "look-alike, sound-alike"
+(LASA) drug name pairs precisely because confusion between similar-sounding
+names (e.g. hydroxyzine/hydralazine, Celebrex/Celexa) causes real dispensing
+errors. A pharmacy's `TRAP_WORDS` list is literally its drug formulary --
+every name it dispenses gets checked before a script goes live.
+
+This isn't theoretical for this project: we tested 21 real drug names
+against the actual pipeline (Google Cloud TTS + self-listen ASR). 19/21 came
+back clean. Two -- **Rybelsus** and **Vraylar** -- came back genuinely
+mangled ("ribelisys", "VRAYER"), failed after 3 retries, and were correctly
+flagged for human review with auto-generated phonetic fallbacks. See
+`scripts/sample_prompts_pharmacy.txt` / `data/lint_report_pharmacy.json`.
+
+**General problem (any voice AI system):** the TTS voice mispronounces a
+name, brand, or technical term, and nobody notices until a customer hears it
+on a live call. Today the fix is reactive -- an engineer has to notice the
+complaint, then manually add a pronunciation-dictionary entry.
 
 This flips that from *reactive* to *shift-left*: like a spell-checker or
 linter that runs in CI before code ships, this runs before a voice bot's
@@ -303,12 +319,17 @@ Key components:
 
 ## Demo script
 
-1. Run the linter against a sample voice-bot script library containing a
-   name/number known to trip up the TTS.
+1. Run the linter against `scripts/sample_prompts_pharmacy.txt` -- a
+   pharmacy refill IVR script library containing real drug names (Rybelsus,
+   Vraylar) known to trip up the TTS.
 2. Show the round-trip ASR catching the mismatch (live trace in Weave/marimo
-   lint report), the correction being generated, retried, and the TypeSafe
-   critic judging whether to escalate.
+   lint report) -- "Rybelsus" heard back as "ribelisys", the correction
+   being generated, retried, and the TypeSafe critic judging whether to
+   escalate.
 3. Show the validated correction landing in the persistent correction table.
 4. Show the **runtime path** speaking the same line: a single TTS call, no
    ASR, no retry -- same latency as a plain TTS integration -- because the
    correction was already validated at lint time.
+5. Zoom out: this is what a pharmacy would run in CI on every script/prompt
+   change, with `TRAP_WORDS` seeded from their drug formulary -- catching
+   patient-safety-relevant mispronunciations before they ever reach a call.
