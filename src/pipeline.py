@@ -40,6 +40,7 @@ class TurnResult:
 def process_turn(intended_text: str, correction_table: CorrectionTable, max_retries: int = MAX_RETRIES) -> TurnResult:
     """Self-listen loop: synthesize, check, learn, retry (bounded)."""
     fallback_words: set[str] = set()
+    critic_already_asked: set[str] = set()
     attempt_records: list[AttemptRecord] = []
     attempt = 0
     audio = b""
@@ -94,6 +95,13 @@ def process_turn(intended_text: str, correction_table: CorrectionTable, max_retr
                     text_fallback=new_entry.get("text_fallback"),
                 )
             elif existing.get("text_fallback") and word.lower() not in fallback_words:
+                if word.lower() in critic_already_asked:
+                    # Already asked once and the phoneme override still diverged on
+                    # retry -- don't ask the identical question again and get stuck
+                    # repeating a losing strategy, just escalate.
+                    fallback_words.add(word.lower())
+                    continue
+                critic_already_asked.add(word.lower())
                 # Don't blindly escalate to the text fallback -- ask whether it's
                 # actually likely to beat the phoneme override already tried.
                 if should_escalate_to_text_fallback(

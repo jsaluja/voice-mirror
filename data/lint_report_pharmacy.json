@@ -57,9 +57,9 @@
   },
   {
     "text": "Your Rybelsus prescription is ready for pickup.",
-    "success": false,
+    "success": true,
     "attempts": 3,
-    "final_wer": 0.14285714285714285,
+    "final_wer": 0.0,
     "attempt_log": [
       {
         "attempt": 0,
@@ -75,9 +75,9 @@
       },
       {
         "attempt": 2,
-        "wer": 0.14285714285714285,
-        "diverged": true,
-        "heard": "Your roebelsus prescription is ready for pickup."
+        "wer": 0.0,
+        "diverged": false,
+        "heard": "Your Rybelsus prescription is ready for pickup."
       }
     ]
   },
@@ -85,7 +85,7 @@
     "text": "Your Vraylar dosage has changed this month.",
     "success": false,
     "attempts": 3,
-    "final_wer": 0.14285714285714285,
+    "final_wer": 0.42857142857142855,
     "attempt_log": [
       {
         "attempt": 0,
@@ -101,9 +101,9 @@
       },
       {
         "attempt": 2,
-        "wer": 0.14285714285714285,
+        "wer": 0.42857142857142855,
         "diverged": true,
-        "heard": "Your regular dosage has changed this month."
+        "heard": "Your VRA Y LAR dosage has changed this month."
       }
     ]
   }
