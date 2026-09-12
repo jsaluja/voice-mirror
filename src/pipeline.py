@@ -11,6 +11,7 @@ import weave
 from src.asr import transcribe_audio
 from src.config import MAX_RETRIES
 from src.correction_table import CorrectionTable
+from src.critic import should_escalate_to_text_fallback
 from src.diff import DivergenceResult, compute_divergence
 from src.llm import generate_correction, generate_response
 from src.tts import build_ssml, synthesize_speech
@@ -92,8 +93,16 @@ def process_turn(intended_text: str, correction_table: CorrectionTable, max_retr
                     phoneme_ipa=new_entry.get("phoneme_ipa"),
                     text_fallback=new_entry.get("text_fallback"),
                 )
-            else:
-                fallback_words.add(word.lower())
+            elif existing.get("text_fallback") and word.lower() not in fallback_words:
+                # Don't blindly escalate to the text fallback -- ask whether it's
+                # actually likely to beat the phoneme override already tried.
+                if should_escalate_to_text_fallback(
+                    word,
+                    phoneme_ipa=existing.get("phoneme_ipa", ""),
+                    text_fallback=existing["text_fallback"],
+                    heard_as=mismatch.hypothesis_word,
+                ):
+                    fallback_words.add(word.lower())
 
 
 @weave.op()

@@ -9,6 +9,10 @@ DEEPGRAM_API_KEY = os.environ.get("DEEPGRAM_API_KEY", "")
 WANDB_API_KEY = os.environ.get("WANDB_API_KEY", "")
 WEAVE_PROJECT = os.environ.get("WEAVE_PROJECT", "voice-self-correct-loop")
 
+# TypeSafe (Jev): judges whether escalating to the text-fallback correction is
+# likely to help, instead of blindly always trying it once a phoneme override fails.
+TYPESAFE_API_KEY = os.environ.get("TYPESAFE_API_KEY", "")
+
 GOOGLE_CLOUD_PROJECT = os.environ.get("GOOGLE_CLOUD_PROJECT", "")
 TTS_VOICE_NAME = os.environ.get("TTS_VOICE_NAME", "en-US-Neural2-C")
 TTS_LANGUAGE_CODE = os.environ.get("TTS_LANGUAGE_CODE", "en-US")
