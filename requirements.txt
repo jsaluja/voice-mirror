@@ -1,6 +1,7 @@
 openai>=1.40.0
 requests>=2.31.0
 google-cloud-texttospeech>=2.16.0
+google-cloud-speech>=2.31.0
 jiwer>=3.0.0
 weave>=0.51.0
 python-dotenv>=1.0.0

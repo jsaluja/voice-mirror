@@ -1,18 +1,14 @@
-"""ASR via Deepgram prerecorded REST API. Used both for user speech input and
+"""ASR via Google Cloud Speech-to-Text. Used both for user speech input and
 for the self-listen round-trip check on synthesized TTS audio.
-
-Calls the REST endpoint directly (rather than the deepgram-sdk package) since
-the installed SDK major version's API surface changes frequently -- a plain
-HTTP call is stable and dependency-free beyond `requests`.
 """
 from dataclasses import dataclass
 
-import requests
 import weave
+from google.cloud import speech
 
-from src.config import DEEPGRAM_API_KEY, DEEPGRAM_MODEL
+from src.config import TTS_LANGUAGE_CODE
 
-_LISTEN_URL = "https://api.deepgram.com/v1/listen"
+_client = speech.SpeechClient()
 
 
 @dataclass
@@ -30,22 +26,22 @@ class TranscriptResult:
 @weave.op()
 def transcribe_audio(audio_bytes: bytes, mimetype: str = "audio/mp3") -> TranscriptResult:
     """Transcribe audio bytes, returning text + per-word confidence."""
-    response = requests.post(
-        _LISTEN_URL,
-        params={"model": DEEPGRAM_MODEL, "smart_format": "true", "punctuate": "true"},
-        headers={
-            "Authorization": f"Token {DEEPGRAM_API_KEY}",
-            "Content-Type": mimetype,
-        },
-        data=audio_bytes,
-        timeout=30,
+    config = speech.RecognitionConfig(
+        encoding=speech.RecognitionConfig.AudioEncoding.MP3,
+        language_code=TTS_LANGUAGE_CODE,
+        enable_word_confidence=True,
+        enable_automatic_punctuation=True,
     )
-    response.raise_for_status()
-    payload = response.json()
-    alternative = payload["results"]["channels"][0]["alternatives"][0]
-    text = alternative.get("transcript", "")
-    words = [
-        WordConfidence(word=w["word"], confidence=w.get("confidence", 0.0))
-        for w in alternative.get("words", [])
-    ]
-    return TranscriptResult(text=text, words=words)
+    audio = speech.RecognitionAudio(content=audio_bytes)
+    response = _client.recognize(config=config, audio=audio, timeout=30)
+
+    text_parts = []
+    words: list[WordConfidence] = []
+    for result in response.results:
+        alternative = result.alternatives[0]
+        text_parts.append(alternative.transcript)
+        words.extend(
+            WordConfidence(word=w.word, confidence=w.confidence)
+            for w in alternative.words
+        )
+    return TranscriptResult(text=" ".join(text_parts).strip(), words=words)

@@ -5,7 +5,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-DEEPGRAM_API_KEY = os.environ.get("DEEPGRAM_API_KEY", "")
 WANDB_API_KEY = os.environ.get("WANDB_API_KEY", "")
 WEAVE_PROJECT = os.environ.get("WEAVE_PROJECT", "voice-self-correct-loop")
 
@@ -22,7 +21,6 @@ AZURE_OPENAI_API_KEY = os.environ.get("AZURE_OPENAI_API_KEY") or os.environ.get(
 AZURE_OPENAI_ENDPOINT = os.environ.get("AZURE_ENDPOINT", "")
 AZURE_OPENAI_API_VERSION = os.environ.get("AZURE_API_VERSION", "2024-04-01-preview")
 LLM_MODEL = os.environ.get("AZURE_OPENAI_DEPLOYMENT_NAME") or os.environ.get("AZURE_DEPLOYMENT", "gpt-4.1-mini")
-DEEPGRAM_MODEL = os.environ.get("DEEPGRAM_MODEL", "nova-2")
 
 MAX_RETRIES = 2  # bounded retry per plan MVP scope
 
