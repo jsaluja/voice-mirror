@@ -15,9 +15,18 @@ _client = texttospeech.TextToSpeechClient()
 def build_ssml(text: str, correction_table: CorrectionTable, use_text_fallback_for: set[str] | None = None) -> tuple[str, bool]:
     """Apply correction-table overrides to `text`.
 
-    For each word with a table entry: use <phoneme> unless that word is in
-    `use_text_fallback_for` (i.e. phoneme already failed this turn), in which
-    case substitute the plain-text fallback spelling instead.
+    For each word with a table entry: prefer the plain-text fallback
+    respelling (e.g. "VRAY-lar") over the <phoneme> IPA override by default.
+
+    This is deliberately IPA-averse: our own quality-gate data showed the
+    <phoneme alphabet="ipa"> tag is unreliable on the configured voice and
+    can regress a merely-mispronounced word into one spelled out letter by
+    letter (worse than the original mispronunciation) -- see the Vraylar/
+    Esketamine/Clozapine cases in AGENTS.md, all triggered on the retry
+    attempt right after a phoneme override kicked in. `use_text_fallback_for`
+    is now a no-op safety net for words with no text_fallback saved yet; the
+    phoneme override is only used as a last resort when no plain-text
+    fallback exists at all.
 
     Returns (ssml_or_text, used_ssml). When no phoneme override is used, the
     returned string is plain (unescaped) text -- XML escaping only applies
@@ -34,13 +43,11 @@ def build_ssml(text: str, correction_table: CorrectionTable, use_text_fallback_f
         if not entry:
             parts.append(("plain", token))
             continue
-        if bare.lower() in use_text_fallback_for and entry.get("text_fallback"):
+        if entry.get("text_fallback"):
             parts.append(("plain", entry["text_fallback"]))
-        elif entry.get("phoneme_ipa"):
+        elif entry.get("phoneme_ipa") and bare.lower() not in use_text_fallback_for:
             parts.append(("phoneme", token, entry["phoneme_ipa"]))
             used_ssml = True
-        elif entry.get("text_fallback"):
-            parts.append(("plain", entry["text_fallback"]))
         else:
             parts.append(("plain", token))
 
