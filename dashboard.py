@@ -407,7 +407,8 @@ def _(audio_sources_by_scenario, case_table, content_bytes, lines_data, mo):
             row['scenario_id'], ([], [], None, None)
         )
         _selected_audio_bytes = content_bytes(_out.audio) if _out is not None else None
-        for _attempt in _attempts:
+        # Worst quality first, best quality last -- so scrolling ends on the winning take.
+        for _attempt in sorted(_attempts, key=lambda attempt: attempt.wer, reverse=True):
             _audio_bytes = content_bytes(_trace_tts[_attempt.attempt].output) if _attempt.attempt < len(_trace_tts) else None
             _is_selected = _best_attempt is not None and _attempt.attempt == _best_attempt.attempt
             if _is_selected and _selected_audio_bytes is not None:
