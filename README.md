@@ -24,6 +24,21 @@ Built end-to-end on CoreWeave's stack: audit trails and the caching layer run
 on CoreWeave, TypeSafe (Jev) is the confidence judge, and Marimo notebooks
 power the live dashboard and human-in-the-loop workflow.
 
+## Slides
+
+<p>
+  <img src="assets/slides/01-title.png" width="49%" />
+  <img src="assets/slides/02-loop-diagram.png" width="49%" />
+</p>
+<p>
+  <img src="assets/slides/03-dashboard.png" width="49%" />
+  <img src="assets/slides/04-bug-examples.png" width="49%" />
+</p>
+<p>
+  <img src="assets/slides/05-cache-stats.png" width="49%" />
+  <img src="assets/slides/06-sponsors.png" width="49%" />
+</p>
+
 ## How the loop works
 
 ```
