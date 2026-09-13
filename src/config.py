@@ -12,6 +12,12 @@ WEAVE_PROJECT = os.environ.get("WEAVE_PROJECT", "voice-self-correct-loop")
 # likely to help, instead of blindly always trying it once a phoneme override fails.
 TYPESAFE_API_KEY = os.environ.get("TYPESAFE_API_KEY", "")
 
+# Vapi: telephony/voice-agent layer. Our server plugs in as a custom-llm +
+# custom-voice provider (see src/vapi_server.py) -- Vapi never talks to
+# Google Cloud directly.
+VAPI_API_KEY = os.environ.get("VAPI_API_KEY", "")
+VAPI_PUBLIC_KEY = os.environ.get("VAPI_PUBLIC_KEY", "")
+
 GOOGLE_CLOUD_PROJECT = os.environ.get("GOOGLE_CLOUD_PROJECT", "")
 GOOGLE_CLOUD_LOCATION = os.environ.get("GOOGLE_CLOUD_LOCATION", "us-central1")
 TTS_VOICE_NAME = os.environ.get("TTS_VOICE_NAME", "en-US-Neural2-C")
@@ -28,7 +34,7 @@ MAX_RETRIES = 2  # bounded retry per plan MVP scope
 TRAP_WORDS = {
     w.strip().lower()
     for w in os.environ.get(
-        "TRAP_WORDS", "coreweave,typesafe,marimo,aria,kirkcudbright,eyjafjallajokull,rybelsus,vraylar"
+        "TRAP_WORDS", "coreweave,typesafe,marimo,aria,kirkcudbright,eyjafjallajokull,rybelsus,vraylar,farxiga"
     ).split(",")
     if w.strip()
 }
@@ -37,4 +43,10 @@ CORRECTION_TABLE_PATH = os.path.join(
     os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
     "data",
     "correction_table.json",
+)
+
+PATIENTS_DB_PATH = os.path.join(
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+    "data",
+    "patients.json",
 )

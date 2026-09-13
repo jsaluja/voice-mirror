@@ -28,44 +28,28 @@ def _(mo):
 
 
 @app.cell
-def _(mo):
-    wandb_key_input = mo.ui.text(label='W&B API Key', kind='password', placeholder='paste your WANDB_API_KEY')
-    project_input = mo.ui.text(label='Weave project (entity/project)', value='jaspal-singh-saluja/voice-self-correct-loop')
-    mo.vstack([wandb_key_input, project_input])
-    return project_input, wandb_key_input
+def _(mo, os, wandb, weave):
+    # Autonomous connect: read creds from the environment (.env / shell), no
+    # human paste-and-click step -- same WANDB_API_KEY/WEAVE_PROJECT the CLI
+    # scripts (lint_scripts.py, demo.py) already use.
+    from src.config import WANDB_API_KEY, WEAVE_PROJECT
 
-
-@app.cell
-def _(mo):
-    connect_button = mo.ui.run_button(label='Connect to Weave')
-    connect_button
-    return (connect_button,)
-
-
-@app.cell
-def _(connect_button, mo, os, project_input, wandb, wandb_key_input, weave):
     client = None
-    _status = mo.md('_not connected yet_')
-    if connect_button.value and wandb_key_input.value:
-        os.environ['WANDB_API_KEY'] = wandb_key_input.value
-        wandb.login(key=wandb_key_input.value, relogin=True)
-        client = weave.init(project_input.value)
-        _status = mo.md(f'Connected to **{project_input.value}**')
+    if WANDB_API_KEY:
+        os.environ.setdefault('WANDB_API_KEY', WANDB_API_KEY)
+        wandb.login(key=WANDB_API_KEY, relogin=True)
+        client = weave.init(WEAVE_PROJECT)
+        _status = mo.md(f'Connected to **{WEAVE_PROJECT}**')
+    else:
+        _status = mo.md('_WANDB_API_KEY not set -- export it or add it to .env, then rerun this notebook._')
     _status
     return (client,)
 
 
 @app.cell
-def _(mo):
-    fetch_button = mo.ui.run_button(label='Refresh lint traces')
-    fetch_button
-    return (fetch_button,)
-
-
-@app.cell
-def _(base64, client, fetch_button, pd):
+def _(base64, client, pd):
     lines_data = []
-    if client is not None and fetch_button.value:
+    if client is not None:
         calls = list(client.get_calls(limit=500, sort_by=[{'field': 'started_at', 'direction': 'desc'}]))
         pt_calls = [c for c in calls if '/process_turn:' in c.op_name]
         tts_calls = [c for c in calls if '/synthesize_speech:' in c.op_name]

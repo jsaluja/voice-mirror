@@ -3,3 +3,4 @@ __pycache__/
 *.pyc
 .env
 audio_cache/
+scripts/vapi_test_call.html

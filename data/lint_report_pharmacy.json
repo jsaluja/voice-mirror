@@ -106,5 +106,31 @@
         "heard": "Your v r. A y l dosage has changed this month."
       }
     ]
+  },
+  {
+    "text": "Your Farxiga prescription is ready for pickup.",
+    "success": false,
+    "attempts": 3,
+    "final_wer": 0.2857142857142857,
+    "attempt_log": [
+      {
+        "attempt": 0,
+        "wer": 0.2857142857142857,
+        "diverged": true,
+        "heard": "Your foxy good prescription is ready for pickup."
+      },
+      {
+        "attempt": 1,
+        "wer": 0.2857142857142857,
+        "diverged": true,
+        "heard": "Your far seaga prescription is ready for pickup."
+      },
+      {
+        "attempt": 2,
+        "wer": 0.2857142857142857,
+        "diverged": true,
+        "heard": "Your far seaga prescription is ready for pickup."
+      }
+    ]
   }
 ]

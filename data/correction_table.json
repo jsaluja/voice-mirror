@@ -3,6 +3,10 @@
     "phoneme_ipa": "ˈeɪjaˌfjatlaˈjoʊkʏtl",
     "text_fallback": "ay-ya-fyat-la-yo-kutl"
   },
+  "farxiga": {
+    "phoneme_ipa": "fɑrsiɡə",
+    "text_fallback": "far-SEE-guh"
+  },
   "kirkcudbright": {
     "phoneme_ipa": "kərˈkuːbri",
     "text_fallback": "kur-koo-bree"

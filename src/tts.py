@@ -81,3 +81,29 @@ def synthesize_speech(text: str, is_ssml: bool = False) -> bytes:
         timeout=30,
     )
     return response.audio_content
+
+
+@weave.op(postprocess_output=_trace_audio_as_content)
+def synthesize_speech_pcm(text: str, is_ssml: bool, sample_rate_hertz: int) -> bytes:
+    """Synthesize speech as raw LINEAR16 PCM at an exact sample rate -- the
+    format Vapi's custom-voice webhook requires (no container/headers).
+    """
+    synth_input = (
+        texttospeech.SynthesisInput(ssml=text)
+        if is_ssml
+        else texttospeech.SynthesisInput(text=text)
+    )
+    voice = texttospeech.VoiceSelectionParams(
+        language_code=TTS_LANGUAGE_CODE, name=TTS_VOICE_NAME
+    )
+    audio_config = texttospeech.AudioConfig(
+        audio_encoding=texttospeech.AudioEncoding.LINEAR16,
+        sample_rate_hertz=sample_rate_hertz,
+    )
+    response = _client.synthesize_speech(
+        input=synth_input,
+        voice=voice,
+        audio_config=audio_config,
+        timeout=30,
+    )
+    return response.audio_content

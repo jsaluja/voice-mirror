@@ -20,6 +20,26 @@ def generate_response(user_text: str) -> str:
 
 
 @weave.op()
+def generate_pharmacy_response(record: dict) -> str:
+    """Phrase the prescription status naturally for a pharmacy IVR reply."""
+    response = _client.models.generate_content(
+        model=LLM_MODEL,
+        contents=(
+            f"Patient prescription record: drug={record['drug']!r}, "
+            f"status={record['refill_status']!r}. Tell the patient this status "
+            f"in one short spoken sentence, naturally mentioning the drug name."
+        ),
+        config={
+            "system_instruction": (
+                "You are a pharmacy IVR voice assistant reading back a patient's "
+                "prescription status over the phone. Keep it to 1 short spoken sentence."
+            ),
+        },
+    )
+    return response.text.strip()
+
+
+@weave.op()
 def generate_correction(word: str) -> dict[str, str]:
     """Ask the LLM for an IPA transcription + plain-text respelling of `word`."""
     prompt = (

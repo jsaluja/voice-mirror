@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Jane Smith",
+    "dob": "1990-03-14",
+    "zip_code": "10001",
+    "doctor_name": "Dr. Patel",
+    "drug": "Rybelsus",
+    "refill_status": "ready for pickup"
+  },
+  {
+    "name": "John Smith",
+    "dob": "1985-07-22",
+    "zip_code": "10001",
+    "doctor_name": "Dr. Nguyen",
+    "drug": "Vraylar",
+    "refill_status": "pending doctor approval"
+  },
+  {
+    "name": "Maria Alvarez",
+    "dob": "1978-11-02",
+    "zip_code": "94103",
+    "doctor_name": "Dr. Okafor",
+    "drug": "Levothyroxine",
+    "refill_status": "ready for pickup"
+  },
+  {
+    "name": "David Chen",
+    "dob": "1966-05-30",
+    "zip_code": "60614",
+    "doctor_name": "Dr. Patel",
+    "drug": "Metoprolol Succinate",
+    "refill_status": "ready for pickup"
+  },
+  {
+    "name": "Robert Johnson",
+    "dob": "1972-01-09",
+    "zip_code": "30301",
+    "doctor_name": "Dr. Okafor",
+    "drug": "Atorvastatin",
+    "refill_status": "ready for pickup"
+  },
+  {
+    "name": "Robert Johnson",
+    "dob": "1995-09-18",
+    "zip_code": "30303",
+    "doctor_name": "Dr. Nguyen",
+    "drug": "Semaglutide",
+    "refill_status": "prior authorization required"
+  },
+  {
+    "name": "Sarah Kim",
+    "dob": "1988-02-20",
+    "zip_code": "94103",
+    "doctor_name": "Dr. Okafor",
+    "drug": "Farxiga",
+    "refill_status": "ready for pickup"
+  }
+]

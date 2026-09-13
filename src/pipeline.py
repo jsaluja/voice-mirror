@@ -13,7 +13,8 @@ from src.config import MAX_RETRIES
 from src.correction_table import CorrectionTable
 from src.critic import should_escalate_to_text_fallback
 from src.diff import DivergenceResult, compute_divergence
-from src.llm import generate_correction, generate_response
+from src.intake import extract_patient_query, find_candidate_records, load_patients, verify_patient_match
+from src.llm import generate_correction, generate_pharmacy_response, generate_response
 from src.tts import build_ssml, synthesize_speech
 
 
@@ -45,12 +46,18 @@ def process_turn(intended_text: str, correction_table: CorrectionTable, max_retr
     attempt = 0
     audio = b""
     divergence: DivergenceResult | None = None
+    best_audio = b""
+    best_divergence: DivergenceResult | None = None
 
     while True:
         rendered, used_ssml = build_ssml(intended_text, correction_table, use_text_fallback_for=fallback_words)
         audio = synthesize_speech(rendered, is_ssml=used_ssml)
         transcript = transcribe_audio(audio)
         divergence = compute_divergence(intended_text, transcript.text)
+
+        if best_divergence is None or divergence.wer < best_divergence.wer:
+            best_audio = audio
+            best_divergence = divergence
 
         attempt_records.append(
             AttemptRecord(
@@ -76,10 +83,10 @@ def process_turn(intended_text: str, correction_table: CorrectionTable, max_retr
         if attempt > max_retries:
             return TurnResult(
                 intended_text=intended_text,
-                audio=audio,
+                audio=best_audio,
                 success=False,
                 attempts=attempt_records,
-                final_divergence=divergence,
+                final_divergence=best_divergence,
             )
 
         for mismatch in divergence.mismatches:
@@ -129,3 +136,39 @@ def speak(text: str, correction_table: CorrectionTable) -> bytes:
     """
     rendered, used_ssml = build_ssml(text, correction_table)
     return synthesize_speech(rendered, is_ssml=used_ssml)
+
+
+@dataclass
+class PharmacyTurnResult:
+    needs_clarification: bool
+    matched_record: dict | None
+    turn: TurnResult
+
+
+@weave.op()
+def handle_pharmacy_call(utterance: str, correction_table: CorrectionTable) -> PharmacyTurnResult:
+    """Live pharmacy IVR turn: identify the caller (extract -> match -> TypeSafe
+    confidence gate), then either ask for clarification or read back their
+    prescription status through the self-correcting TTS loop.
+    """
+    query = extract_patient_query(utterance)
+    candidates = find_candidate_records(query, load_patients())
+    record = verify_patient_match(query, candidates)
+
+    if record is None:
+        clarification = (
+            "I couldn't confirm your identity from that -- "
+            "can you give me your full name, date of birth, and zip code?"
+        )
+        return PharmacyTurnResult(
+            needs_clarification=True,
+            matched_record=None,
+            turn=process_turn(clarification, correction_table),
+        )
+
+    response_text = generate_pharmacy_response(record)
+    return PharmacyTurnResult(
+        needs_clarification=False,
+        matched_record=record,
+        turn=process_turn(response_text, correction_table),
+    )
