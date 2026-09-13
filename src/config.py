@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 WANDB_API_KEY = os.environ.get("WANDB_API_KEY", "")
-WEAVE_PROJECT = os.environ.get("WEAVE_PROJECT", "voice-self-correct-loop")
+WEAVE_PROJECT = os.environ.get("WEAVE_PROJECT", "voice-mirror")
 
 # TypeSafe (Jev): judges whether escalating to the text-fallback correction is
 # likely to help, instead of blindly always trying it once a phoneme override fails.
