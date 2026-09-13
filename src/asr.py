@@ -1,5 +1,9 @@
-"""ASR via Google Cloud Speech-to-Text. Used both for user speech input and
-for the self-listen round-trip check on synthesized TTS audio.
+"""ASR via Google Cloud Speech-to-Text.
+
+Used only for the offline self-listen round-trip check: transcribing our own
+synthesized TTS audio to test whether it would be understood correctly. Live
+calls never reach this module -- Vapi transcribes the caller's real speech
+with its own transcriber before it reaches vapi_server.py.
 """
 from dataclasses import dataclass
 
@@ -25,12 +29,21 @@ class TranscriptResult:
 
 @weave.op()
 def transcribe_audio(audio_bytes: bytes, mimetype: str = "audio/mp3") -> TranscriptResult:
-    """Transcribe audio bytes, returning text + per-word confidence."""
+    """Transcribe audio bytes, returning text + per-word confidence.
+
+    Uses the `latest_long` model explicitly -- Google's unversioned default
+    model measurably mishears rare medication names (verified: it garbled
+    "atorvastatin" into "a tourist" on correctly-pronounced audio, while
+    latest_long transcribed it correctly on the same audio). Phrase-hint
+    boosting was also tried and had zero measurable effect at any boost
+    value, so it's not used here.
+    """
     config = speech.RecognitionConfig(
         encoding=speech.RecognitionConfig.AudioEncoding.MP3,
         language_code=TTS_LANGUAGE_CODE,
         enable_word_confidence=True,
         enable_automatic_punctuation=True,
+        model="latest_long",
     )
     audio = speech.RecognitionAudio(content=audio_bytes)
     response = _client.recognize(config=config, audio=audio, timeout=30)

@@ -1,0 +1,6508 @@
+{
+  "schema_version": 2,
+  "suite_id": "cross-industry-voice-quality-gate",
+  "cases": [
+    {
+      "id": "pharmacy-levothyroxine-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your prescription for Levothyroxine is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-levothyroxine-preserved",
+          "type": "contains_any",
+          "values": [
+            "levothyroxine"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Levothyroxine."
+      ]
+    },
+    {
+      "id": "pharmacy-metoprolol-succinate-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your refill of Metoprolol Succinate has been approved by your doctor.",
+      "assertions": [
+        {
+          "id": "medication-metoprolol-succinate-preserved",
+          "type": "contains_any",
+          "values": [
+            "metoprolol succinate",
+            "metoprolol"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Metoprolol Succinate."
+      ]
+    },
+    {
+      "id": "pharmacy-atorvastatin-dosage-change",
+      "industry": "pharmacy",
+      "intended_text": "Your Atorvastatin dosage has changed from twenty milligrams to forty milligrams.",
+      "assertions": [
+        {
+          "id": "medication-atorvastatin-preserved",
+          "type": "contains_any",
+          "values": [
+            "atorvastatin"
+          ]
+        },
+        {
+          "id": "dosage-20-to-40-mg",
+          "type": "contains_any",
+          "values": [
+            "twenty milligrams to forty milligrams",
+            "20 milligrams to 40 milligrams",
+            "20 to 40 milligrams"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Atorvastatin.",
+        "The spoken audio clearly preserves the dosage change from 20 milligrams to 40 milligrams."
+      ]
+    },
+    {
+      "id": "pharmacy-semaglutide-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Semaglutide prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-semaglutide-preserved",
+          "type": "contains_any",
+          "values": [
+            "semaglutide"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Semaglutide."
+      ]
+    },
+    {
+      "id": "pharmacy-rybelsus-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Rybelsus prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-rybelsus-preserved",
+          "type": "contains_any",
+          "values": [
+            "rybelsus"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Rybelsus."
+      ]
+    },
+    {
+      "id": "pharmacy-vraylar-dosage-change",
+      "industry": "pharmacy",
+      "intended_text": "Your Vraylar dosage has changed this month.",
+      "assertions": [
+        {
+          "id": "medication-vraylar-preserved",
+          "type": "contains_any",
+          "values": [
+            "vraylar"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Vraylar."
+      ]
+    },
+    {
+      "id": "pharmacy-farxiga-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Farxiga prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-farxiga-preserved",
+          "type": "contains_any",
+          "values": [
+            "farxiga"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Farxiga."
+      ]
+    },
+    {
+      "id": "pharmacy-amoxicillin-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Amoxicillin prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-amoxicillin-preserved",
+          "type": "contains_any",
+          "values": [
+            "amoxicillin"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Amoxicillin."
+      ]
+    },
+    {
+      "id": "pharmacy-lisinopril-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your refill of Lisinopril has been approved by your doctor.",
+      "assertions": [
+        {
+          "id": "medication-lisinopril-preserved",
+          "type": "contains_any",
+          "values": [
+            "lisinopril"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Lisinopril."
+      ]
+    },
+    {
+      "id": "pharmacy-omeprazole-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Omeprazole prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-omeprazole-preserved",
+          "type": "contains_any",
+          "values": [
+            "omeprazole"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Omeprazole."
+      ]
+    },
+    {
+      "id": "pharmacy-gabapentin-dosage-change",
+      "industry": "pharmacy",
+      "intended_text": "Your Gabapentin dosage has changed from three hundred milligrams to six hundred milligrams.",
+      "assertions": [
+        {
+          "id": "medication-gabapentin-preserved",
+          "type": "contains_any",
+          "values": [
+            "gabapentin"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Gabapentin.",
+        "The spoken audio clearly preserves the dosage change from 300 milligrams to 600 milligrams."
+      ]
+    },
+    {
+      "id": "pharmacy-hydrochlorothiazide-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your refill of Hydrochlorothiazide has been approved by your doctor.",
+      "assertions": [
+        {
+          "id": "medication-hydrochlorothiazide-preserved",
+          "type": "contains_any",
+          "values": [
+            "hydrochlorothiazide"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Hydrochlorothiazide."
+      ]
+    },
+    {
+      "id": "pharmacy-sertraline-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Sertraline prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-sertraline-preserved",
+          "type": "contains_any",
+          "values": [
+            "sertraline"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Sertraline."
+      ]
+    },
+    {
+      "id": "pharmacy-escitalopram-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your refill of Escitalopram has been approved by your doctor.",
+      "assertions": [
+        {
+          "id": "medication-escitalopram-preserved",
+          "type": "contains_any",
+          "values": [
+            "escitalopram"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Escitalopram."
+      ]
+    },
+    {
+      "id": "pharmacy-duloxetine-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Duloxetine prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-duloxetine-preserved",
+          "type": "contains_any",
+          "values": [
+            "duloxetine"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Duloxetine."
+      ]
+    },
+    {
+      "id": "pharmacy-rosuvastatin-dosage-change",
+      "industry": "pharmacy",
+      "intended_text": "Your Rosuvastatin dosage has changed from ten milligrams to twenty milligrams.",
+      "assertions": [
+        {
+          "id": "medication-rosuvastatin-preserved",
+          "type": "contains_any",
+          "values": [
+            "rosuvastatin"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Rosuvastatin.",
+        "The spoken audio clearly preserves the dosage change from 10 milligrams to 20 milligrams."
+      ]
+    },
+    {
+      "id": "pharmacy-empagliflozin-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Empagliflozin prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-empagliflozin-preserved",
+          "type": "contains_any",
+          "values": [
+            "empagliflozin"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Empagliflozin."
+      ]
+    },
+    {
+      "id": "pharmacy-apixaban-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Apixaban prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-apixaban-preserved",
+          "type": "contains_any",
+          "values": [
+            "apixaban"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Apixaban."
+      ]
+    },
+    {
+      "id": "pharmacy-dulaglutide-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your refill of Dulaglutide has been approved by your doctor.",
+      "assertions": [
+        {
+          "id": "medication-dulaglutide-preserved",
+          "type": "contains_any",
+          "values": [
+            "dulaglutide"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Dulaglutide."
+      ]
+    },
+    {
+      "id": "pharmacy-esomeprazole-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Esomeprazole prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-esomeprazole-preserved",
+          "type": "contains_any",
+          "values": [
+            "esomeprazole"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Esomeprazole."
+      ]
+    },
+    {
+      "id": "pharmacy-montelukast-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Montelukast prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-montelukast-preserved",
+          "type": "contains_any",
+          "values": [
+            "montelukast"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Montelukast."
+      ]
+    },
+    {
+      "id": "pharmacy-levetiracetam-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Levetiracetam prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-levetiracetam-preserved",
+          "type": "contains_any",
+          "values": [
+            "levetiracetam"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Levetiracetam."
+      ]
+    },
+    {
+      "id": "pharmacy-dexlansoprazole-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your refill of Dexlansoprazole has been approved by your doctor.",
+      "assertions": [
+        {
+          "id": "medication-dexlansoprazole-preserved",
+          "type": "contains_any",
+          "values": [
+            "dexlansoprazole"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Dexlansoprazole."
+      ]
+    },
+    {
+      "id": "pharmacy-aripiprazole-dosage-change",
+      "industry": "pharmacy",
+      "intended_text": "Your Aripiprazole dosage has changed from ten milligrams to fifteen milligrams.",
+      "assertions": [
+        {
+          "id": "medication-aripiprazole-preserved",
+          "type": "contains_any",
+          "values": [
+            "aripiprazole"
+          ]
+        },
+        {
+          "id": "dosage-10-to-15-mg",
+          "type": "contains_any",
+          "values": [
+            "ten milligrams to fifteen milligrams",
+            "10 milligrams to 15 milligrams",
+            "10 to 15 milligrams"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Aripiprazole.",
+        "The spoken audio clearly preserves the dosage change from 10 milligrams to 15 milligrams."
+      ]
+    },
+    {
+      "id": "pharmacy-tiotropium-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Tiotropium prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-tiotropium-preserved",
+          "type": "contains_any",
+          "values": [
+            "tiotropium"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Tiotropium."
+      ]
+    },
+    {
+      "id": "pharmacy-vortioxetine-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Vortioxetine prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-vortioxetine-preserved",
+          "type": "contains_any",
+          "values": [
+            "vortioxetine"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Vortioxetine."
+      ]
+    },
+    {
+      "id": "pharmacy-deutetrabenazine-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your refill of Deutetrabenazine has been approved by your doctor.",
+      "assertions": [
+        {
+          "id": "medication-deutetrabenazine-preserved",
+          "type": "contains_any",
+          "values": [
+            "deutetrabenazine"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Deutetrabenazine."
+      ]
+    },
+    {
+      "id": "pharmacy-ustekinumab-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Ustekinumab injection is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-ustekinumab-preserved",
+          "type": "contains_any",
+          "values": [
+            "ustekinumab"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Ustekinumab."
+      ]
+    },
+    {
+      "id": "pharmacy-cariprazine-dosage-change",
+      "industry": "pharmacy",
+      "intended_text": "Your Cariprazine dosage has changed this month.",
+      "assertions": [
+        {
+          "id": "medication-cariprazine-preserved",
+          "type": "contains_any",
+          "values": [
+            "cariprazine"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Cariprazine."
+      ]
+    },
+    {
+      "id": "pharmacy-hydroxychloroquine-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Hydroxychloroquine prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-hydroxychloroquine-preserved",
+          "type": "contains_any",
+          "values": [
+            "hydroxychloroquine"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Hydroxychloroquine."
+      ]
+    },
+    {
+      "id": "pharmacy-dabigatran-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Dabigatran prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-dabigatran-preserved",
+          "type": "contains_any",
+          "values": [
+            "dabigatran"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Dabigatran."
+      ]
+    },
+    {
+      "id": "pharmacy-rivaroxaban-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Rivaroxaban prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-rivaroxaban-preserved",
+          "type": "contains_any",
+          "values": [
+            "rivaroxaban"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Rivaroxaban."
+      ]
+    },
+    {
+      "id": "pharmacy-edoxaban-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Edoxaban prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-edoxaban-preserved",
+          "type": "contains_any",
+          "values": [
+            "edoxaban"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Edoxaban."
+      ]
+    },
+    {
+      "id": "pharmacy-fingolimod-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Fingolimod prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-fingolimod-preserved",
+          "type": "contains_any",
+          "values": [
+            "fingolimod"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Fingolimod."
+      ]
+    },
+    {
+      "id": "pharmacy-natalizumab-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Natalizumab prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-natalizumab-preserved",
+          "type": "contains_any",
+          "values": [
+            "natalizumab"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Natalizumab."
+      ]
+    },
+    {
+      "id": "pharmacy-teriflunomide-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Teriflunomide prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-teriflunomide-preserved",
+          "type": "contains_any",
+          "values": [
+            "teriflunomide"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Teriflunomide."
+      ]
+    },
+    {
+      "id": "pharmacy-ocrelizumab-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Ocrelizumab prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-ocrelizumab-preserved",
+          "type": "contains_any",
+          "values": [
+            "ocrelizumab"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Ocrelizumab."
+      ]
+    },
+    {
+      "id": "pharmacy-alectinib-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Alectinib prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-alectinib-preserved",
+          "type": "contains_any",
+          "values": [
+            "alectinib"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Alectinib."
+      ]
+    },
+    {
+      "id": "pharmacy-osimertinib-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Osimertinib prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-osimertinib-preserved",
+          "type": "contains_any",
+          "values": [
+            "osimertinib"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Osimertinib."
+      ]
+    },
+    {
+      "id": "pharmacy-pembrolizumab-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Pembrolizumab prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-pembrolizumab-preserved",
+          "type": "contains_any",
+          "values": [
+            "pembrolizumab"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Pembrolizumab."
+      ]
+    },
+    {
+      "id": "pharmacy-nivolumab-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Nivolumab prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-nivolumab-preserved",
+          "type": "contains_any",
+          "values": [
+            "nivolumab"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Nivolumab."
+      ]
+    },
+    {
+      "id": "pharmacy-ipilimumab-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Ipilimumab prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-ipilimumab-preserved",
+          "type": "contains_any",
+          "values": [
+            "ipilimumab"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Ipilimumab."
+      ]
+    },
+    {
+      "id": "pharmacy-atezolizumab-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Atezolizumab prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-atezolizumab-preserved",
+          "type": "contains_any",
+          "values": [
+            "atezolizumab"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Atezolizumab."
+      ]
+    },
+    {
+      "id": "pharmacy-durvalumab-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Durvalumab prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-durvalumab-preserved",
+          "type": "contains_any",
+          "values": [
+            "durvalumab"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Durvalumab."
+      ]
+    },
+    {
+      "id": "pharmacy-lenvatinib-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Lenvatinib prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-lenvatinib-preserved",
+          "type": "contains_any",
+          "values": [
+            "lenvatinib"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Lenvatinib."
+      ]
+    },
+    {
+      "id": "pharmacy-cabozantinib-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Cabozantinib prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-cabozantinib-preserved",
+          "type": "contains_any",
+          "values": [
+            "cabozantinib"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Cabozantinib."
+      ]
+    },
+    {
+      "id": "pharmacy-regorafenib-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Regorafenib prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-regorafenib-preserved",
+          "type": "contains_any",
+          "values": [
+            "regorafenib"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Regorafenib."
+      ]
+    },
+    {
+      "id": "pharmacy-ribociclib-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Ribociclib prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-ribociclib-preserved",
+          "type": "contains_any",
+          "values": [
+            "ribociclib"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Ribociclib."
+      ]
+    },
+    {
+      "id": "pharmacy-palbociclib-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Palbociclib prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-palbociclib-preserved",
+          "type": "contains_any",
+          "values": [
+            "palbociclib"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Palbociclib."
+      ]
+    },
+    {
+      "id": "pharmacy-abemaciclib-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Abemaciclib prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-abemaciclib-preserved",
+          "type": "contains_any",
+          "values": [
+            "abemaciclib"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Abemaciclib."
+      ]
+    },
+    {
+      "id": "pharmacy-venetoclax-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Venetoclax prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-venetoclax-preserved",
+          "type": "contains_any",
+          "values": [
+            "venetoclax"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Venetoclax."
+      ]
+    },
+    {
+      "id": "pharmacy-ibrutinib-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Ibrutinib prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-ibrutinib-preserved",
+          "type": "contains_any",
+          "values": [
+            "ibrutinib"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Ibrutinib."
+      ]
+    },
+    {
+      "id": "pharmacy-acalabrutinib-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Acalabrutinib prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-acalabrutinib-preserved",
+          "type": "contains_any",
+          "values": [
+            "acalabrutinib"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Acalabrutinib."
+      ]
+    },
+    {
+      "id": "pharmacy-zanubrutinib-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Zanubrutinib prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-zanubrutinib-preserved",
+          "type": "contains_any",
+          "values": [
+            "zanubrutinib"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Zanubrutinib."
+      ]
+    },
+    {
+      "id": "pharmacy-midostaurin-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Midostaurin prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-midostaurin-preserved",
+          "type": "contains_any",
+          "values": [
+            "midostaurin"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Midostaurin."
+      ]
+    },
+    {
+      "id": "pharmacy-gilteritinib-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Gilteritinib prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-gilteritinib-preserved",
+          "type": "contains_any",
+          "values": [
+            "gilteritinib"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Gilteritinib."
+      ]
+    },
+    {
+      "id": "pharmacy-enasidenib-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Enasidenib prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-enasidenib-preserved",
+          "type": "contains_any",
+          "values": [
+            "enasidenib"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Enasidenib."
+      ]
+    },
+    {
+      "id": "pharmacy-ivosidenib-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Ivosidenib prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-ivosidenib-preserved",
+          "type": "contains_any",
+          "values": [
+            "ivosidenib"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Ivosidenib."
+      ]
+    },
+    {
+      "id": "pharmacy-tofacitinib-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Tofacitinib prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-tofacitinib-preserved",
+          "type": "contains_any",
+          "values": [
+            "tofacitinib"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Tofacitinib."
+      ]
+    },
+    {
+      "id": "pharmacy-baricitinib-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Baricitinib prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-baricitinib-preserved",
+          "type": "contains_any",
+          "values": [
+            "baricitinib"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Baricitinib."
+      ]
+    },
+    {
+      "id": "pharmacy-upadacitinib-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Upadacitinib prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-upadacitinib-preserved",
+          "type": "contains_any",
+          "values": [
+            "upadacitinib"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Upadacitinib."
+      ]
+    },
+    {
+      "id": "pharmacy-abrocitinib-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Abrocitinib prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-abrocitinib-preserved",
+          "type": "contains_any",
+          "values": [
+            "abrocitinib"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Abrocitinib."
+      ]
+    },
+    {
+      "id": "pharmacy-secukinumab-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Secukinumab prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-secukinumab-preserved",
+          "type": "contains_any",
+          "values": [
+            "secukinumab"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Secukinumab."
+      ]
+    },
+    {
+      "id": "pharmacy-ixekizumab-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Ixekizumab prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-ixekizumab-preserved",
+          "type": "contains_any",
+          "values": [
+            "ixekizumab"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Ixekizumab."
+      ]
+    },
+    {
+      "id": "pharmacy-guselkumab-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Guselkumab prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-guselkumab-preserved",
+          "type": "contains_any",
+          "values": [
+            "guselkumab"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Guselkumab."
+      ]
+    },
+    {
+      "id": "pharmacy-risankizumab-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Risankizumab prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-risankizumab-preserved",
+          "type": "contains_any",
+          "values": [
+            "risankizumab"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Risankizumab."
+      ]
+    },
+    {
+      "id": "pharmacy-tildrakizumab-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Tildrakizumab prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-tildrakizumab-preserved",
+          "type": "contains_any",
+          "values": [
+            "tildrakizumab"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Tildrakizumab."
+      ]
+    },
+    {
+      "id": "pharmacy-brodalumab-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Brodalumab prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-brodalumab-preserved",
+          "type": "contains_any",
+          "values": [
+            "brodalumab"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Brodalumab."
+      ]
+    },
+    {
+      "id": "pharmacy-golimumab-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Golimumab prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-golimumab-preserved",
+          "type": "contains_any",
+          "values": [
+            "golimumab"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Golimumab."
+      ]
+    },
+    {
+      "id": "pharmacy-vedolizumab-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Vedolizumab prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-vedolizumab-preserved",
+          "type": "contains_any",
+          "values": [
+            "vedolizumab"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Vedolizumab."
+      ]
+    },
+    {
+      "id": "pharmacy-mirikizumab-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Mirikizumab prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-mirikizumab-preserved",
+          "type": "contains_any",
+          "values": [
+            "mirikizumab"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Mirikizumab."
+      ]
+    },
+    {
+      "id": "pharmacy-deucravacitinib-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Deucravacitinib prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-deucravacitinib-preserved",
+          "type": "contains_any",
+          "values": [
+            "deucravacitinib"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Deucravacitinib."
+      ]
+    },
+    {
+      "id": "pharmacy-elagolix-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Elagolix prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-elagolix-preserved",
+          "type": "contains_any",
+          "values": [
+            "elagolix"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Elagolix."
+      ]
+    },
+    {
+      "id": "pharmacy-relugolix-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Relugolix prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-relugolix-preserved",
+          "type": "contains_any",
+          "values": [
+            "relugolix"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Relugolix."
+      ]
+    },
+    {
+      "id": "pharmacy-ospemifene-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Ospemifene prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-ospemifene-preserved",
+          "type": "contains_any",
+          "values": [
+            "ospemifene"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Ospemifene."
+      ]
+    },
+    {
+      "id": "pharmacy-flibanserin-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Flibanserin prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-flibanserin-preserved",
+          "type": "contains_any",
+          "values": [
+            "flibanserin"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Flibanserin."
+      ]
+    },
+    {
+      "id": "pharmacy-bremelanotide-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Bremelanotide prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-bremelanotide-preserved",
+          "type": "contains_any",
+          "values": [
+            "bremelanotide"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Bremelanotide."
+      ]
+    },
+    {
+      "id": "pharmacy-lofexidine-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Lofexidine prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-lofexidine-preserved",
+          "type": "contains_any",
+          "values": [
+            "lofexidine"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Lofexidine."
+      ]
+    },
+    {
+      "id": "pharmacy-lasmiditan-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Lasmiditan prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-lasmiditan-preserved",
+          "type": "contains_any",
+          "values": [
+            "lasmiditan"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Lasmiditan."
+      ]
+    },
+    {
+      "id": "pharmacy-rimegepant-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Rimegepant prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-rimegepant-preserved",
+          "type": "contains_any",
+          "values": [
+            "rimegepant"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Rimegepant."
+      ]
+    },
+    {
+      "id": "pharmacy-ubrogepant-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Ubrogepant prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-ubrogepant-preserved",
+          "type": "contains_any",
+          "values": [
+            "ubrogepant"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Ubrogepant."
+      ]
+    },
+    {
+      "id": "pharmacy-atogepant-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Atogepant prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-atogepant-preserved",
+          "type": "contains_any",
+          "values": [
+            "atogepant"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Atogepant."
+      ]
+    },
+    {
+      "id": "pharmacy-erenumab-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Erenumab prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-erenumab-preserved",
+          "type": "contains_any",
+          "values": [
+            "erenumab"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Erenumab."
+      ]
+    },
+    {
+      "id": "pharmacy-fremanezumab-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Fremanezumab prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-fremanezumab-preserved",
+          "type": "contains_any",
+          "values": [
+            "fremanezumab"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Fremanezumab."
+      ]
+    },
+    {
+      "id": "pharmacy-galcanezumab-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Galcanezumab prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-galcanezumab-preserved",
+          "type": "contains_any",
+          "values": [
+            "galcanezumab"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Galcanezumab."
+      ]
+    },
+    {
+      "id": "pharmacy-eptinezumab-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Eptinezumab prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-eptinezumab-preserved",
+          "type": "contains_any",
+          "values": [
+            "eptinezumab"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Eptinezumab."
+      ]
+    },
+    {
+      "id": "pharmacy-valbenazine-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Valbenazine prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-valbenazine-preserved",
+          "type": "contains_any",
+          "values": [
+            "valbenazine"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Valbenazine."
+      ]
+    },
+    {
+      "id": "pharmacy-pimavanserin-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Pimavanserin prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-pimavanserin-preserved",
+          "type": "contains_any",
+          "values": [
+            "pimavanserin"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Pimavanserin."
+      ]
+    },
+    {
+      "id": "pharmacy-lumateperone-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Lumateperone prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-lumateperone-preserved",
+          "type": "contains_any",
+          "values": [
+            "lumateperone"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Lumateperone."
+      ]
+    },
+    {
+      "id": "pharmacy-brexpiprazole-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Brexpiprazole prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-brexpiprazole-preserved",
+          "type": "contains_any",
+          "values": [
+            "brexpiprazole"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Brexpiprazole."
+      ]
+    },
+    {
+      "id": "pharmacy-iloperidone-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Iloperidone prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-iloperidone-preserved",
+          "type": "contains_any",
+          "values": [
+            "iloperidone"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Iloperidone."
+      ]
+    },
+    {
+      "id": "pharmacy-asenapine-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Asenapine prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-asenapine-preserved",
+          "type": "contains_any",
+          "values": [
+            "asenapine"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Asenapine."
+      ]
+    },
+    {
+      "id": "pharmacy-paliperidone-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Paliperidone prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-paliperidone-preserved",
+          "type": "contains_any",
+          "values": [
+            "paliperidone"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Paliperidone."
+      ]
+    },
+    {
+      "id": "pharmacy-clozapine-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Clozapine prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-clozapine-preserved",
+          "type": "contains_any",
+          "values": [
+            "clozapine"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Clozapine."
+      ]
+    },
+    {
+      "id": "pharmacy-levomilnacipran-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Levomilnacipran prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-levomilnacipran-preserved",
+          "type": "contains_any",
+          "values": [
+            "levomilnacipran"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Levomilnacipran."
+      ]
+    },
+    {
+      "id": "pharmacy-desvenlafaxine-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Desvenlafaxine prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-desvenlafaxine-preserved",
+          "type": "contains_any",
+          "values": [
+            "desvenlafaxine"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Desvenlafaxine."
+      ]
+    },
+    {
+      "id": "pharmacy-vilazodone-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Vilazodone prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-vilazodone-preserved",
+          "type": "contains_any",
+          "values": [
+            "vilazodone"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Vilazodone."
+      ]
+    },
+    {
+      "id": "pharmacy-esketamine-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Esketamine prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-esketamine-preserved",
+          "type": "contains_any",
+          "values": [
+            "esketamine"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Esketamine."
+      ]
+    },
+    {
+      "id": "pharmacy-amantadine-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Amantadine prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-amantadine-preserved",
+          "type": "contains_any",
+          "values": [
+            "amantadine"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Amantadine."
+      ]
+    },
+    {
+      "id": "pharmacy-istradefylline-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Istradefylline prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-istradefylline-preserved",
+          "type": "contains_any",
+          "values": [
+            "istradefylline"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Istradefylline."
+      ]
+    },
+    {
+      "id": "pharmacy-safinamide-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Safinamide prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-safinamide-preserved",
+          "type": "contains_any",
+          "values": [
+            "safinamide"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Safinamide."
+      ]
+    },
+    {
+      "id": "pharmacy-opicapone-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Opicapone prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-opicapone-preserved",
+          "type": "contains_any",
+          "values": [
+            "opicapone"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Opicapone."
+      ]
+    },
+    {
+      "id": "pharmacy-eculizumab-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Eculizumab prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-eculizumab-preserved",
+          "type": "contains_any",
+          "values": [
+            "eculizumab"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Eculizumab."
+      ]
+    },
+    {
+      "id": "pharmacy-ravulizumab-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Ravulizumab prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-ravulizumab-preserved",
+          "type": "contains_any",
+          "values": [
+            "ravulizumab"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Ravulizumab."
+      ]
+    },
+    {
+      "id": "pharmacy-avacopan-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Avacopan prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-avacopan-preserved",
+          "type": "contains_any",
+          "values": [
+            "avacopan"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Avacopan."
+      ]
+    },
+    {
+      "id": "pharmacy-voclosporin-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Voclosporin prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-voclosporin-preserved",
+          "type": "contains_any",
+          "values": [
+            "voclosporin"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Voclosporin."
+      ]
+    },
+    {
+      "id": "pharmacy-belimumab-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Belimumab prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-belimumab-preserved",
+          "type": "contains_any",
+          "values": [
+            "belimumab"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Belimumab."
+      ]
+    },
+    {
+      "id": "pharmacy-anifrolumab-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Anifrolumab prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-anifrolumab-preserved",
+          "type": "contains_any",
+          "values": [
+            "anifrolumab"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Anifrolumab."
+      ]
+    },
+    {
+      "id": "pharmacy-lecanemab-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Lecanemab prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-lecanemab-preserved",
+          "type": "contains_any",
+          "values": [
+            "lecanemab"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Lecanemab."
+      ]
+    },
+    {
+      "id": "pharmacy-aducanumab-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Aducanumab prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-aducanumab-preserved",
+          "type": "contains_any",
+          "values": [
+            "aducanumab"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Aducanumab."
+      ]
+    },
+    {
+      "id": "pharmacy-donanemab-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Donanemab prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-donanemab-preserved",
+          "type": "contains_any",
+          "values": [
+            "donanemab"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Donanemab."
+      ]
+    },
+    {
+      "id": "pharmacy-tofersen-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Tofersen prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-tofersen-preserved",
+          "type": "contains_any",
+          "values": [
+            "tofersen"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Tofersen."
+      ]
+    },
+    {
+      "id": "pharmacy-nusinersen-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Nusinersen prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-nusinersen-preserved",
+          "type": "contains_any",
+          "values": [
+            "nusinersen"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Nusinersen."
+      ]
+    },
+    {
+      "id": "pharmacy-risdiplam-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Risdiplam prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-risdiplam-preserved",
+          "type": "contains_any",
+          "values": [
+            "risdiplam"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Risdiplam."
+      ]
+    },
+    {
+      "id": "pharmacy-patisiran-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Patisiran prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-patisiran-preserved",
+          "type": "contains_any",
+          "values": [
+            "patisiran"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Patisiran."
+      ]
+    },
+    {
+      "id": "pharmacy-inotersen-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Inotersen prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-inotersen-preserved",
+          "type": "contains_any",
+          "values": [
+            "inotersen"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Inotersen."
+      ]
+    },
+    {
+      "id": "pharmacy-vutrisiran-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Vutrisiran prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-vutrisiran-preserved",
+          "type": "contains_any",
+          "values": [
+            "vutrisiran"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Vutrisiran."
+      ]
+    },
+    {
+      "id": "pharmacy-lumasiran-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Lumasiran prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-lumasiran-preserved",
+          "type": "contains_any",
+          "values": [
+            "lumasiran"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Lumasiran."
+      ]
+    },
+    {
+      "id": "pharmacy-givosiran-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Givosiran prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-givosiran-preserved",
+          "type": "contains_any",
+          "values": [
+            "givosiran"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Givosiran."
+      ]
+    },
+    {
+      "id": "pharmacy-voxelotor-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Voxelotor prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-voxelotor-preserved",
+          "type": "contains_any",
+          "values": [
+            "voxelotor"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Voxelotor."
+      ]
+    },
+    {
+      "id": "pharmacy-crizanlizumab-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Crizanlizumab prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-crizanlizumab-preserved",
+          "type": "contains_any",
+          "values": [
+            "crizanlizumab"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Crizanlizumab."
+      ]
+    },
+    {
+      "id": "pharmacy-luspatercept-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Luspatercept prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-luspatercept-preserved",
+          "type": "contains_any",
+          "values": [
+            "luspatercept"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Luspatercept."
+      ]
+    },
+    {
+      "id": "pharmacy-avatrombopag-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Avatrombopag prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-avatrombopag-preserved",
+          "type": "contains_any",
+          "values": [
+            "avatrombopag"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Avatrombopag."
+      ]
+    },
+    {
+      "id": "pharmacy-fostamatinib-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Fostamatinib prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-fostamatinib-preserved",
+          "type": "contains_any",
+          "values": [
+            "fostamatinib"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Fostamatinib."
+      ]
+    },
+    {
+      "id": "pharmacy-fedratinib-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Fedratinib prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-fedratinib-preserved",
+          "type": "contains_any",
+          "values": [
+            "fedratinib"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Fedratinib."
+      ]
+    },
+    {
+      "id": "pharmacy-ruxolitinib-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Ruxolitinib prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-ruxolitinib-preserved",
+          "type": "contains_any",
+          "values": [
+            "ruxolitinib"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Ruxolitinib."
+      ]
+    },
+    {
+      "id": "pharmacy-pacritinib-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Pacritinib prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-pacritinib-preserved",
+          "type": "contains_any",
+          "values": [
+            "pacritinib"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Pacritinib."
+      ]
+    },
+    {
+      "id": "pharmacy-momelotinib-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Momelotinib prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-momelotinib-preserved",
+          "type": "contains_any",
+          "values": [
+            "momelotinib"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Momelotinib."
+      ]
+    },
+    {
+      "id": "travel-icelandair-ouagadougou-reykjavik",
+      "industry": "travel",
+      "intended_text": "Icelandair flight 200 from Ouagadougou to Reykjavik departs on January first at 6:45 PM.",
+      "assertions": [
+        {
+          "id": "icelandair-flight-200",
+          "type": "contains_any",
+          "values": [
+            "flight 200",
+            "flight 200"
+          ]
+        },
+        {
+          "id": "ouagadougou-to-reykjavik",
+          "type": "contains_any",
+          "values": [
+            "ouagadougou to reykjavik"
+          ]
+        },
+        {
+          "id": "date-january-1",
+          "type": "contains_any",
+          "values": [
+            "january first",
+            "january 1"
+          ]
+        },
+        {
+          "id": "departure-6-45-pm",
+          "type": "contains_any",
+          "values": [
+            "6:45 pm",
+            "six forty-five pm"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken audio clearly preserves Icelandair flight 200 from Ouagadougou to Reykjavik.",
+        "The spoken audio clearly preserves the intended January 1 travel date.",
+        "The spoken audio clearly preserves the intended 6:45 PM departure time."
+      ]
+    },
+    {
+      "id": "travel-ethiopian-airlines-reykjavik-nuuk",
+      "industry": "travel",
+      "intended_text": "Ethiopian Airlines flight 201 from Reykjavik to Nuuk departs on February second at 9:15 AM.",
+      "assertions": [
+        {
+          "id": "ethiopian-airlines-flight-201",
+          "type": "contains_any",
+          "values": [
+            "flight 201",
+            "flight 201"
+          ]
+        },
+        {
+          "id": "reykjavik-to-nuuk",
+          "type": "contains_any",
+          "values": [
+            "reykjavik to nuuk"
+          ]
+        },
+        {
+          "id": "date-february-2",
+          "type": "contains_any",
+          "values": [
+            "february second",
+            "february 2"
+          ]
+        },
+        {
+          "id": "departure-9-15-am",
+          "type": "contains_any",
+          "values": [
+            "9:15 am",
+            "nine fifteen am"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken audio clearly preserves Ethiopian Airlines flight 201 from Reykjavik to Nuuk.",
+        "The spoken audio clearly preserves the intended February 2 travel date.",
+        "The spoken audio clearly preserves the intended 9:15 AM departure time."
+      ]
+    },
+    {
+      "id": "travel-turkish-airlines-nuuk-yogyakarta",
+      "industry": "travel",
+      "intended_text": "Turkish Airlines flight 202 from Nuuk to Yogyakarta departs on March third at 2:30 PM.",
+      "assertions": [
+        {
+          "id": "turkish-airlines-flight-202",
+          "type": "contains_any",
+          "values": [
+            "flight 202",
+            "flight 202"
+          ]
+        },
+        {
+          "id": "nuuk-to-yogyakarta",
+          "type": "contains_any",
+          "values": [
+            "nuuk to yogyakarta"
+          ]
+        },
+        {
+          "id": "date-march-3",
+          "type": "contains_any",
+          "values": [
+            "march third",
+            "march 3"
+          ]
+        },
+        {
+          "id": "departure-2-30-pm",
+          "type": "contains_any",
+          "values": [
+            "2:30 pm",
+            "two thirty pm"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken audio clearly preserves Turkish Airlines flight 202 from Nuuk to Yogyakarta.",
+        "The spoken audio clearly preserves the intended March 3 travel date.",
+        "The spoken audio clearly preserves the intended 2:30 PM departure time."
+      ]
+    },
+    {
+      "id": "travel-latam-yogyakarta-thiruvananthapuram",
+      "industry": "travel",
+      "intended_text": "LATAM flight 203 from Yogyakarta to Thiruvananthapuram departs on April fourth at 11:05 AM.",
+      "assertions": [
+        {
+          "id": "latam-flight-203",
+          "type": "contains_any",
+          "values": [
+            "flight 203",
+            "flight 203"
+          ]
+        },
+        {
+          "id": "yogyakarta-to-thiruvananthapuram",
+          "type": "contains_any",
+          "values": [
+            "yogyakarta to thiruvananthapuram"
+          ]
+        },
+        {
+          "id": "date-april-4",
+          "type": "contains_any",
+          "values": [
+            "april fourth",
+            "april 4"
+          ]
+        },
+        {
+          "id": "departure-11-5-am",
+          "type": "contains_any",
+          "values": [
+            "11:05 am",
+            "eleven oh-five am"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken audio clearly preserves LATAM flight 203 from Yogyakarta to Thiruvananthapuram.",
+        "The spoken audio clearly preserves the intended April 4 travel date.",
+        "The spoken audio clearly preserves the intended 11:05 AM departure time."
+      ]
+    },
+    {
+      "id": "travel-finnair-thiruvananthapuram-kaohsiung",
+      "industry": "travel",
+      "intended_text": "Finnair flight 204 from Thiruvananthapuram to Kaohsiung departs on May fifth at 4:20 PM.",
+      "assertions": [
+        {
+          "id": "finnair-flight-204",
+          "type": "contains_any",
+          "values": [
+            "flight 204",
+            "flight 204"
+          ]
+        },
+        {
+          "id": "thiruvananthapuram-to-kaohsiung",
+          "type": "contains_any",
+          "values": [
+            "thiruvananthapuram to kaohsiung"
+          ]
+        },
+        {
+          "id": "date-may-5",
+          "type": "contains_any",
+          "values": [
+            "may fifth",
+            "may 5"
+          ]
+        },
+        {
+          "id": "departure-4-20-pm",
+          "type": "contains_any",
+          "values": [
+            "4:20 pm",
+            "four twenty pm"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken audio clearly preserves Finnair flight 204 from Thiruvananthapuram to Kaohsiung.",
+        "The spoken audio clearly preserves the intended May 5 travel date.",
+        "The spoken audio clearly preserves the intended 4:20 PM departure time."
+      ]
+    },
+    {
+      "id": "travel-cathay-pacific-kaohsiung-chongqing",
+      "industry": "travel",
+      "intended_text": "Cathay Pacific flight 205 from Kaohsiung to Chongqing departs on June sixth at 7:50 PM.",
+      "assertions": [
+        {
+          "id": "cathay-pacific-flight-205",
+          "type": "contains_any",
+          "values": [
+            "flight 205",
+            "flight 205"
+          ]
+        },
+        {
+          "id": "kaohsiung-to-chongqing",
+          "type": "contains_any",
+          "values": [
+            "kaohsiung to chongqing"
+          ]
+        },
+        {
+          "id": "date-june-6",
+          "type": "contains_any",
+          "values": [
+            "june sixth",
+            "june 6"
+          ]
+        },
+        {
+          "id": "departure-7-50-pm",
+          "type": "contains_any",
+          "values": [
+            "7:50 pm",
+            "seven fifty pm"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken audio clearly preserves Cathay Pacific flight 205 from Kaohsiung to Chongqing.",
+        "The spoken audio clearly preserves the intended June 6 travel date.",
+        "The spoken audio clearly preserves the intended 7:50 PM departure time."
+      ]
+    },
+    {
+      "id": "travel-singapore-airlines-chongqing-xian",
+      "industry": "travel",
+      "intended_text": "Singapore Airlines flight 206 from Chongqing to Xi'an departs on July seventh at 10:10 AM.",
+      "assertions": [
+        {
+          "id": "singapore-airlines-flight-206",
+          "type": "contains_any",
+          "values": [
+            "flight 206",
+            "flight 206"
+          ]
+        },
+        {
+          "id": "chongqing-to-xi'an",
+          "type": "contains_any",
+          "values": [
+            "chongqing to xi'an"
+          ]
+        },
+        {
+          "id": "date-july-7",
+          "type": "contains_any",
+          "values": [
+            "july seventh",
+            "july 7"
+          ]
+        },
+        {
+          "id": "departure-10-10-am",
+          "type": "contains_any",
+          "values": [
+            "10:10 am",
+            "ten ten am"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken audio clearly preserves Singapore Airlines flight 206 from Chongqing to Xi'an.",
+        "The spoken audio clearly preserves the intended July 7 travel date.",
+        "The spoken audio clearly preserves the intended 10:10 AM departure time."
+      ]
+    },
+    {
+      "id": "travel-qatar-airways-xian-urumqi",
+      "industry": "travel",
+      "intended_text": "Qatar Airways flight 207 from Xi'an to Urumqi departs on August eighth at 1:35 PM.",
+      "assertions": [
+        {
+          "id": "qatar-airways-flight-207",
+          "type": "contains_any",
+          "values": [
+            "flight 207",
+            "flight 207"
+          ]
+        },
+        {
+          "id": "xi'an-to-urumqi",
+          "type": "contains_any",
+          "values": [
+            "xi'an to urumqi"
+          ]
+        },
+        {
+          "id": "date-august-8",
+          "type": "contains_any",
+          "values": [
+            "august eighth",
+            "august 8"
+          ]
+        },
+        {
+          "id": "departure-1-35-pm",
+          "type": "contains_any",
+          "values": [
+            "1:35 pm",
+            "one thirty-five pm"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken audio clearly preserves Qatar Airways flight 207 from Xi'an to Urumqi.",
+        "The spoken audio clearly preserves the intended August 8 travel date.",
+        "The spoken audio clearly preserves the intended 1:35 PM departure time."
+      ]
+    },
+    {
+      "id": "travel-emirates-urumqi-bratislava",
+      "industry": "travel",
+      "intended_text": "Emirates flight 208 from Urumqi to Bratislava departs on September ninth at 3:00 PM.",
+      "assertions": [
+        {
+          "id": "emirates-flight-208",
+          "type": "contains_any",
+          "values": [
+            "flight 208",
+            "flight 208"
+          ]
+        },
+        {
+          "id": "urumqi-to-bratislava",
+          "type": "contains_any",
+          "values": [
+            "urumqi to bratislava"
+          ]
+        },
+        {
+          "id": "date-september-9",
+          "type": "contains_any",
+          "values": [
+            "september ninth",
+            "september 9"
+          ]
+        },
+        {
+          "id": "departure-3-0-pm",
+          "type": "contains_any",
+          "values": [
+            "3:00 pm",
+            "three o'clock pm"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken audio clearly preserves Emirates flight 208 from Urumqi to Bratislava.",
+        "The spoken audio clearly preserves the intended September 9 travel date.",
+        "The spoken audio clearly preserves the intended 3:00 PM departure time."
+      ]
+    },
+    {
+      "id": "travel-egyptair-bratislava-dubrovnik",
+      "industry": "travel",
+      "intended_text": "EgyptAir flight 209 from Bratislava to Dubrovnik departs on October tenth at 8:25 AM.",
+      "assertions": [
+        {
+          "id": "egyptair-flight-209",
+          "type": "contains_any",
+          "values": [
+            "flight 209",
+            "flight 209"
+          ]
+        },
+        {
+          "id": "bratislava-to-dubrovnik",
+          "type": "contains_any",
+          "values": [
+            "bratislava to dubrovnik"
+          ]
+        },
+        {
+          "id": "date-october-10",
+          "type": "contains_any",
+          "values": [
+            "october tenth",
+            "october 10"
+          ]
+        },
+        {
+          "id": "departure-8-25-am",
+          "type": "contains_any",
+          "values": [
+            "8:25 am",
+            "eight twenty-five am"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken audio clearly preserves EgyptAir flight 209 from Bratislava to Dubrovnik.",
+        "The spoken audio clearly preserves the intended October 10 travel date.",
+        "The spoken audio clearly preserves the intended 8:25 AM departure time."
+      ]
+    },
+    {
+      "id": "travel-royal-air-maroc-dubrovnik-ljubljana",
+      "industry": "travel",
+      "intended_text": "Royal Air Maroc flight 210 from Dubrovnik to Ljubljana departs on November eleventh at 5:55 PM.",
+      "assertions": [
+        {
+          "id": "royal-air-maroc-flight-210",
+          "type": "contains_any",
+          "values": [
+            "flight 210",
+            "flight 210"
+          ]
+        },
+        {
+          "id": "dubrovnik-to-ljubljana",
+          "type": "contains_any",
+          "values": [
+            "dubrovnik to ljubljana"
+          ]
+        },
+        {
+          "id": "date-november-11",
+          "type": "contains_any",
+          "values": [
+            "november eleventh",
+            "november 11"
+          ]
+        },
+        {
+          "id": "departure-5-55-pm",
+          "type": "contains_any",
+          "values": [
+            "5:55 pm",
+            "five fifty-five pm"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken audio clearly preserves Royal Air Maroc flight 210 from Dubrovnik to Ljubljana.",
+        "The spoken audio clearly preserves the intended November 11 travel date.",
+        "The spoken audio clearly preserves the intended 5:55 PM departure time."
+      ]
+    },
+    {
+      "id": "travel-kenya-airways-ljubljana-krakow",
+      "industry": "travel",
+      "intended_text": "Kenya Airways flight 211 from Ljubljana to Krakow departs on December twelfth at 12:40 PM.",
+      "assertions": [
+        {
+          "id": "kenya-airways-flight-211",
+          "type": "contains_any",
+          "values": [
+            "flight 211",
+            "flight 211"
+          ]
+        },
+        {
+          "id": "ljubljana-to-krakow",
+          "type": "contains_any",
+          "values": [
+            "ljubljana to krakow"
+          ]
+        },
+        {
+          "id": "date-december-12",
+          "type": "contains_any",
+          "values": [
+            "december twelfth",
+            "december 12"
+          ]
+        },
+        {
+          "id": "departure-12-40-pm",
+          "type": "contains_any",
+          "values": [
+            "12:40 pm",
+            "twelve forty pm"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken audio clearly preserves Kenya Airways flight 211 from Ljubljana to Krakow.",
+        "The spoken audio clearly preserves the intended December 12 travel date.",
+        "The spoken audio clearly preserves the intended 12:40 PM departure time."
+      ]
+    },
+    {
+      "id": "travel-lot-polish-airlines-krakow-wroclaw",
+      "industry": "travel",
+      "intended_text": "LOT Polish Airlines flight 212 from Krakow to Wroclaw departs on January thirteenth at 6:45 PM.",
+      "assertions": [
+        {
+          "id": "lot-polish-airlines-flight-212",
+          "type": "contains_any",
+          "values": [
+            "flight 212",
+            "flight 212"
+          ]
+        },
+        {
+          "id": "krakow-to-wroclaw",
+          "type": "contains_any",
+          "values": [
+            "krakow to wroclaw"
+          ]
+        },
+        {
+          "id": "date-january-13",
+          "type": "contains_any",
+          "values": [
+            "january thirteenth",
+            "january 13"
+          ]
+        },
+        {
+          "id": "departure-6-45-pm",
+          "type": "contains_any",
+          "values": [
+            "6:45 pm",
+            "six forty-five pm"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken audio clearly preserves LOT Polish Airlines flight 212 from Krakow to Wroclaw.",
+        "The spoken audio clearly preserves the intended January 13 travel date.",
+        "The spoken audio clearly preserves the intended 6:45 PM departure time."
+      ]
+    },
+    {
+      "id": "travel-croatia-airlines-wroclaw-gdansk",
+      "industry": "travel",
+      "intended_text": "Croatia Airlines flight 213 from Wroclaw to Gdansk departs on February fourteenth at 9:15 AM.",
+      "assertions": [
+        {
+          "id": "croatia-airlines-flight-213",
+          "type": "contains_any",
+          "values": [
+            "flight 213",
+            "flight 213"
+          ]
+        },
+        {
+          "id": "wroclaw-to-gdansk",
+          "type": "contains_any",
+          "values": [
+            "wroclaw to gdansk"
+          ]
+        },
+        {
+          "id": "date-february-14",
+          "type": "contains_any",
+          "values": [
+            "february fourteenth",
+            "february 14"
+          ]
+        },
+        {
+          "id": "departure-9-15-am",
+          "type": "contains_any",
+          "values": [
+            "9:15 am",
+            "nine fifteen am"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken audio clearly preserves Croatia Airlines flight 213 from Wroclaw to Gdansk.",
+        "The spoken audio clearly preserves the intended February 14 travel date.",
+        "The spoken audio clearly preserves the intended 9:15 AM departure time."
+      ]
+    },
+    {
+      "id": "travel-air-baltic-gdansk-czestochowa",
+      "industry": "travel",
+      "intended_text": "Air Baltic flight 214 from Gdansk to Czestochowa departs on March fifteenth at 2:30 PM.",
+      "assertions": [
+        {
+          "id": "air-baltic-flight-214",
+          "type": "contains_any",
+          "values": [
+            "flight 214",
+            "flight 214"
+          ]
+        },
+        {
+          "id": "gdansk-to-czestochowa",
+          "type": "contains_any",
+          "values": [
+            "gdansk to czestochowa"
+          ]
+        },
+        {
+          "id": "date-march-15",
+          "type": "contains_any",
+          "values": [
+            "march fifteenth",
+            "march 15"
+          ]
+        },
+        {
+          "id": "departure-2-30-pm",
+          "type": "contains_any",
+          "values": [
+            "2:30 pm",
+            "two thirty pm"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken audio clearly preserves Air Baltic flight 214 from Gdansk to Czestochowa.",
+        "The spoken audio clearly preserves the intended March 15 travel date.",
+        "The spoken audio clearly preserves the intended 2:30 PM departure time."
+      ]
+    },
+    {
+      "id": "travel-uzbekistan-airways-czestochowa-kaunas",
+      "industry": "travel",
+      "intended_text": "Uzbekistan Airways flight 215 from Czestochowa to Kaunas departs on April sixteenth at 11:05 AM.",
+      "assertions": [
+        {
+          "id": "uzbekistan-airways-flight-215",
+          "type": "contains_any",
+          "values": [
+            "flight 215",
+            "flight 215"
+          ]
+        },
+        {
+          "id": "czestochowa-to-kaunas",
+          "type": "contains_any",
+          "values": [
+            "czestochowa to kaunas"
+          ]
+        },
+        {
+          "id": "date-april-16",
+          "type": "contains_any",
+          "values": [
+            "april sixteenth",
+            "april 16"
+          ]
+        },
+        {
+          "id": "departure-11-5-am",
+          "type": "contains_any",
+          "values": [
+            "11:05 am",
+            "eleven oh-five am"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken audio clearly preserves Uzbekistan Airways flight 215 from Czestochowa to Kaunas.",
+        "The spoken audio clearly preserves the intended April 16 travel date.",
+        "The spoken audio clearly preserves the intended 11:05 AM departure time."
+      ]
+    },
+    {
+      "id": "travel-china-southern-kaunas-vilnius",
+      "industry": "travel",
+      "intended_text": "China Southern flight 216 from Kaunas to Vilnius departs on May seventeenth at 4:20 PM.",
+      "assertions": [
+        {
+          "id": "china-southern-flight-216",
+          "type": "contains_any",
+          "values": [
+            "flight 216",
+            "flight 216"
+          ]
+        },
+        {
+          "id": "kaunas-to-vilnius",
+          "type": "contains_any",
+          "values": [
+            "kaunas to vilnius"
+          ]
+        },
+        {
+          "id": "date-may-17",
+          "type": "contains_any",
+          "values": [
+            "may seventeenth",
+            "may 17"
+          ]
+        },
+        {
+          "id": "departure-4-20-pm",
+          "type": "contains_any",
+          "values": [
+            "4:20 pm",
+            "four twenty pm"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken audio clearly preserves China Southern flight 216 from Kaunas to Vilnius.",
+        "The spoken audio clearly preserves the intended May 17 travel date.",
+        "The spoken audio clearly preserves the intended 4:20 PM departure time."
+      ]
+    },
+    {
+      "id": "travel-eva-air-vilnius-tallinn",
+      "industry": "travel",
+      "intended_text": "EVA Air flight 217 from Vilnius to Tallinn departs on June eighteenth at 7:50 PM.",
+      "assertions": [
+        {
+          "id": "eva-air-flight-217",
+          "type": "contains_any",
+          "values": [
+            "flight 217",
+            "flight 217"
+          ]
+        },
+        {
+          "id": "vilnius-to-tallinn",
+          "type": "contains_any",
+          "values": [
+            "vilnius to tallinn"
+          ]
+        },
+        {
+          "id": "date-june-18",
+          "type": "contains_any",
+          "values": [
+            "june eighteenth",
+            "june 18"
+          ]
+        },
+        {
+          "id": "departure-7-50-pm",
+          "type": "contains_any",
+          "values": [
+            "7:50 pm",
+            "seven fifty pm"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken audio clearly preserves EVA Air flight 217 from Vilnius to Tallinn.",
+        "The spoken audio clearly preserves the intended June 18 travel date.",
+        "The spoken audio clearly preserves the intended 7:50 PM departure time."
+      ]
+    },
+    {
+      "id": "travel-garuda-indonesia-tallinn-thessaloniki",
+      "industry": "travel",
+      "intended_text": "Garuda Indonesia flight 218 from Tallinn to Thessaloniki departs on July nineteenth at 10:10 AM.",
+      "assertions": [
+        {
+          "id": "garuda-indonesia-flight-218",
+          "type": "contains_any",
+          "values": [
+            "flight 218",
+            "flight 218"
+          ]
+        },
+        {
+          "id": "tallinn-to-thessaloniki",
+          "type": "contains_any",
+          "values": [
+            "tallinn to thessaloniki"
+          ]
+        },
+        {
+          "id": "date-july-19",
+          "type": "contains_any",
+          "values": [
+            "july nineteenth",
+            "july 19"
+          ]
+        },
+        {
+          "id": "departure-10-10-am",
+          "type": "contains_any",
+          "values": [
+            "10:10 am",
+            "ten ten am"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken audio clearly preserves Garuda Indonesia flight 218 from Tallinn to Thessaloniki.",
+        "The spoken audio clearly preserves the intended July 19 travel date.",
+        "The spoken audio clearly preserves the intended 10:10 AM departure time."
+      ]
+    },
+    {
+      "id": "travel-turkmenistan-airlines-thessaloniki-heraklion",
+      "industry": "travel",
+      "intended_text": "Turkmenistan Airlines flight 219 from Thessaloniki to Heraklion departs on August twentieth at 1:35 PM.",
+      "assertions": [
+        {
+          "id": "turkmenistan-airlines-flight-219",
+          "type": "contains_any",
+          "values": [
+            "flight 219",
+            "flight 219"
+          ]
+        },
+        {
+          "id": "thessaloniki-to-heraklion",
+          "type": "contains_any",
+          "values": [
+            "thessaloniki to heraklion"
+          ]
+        },
+        {
+          "id": "date-august-20",
+          "type": "contains_any",
+          "values": [
+            "august twentieth",
+            "august 20"
+          ]
+        },
+        {
+          "id": "departure-1-35-pm",
+          "type": "contains_any",
+          "values": [
+            "1:35 pm",
+            "one thirty-five pm"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken audio clearly preserves Turkmenistan Airlines flight 219 from Thessaloniki to Heraklion.",
+        "The spoken audio clearly preserves the intended August 20 travel date.",
+        "The spoken audio clearly preserves the intended 1:35 PM departure time."
+      ]
+    },
+    {
+      "id": "travel-icelandair-heraklion-nicosia",
+      "industry": "travel",
+      "intended_text": "Icelandair flight 220 from Heraklion to Nicosia departs on September twenty-first at 3:00 PM.",
+      "assertions": [
+        {
+          "id": "icelandair-flight-220",
+          "type": "contains_any",
+          "values": [
+            "flight 220",
+            "flight 220"
+          ]
+        },
+        {
+          "id": "heraklion-to-nicosia",
+          "type": "contains_any",
+          "values": [
+            "heraklion to nicosia"
+          ]
+        },
+        {
+          "id": "date-september-21",
+          "type": "contains_any",
+          "values": [
+            "september twenty-first",
+            "september 21"
+          ]
+        },
+        {
+          "id": "departure-3-0-pm",
+          "type": "contains_any",
+          "values": [
+            "3:00 pm",
+            "three o'clock pm"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken audio clearly preserves Icelandair flight 220 from Heraklion to Nicosia.",
+        "The spoken audio clearly preserves the intended September 21 travel date.",
+        "The spoken audio clearly preserves the intended 3:00 PM departure time."
+      ]
+    },
+    {
+      "id": "travel-ethiopian-airlines-nicosia-marrakesh",
+      "industry": "travel",
+      "intended_text": "Ethiopian Airlines flight 221 from Nicosia to Marrakesh departs on October twenty-second at 8:25 AM.",
+      "assertions": [
+        {
+          "id": "ethiopian-airlines-flight-221",
+          "type": "contains_any",
+          "values": [
+            "flight 221",
+            "flight 221"
+          ]
+        },
+        {
+          "id": "nicosia-to-marrakesh",
+          "type": "contains_any",
+          "values": [
+            "nicosia to marrakesh"
+          ]
+        },
+        {
+          "id": "date-october-22",
+          "type": "contains_any",
+          "values": [
+            "october twenty-second",
+            "october 22"
+          ]
+        },
+        {
+          "id": "departure-8-25-am",
+          "type": "contains_any",
+          "values": [
+            "8:25 am",
+            "eight twenty-five am"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken audio clearly preserves Ethiopian Airlines flight 221 from Nicosia to Marrakesh.",
+        "The spoken audio clearly preserves the intended October 22 travel date.",
+        "The spoken audio clearly preserves the intended 8:25 AM departure time."
+      ]
+    },
+    {
+      "id": "travel-turkish-airlines-marrakesh-antananarivo",
+      "industry": "travel",
+      "intended_text": "Turkish Airlines flight 222 from Marrakesh to Antananarivo departs on November twenty-third at 5:55 PM.",
+      "assertions": [
+        {
+          "id": "turkish-airlines-flight-222",
+          "type": "contains_any",
+          "values": [
+            "flight 222",
+            "flight 222"
+          ]
+        },
+        {
+          "id": "marrakesh-to-antananarivo",
+          "type": "contains_any",
+          "values": [
+            "marrakesh to antananarivo"
+          ]
+        },
+        {
+          "id": "date-november-23",
+          "type": "contains_any",
+          "values": [
+            "november twenty-third",
+            "november 23"
+          ]
+        },
+        {
+          "id": "departure-5-55-pm",
+          "type": "contains_any",
+          "values": [
+            "5:55 pm",
+            "five fifty-five pm"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken audio clearly preserves Turkish Airlines flight 222 from Marrakesh to Antananarivo.",
+        "The spoken audio clearly preserves the intended November 23 travel date.",
+        "The spoken audio clearly preserves the intended 5:55 PM departure time."
+      ]
+    },
+    {
+      "id": "travel-latam-antananarivo-nouakchott",
+      "industry": "travel",
+      "intended_text": "LATAM flight 223 from Antananarivo to Nouakchott departs on December twenty-fourth at 12:40 PM.",
+      "assertions": [
+        {
+          "id": "latam-flight-223",
+          "type": "contains_any",
+          "values": [
+            "flight 223",
+            "flight 223"
+          ]
+        },
+        {
+          "id": "antananarivo-to-nouakchott",
+          "type": "contains_any",
+          "values": [
+            "antananarivo to nouakchott"
+          ]
+        },
+        {
+          "id": "date-december-24",
+          "type": "contains_any",
+          "values": [
+            "december twenty-fourth",
+            "december 24"
+          ]
+        },
+        {
+          "id": "departure-12-40-pm",
+          "type": "contains_any",
+          "values": [
+            "12:40 pm",
+            "twelve forty pm"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken audio clearly preserves LATAM flight 223 from Antananarivo to Nouakchott.",
+        "The spoken audio clearly preserves the intended December 24 travel date.",
+        "The spoken audio clearly preserves the intended 12:40 PM departure time."
+      ]
+    },
+    {
+      "id": "travel-finnair-nouakchott-djibouti",
+      "industry": "travel",
+      "intended_text": "Finnair flight 224 from Nouakchott to Djibouti departs on January twenty-fifth at 6:45 PM.",
+      "assertions": [
+        {
+          "id": "finnair-flight-224",
+          "type": "contains_any",
+          "values": [
+            "flight 224",
+            "flight 224"
+          ]
+        },
+        {
+          "id": "nouakchott-to-djibouti",
+          "type": "contains_any",
+          "values": [
+            "nouakchott to djibouti"
+          ]
+        },
+        {
+          "id": "date-january-25",
+          "type": "contains_any",
+          "values": [
+            "january twenty-fifth",
+            "january 25"
+          ]
+        },
+        {
+          "id": "departure-6-45-pm",
+          "type": "contains_any",
+          "values": [
+            "6:45 pm",
+            "six forty-five pm"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken audio clearly preserves Finnair flight 224 from Nouakchott to Djibouti.",
+        "The spoken audio clearly preserves the intended January 25 travel date.",
+        "The spoken audio clearly preserves the intended 6:45 PM departure time."
+      ]
+    },
+    {
+      "id": "travel-cathay-pacific-djibouti-bujumbura",
+      "industry": "travel",
+      "intended_text": "Cathay Pacific flight 225 from Djibouti to Bujumbura departs on February twenty-sixth at 9:15 AM.",
+      "assertions": [
+        {
+          "id": "cathay-pacific-flight-225",
+          "type": "contains_any",
+          "values": [
+            "flight 225",
+            "flight 225"
+          ]
+        },
+        {
+          "id": "djibouti-to-bujumbura",
+          "type": "contains_any",
+          "values": [
+            "djibouti to bujumbura"
+          ]
+        },
+        {
+          "id": "date-february-26",
+          "type": "contains_any",
+          "values": [
+            "february twenty-sixth",
+            "february 26"
+          ]
+        },
+        {
+          "id": "departure-9-15-am",
+          "type": "contains_any",
+          "values": [
+            "9:15 am",
+            "nine fifteen am"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken audio clearly preserves Cathay Pacific flight 225 from Djibouti to Bujumbura.",
+        "The spoken audio clearly preserves the intended February 26 travel date.",
+        "The spoken audio clearly preserves the intended 9:15 AM departure time."
+      ]
+    },
+    {
+      "id": "travel-singapore-airlines-bujumbura-yaounde",
+      "industry": "travel",
+      "intended_text": "Singapore Airlines flight 226 from Bujumbura to Yaounde departs on March twenty-seventh at 2:30 PM.",
+      "assertions": [
+        {
+          "id": "singapore-airlines-flight-226",
+          "type": "contains_any",
+          "values": [
+            "flight 226",
+            "flight 226"
+          ]
+        },
+        {
+          "id": "bujumbura-to-yaounde",
+          "type": "contains_any",
+          "values": [
+            "bujumbura to yaounde"
+          ]
+        },
+        {
+          "id": "date-march-27",
+          "type": "contains_any",
+          "values": [
+            "march twenty-seventh",
+            "march 27"
+          ]
+        },
+        {
+          "id": "departure-2-30-pm",
+          "type": "contains_any",
+          "values": [
+            "2:30 pm",
+            "two thirty pm"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken audio clearly preserves Singapore Airlines flight 226 from Bujumbura to Yaounde.",
+        "The spoken audio clearly preserves the intended March 27 travel date.",
+        "The spoken audio clearly preserves the intended 2:30 PM departure time."
+      ]
+    },
+    {
+      "id": "travel-qatar-airways-yaounde-brazzaville",
+      "industry": "travel",
+      "intended_text": "Qatar Airways flight 227 from Yaounde to Brazzaville departs on April twenty-eighth at 11:05 AM.",
+      "assertions": [
+        {
+          "id": "qatar-airways-flight-227",
+          "type": "contains_any",
+          "values": [
+            "flight 227",
+            "flight 227"
+          ]
+        },
+        {
+          "id": "yaounde-to-brazzaville",
+          "type": "contains_any",
+          "values": [
+            "yaounde to brazzaville"
+          ]
+        },
+        {
+          "id": "date-april-28",
+          "type": "contains_any",
+          "values": [
+            "april twenty-eighth",
+            "april 28"
+          ]
+        },
+        {
+          "id": "departure-11-5-am",
+          "type": "contains_any",
+          "values": [
+            "11:05 am",
+            "eleven oh-five am"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken audio clearly preserves Qatar Airways flight 227 from Yaounde to Brazzaville.",
+        "The spoken audio clearly preserves the intended April 28 travel date.",
+        "The spoken audio clearly preserves the intended 11:05 AM departure time."
+      ]
+    },
+    {
+      "id": "travel-emirates-brazzaville-kinshasa",
+      "industry": "travel",
+      "intended_text": "Emirates flight 228 from Brazzaville to Kinshasa departs on May first at 4:20 PM.",
+      "assertions": [
+        {
+          "id": "emirates-flight-228",
+          "type": "contains_any",
+          "values": [
+            "flight 228",
+            "flight 228"
+          ]
+        },
+        {
+          "id": "brazzaville-to-kinshasa",
+          "type": "contains_any",
+          "values": [
+            "brazzaville to kinshasa"
+          ]
+        },
+        {
+          "id": "date-may-1",
+          "type": "contains_any",
+          "values": [
+            "may first",
+            "may 1"
+          ]
+        },
+        {
+          "id": "departure-4-20-pm",
+          "type": "contains_any",
+          "values": [
+            "4:20 pm",
+            "four twenty pm"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken audio clearly preserves Emirates flight 228 from Brazzaville to Kinshasa.",
+        "The spoken audio clearly preserves the intended May 1 travel date.",
+        "The spoken audio clearly preserves the intended 4:20 PM departure time."
+      ]
+    },
+    {
+      "id": "travel-egyptair-kinshasa-lilongwe",
+      "industry": "travel",
+      "intended_text": "EgyptAir flight 229 from Kinshasa to Lilongwe departs on June second at 7:50 PM.",
+      "assertions": [
+        {
+          "id": "egyptair-flight-229",
+          "type": "contains_any",
+          "values": [
+            "flight 229",
+            "flight 229"
+          ]
+        },
+        {
+          "id": "kinshasa-to-lilongwe",
+          "type": "contains_any",
+          "values": [
+            "kinshasa to lilongwe"
+          ]
+        },
+        {
+          "id": "date-june-2",
+          "type": "contains_any",
+          "values": [
+            "june second",
+            "june 2"
+          ]
+        },
+        {
+          "id": "departure-7-50-pm",
+          "type": "contains_any",
+          "values": [
+            "7:50 pm",
+            "seven fifty pm"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken audio clearly preserves EgyptAir flight 229 from Kinshasa to Lilongwe.",
+        "The spoken audio clearly preserves the intended June 2 travel date.",
+        "The spoken audio clearly preserves the intended 7:50 PM departure time."
+      ]
+    },
+    {
+      "id": "travel-royal-air-maroc-lilongwe-gaborone",
+      "industry": "travel",
+      "intended_text": "Royal Air Maroc flight 230 from Lilongwe to Gaborone departs on July third at 10:10 AM.",
+      "assertions": [
+        {
+          "id": "royal-air-maroc-flight-230",
+          "type": "contains_any",
+          "values": [
+            "flight 230",
+            "flight 230"
+          ]
+        },
+        {
+          "id": "lilongwe-to-gaborone",
+          "type": "contains_any",
+          "values": [
+            "lilongwe to gaborone"
+          ]
+        },
+        {
+          "id": "date-july-3",
+          "type": "contains_any",
+          "values": [
+            "july third",
+            "july 3"
+          ]
+        },
+        {
+          "id": "departure-10-10-am",
+          "type": "contains_any",
+          "values": [
+            "10:10 am",
+            "ten ten am"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken audio clearly preserves Royal Air Maroc flight 230 from Lilongwe to Gaborone.",
+        "The spoken audio clearly preserves the intended July 3 travel date.",
+        "The spoken audio clearly preserves the intended 10:10 AM departure time."
+      ]
+    },
+    {
+      "id": "travel-kenya-airways-gaborone-ouarzazate",
+      "industry": "travel",
+      "intended_text": "Kenya Airways flight 231 from Gaborone to Ouarzazate departs on August fourth at 1:35 PM.",
+      "assertions": [
+        {
+          "id": "kenya-airways-flight-231",
+          "type": "contains_any",
+          "values": [
+            "flight 231",
+            "flight 231"
+          ]
+        },
+        {
+          "id": "gaborone-to-ouarzazate",
+          "type": "contains_any",
+          "values": [
+            "gaborone to ouarzazate"
+          ]
+        },
+        {
+          "id": "date-august-4",
+          "type": "contains_any",
+          "values": [
+            "august fourth",
+            "august 4"
+          ]
+        },
+        {
+          "id": "departure-1-35-pm",
+          "type": "contains_any",
+          "values": [
+            "1:35 pm",
+            "one thirty-five pm"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken audio clearly preserves Kenya Airways flight 231 from Gaborone to Ouarzazate.",
+        "The spoken audio clearly preserves the intended August 4 travel date.",
+        "The spoken audio clearly preserves the intended 1:35 PM departure time."
+      ]
+    },
+    {
+      "id": "travel-lot-polish-airlines-ouarzazate-tegucigalpa",
+      "industry": "travel",
+      "intended_text": "LOT Polish Airlines flight 232 from Ouarzazate to Tegucigalpa departs on September fifth at 3:00 PM.",
+      "assertions": [
+        {
+          "id": "lot-polish-airlines-flight-232",
+          "type": "contains_any",
+          "values": [
+            "flight 232",
+            "flight 232"
+          ]
+        },
+        {
+          "id": "ouarzazate-to-tegucigalpa",
+          "type": "contains_any",
+          "values": [
+            "ouarzazate to tegucigalpa"
+          ]
+        },
+        {
+          "id": "date-september-5",
+          "type": "contains_any",
+          "values": [
+            "september fifth",
+            "september 5"
+          ]
+        },
+        {
+          "id": "departure-3-0-pm",
+          "type": "contains_any",
+          "values": [
+            "3:00 pm",
+            "three o'clock pm"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken audio clearly preserves LOT Polish Airlines flight 232 from Ouarzazate to Tegucigalpa.",
+        "The spoken audio clearly preserves the intended September 5 travel date.",
+        "The spoken audio clearly preserves the intended 3:00 PM departure time."
+      ]
+    },
+    {
+      "id": "travel-croatia-airlines-tegucigalpa-chichicastenango",
+      "industry": "travel",
+      "intended_text": "Croatia Airlines flight 233 from Tegucigalpa to Chichicastenango departs on October sixth at 8:25 AM.",
+      "assertions": [
+        {
+          "id": "croatia-airlines-flight-233",
+          "type": "contains_any",
+          "values": [
+            "flight 233",
+            "flight 233"
+          ]
+        },
+        {
+          "id": "tegucigalpa-to-chichicastenango",
+          "type": "contains_any",
+          "values": [
+            "tegucigalpa to chichicastenango"
+          ]
+        },
+        {
+          "id": "date-october-6",
+          "type": "contains_any",
+          "values": [
+            "october sixth",
+            "october 6"
+          ]
+        },
+        {
+          "id": "departure-8-25-am",
+          "type": "contains_any",
+          "values": [
+            "8:25 am",
+            "eight twenty-five am"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken audio clearly preserves Croatia Airlines flight 233 from Tegucigalpa to Chichicastenango.",
+        "The spoken audio clearly preserves the intended October 6 travel date.",
+        "The spoken audio clearly preserves the intended 8:25 AM departure time."
+      ]
+    },
+    {
+      "id": "travel-air-baltic-chichicastenango-quetzaltenango",
+      "industry": "travel",
+      "intended_text": "Air Baltic flight 234 from Chichicastenango to Quetzaltenango departs on November seventh at 5:55 PM.",
+      "assertions": [
+        {
+          "id": "air-baltic-flight-234",
+          "type": "contains_any",
+          "values": [
+            "flight 234",
+            "flight 234"
+          ]
+        },
+        {
+          "id": "chichicastenango-to-quetzaltenango",
+          "type": "contains_any",
+          "values": [
+            "chichicastenango to quetzaltenango"
+          ]
+        },
+        {
+          "id": "date-november-7",
+          "type": "contains_any",
+          "values": [
+            "november seventh",
+            "november 7"
+          ]
+        },
+        {
+          "id": "departure-5-55-pm",
+          "type": "contains_any",
+          "values": [
+            "5:55 pm",
+            "five fifty-five pm"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken audio clearly preserves Air Baltic flight 234 from Chichicastenango to Quetzaltenango.",
+        "The spoken audio clearly preserves the intended November 7 travel date.",
+        "The spoken audio clearly preserves the intended 5:55 PM departure time."
+      ]
+    },
+    {
+      "id": "travel-uzbekistan-airways-quetzaltenango-ayacucho",
+      "industry": "travel",
+      "intended_text": "Uzbekistan Airways flight 235 from Quetzaltenango to Ayacucho departs on December eighth at 12:40 PM.",
+      "assertions": [
+        {
+          "id": "uzbekistan-airways-flight-235",
+          "type": "contains_any",
+          "values": [
+            "flight 235",
+            "flight 235"
+          ]
+        },
+        {
+          "id": "quetzaltenango-to-ayacucho",
+          "type": "contains_any",
+          "values": [
+            "quetzaltenango to ayacucho"
+          ]
+        },
+        {
+          "id": "date-december-8",
+          "type": "contains_any",
+          "values": [
+            "december eighth",
+            "december 8"
+          ]
+        },
+        {
+          "id": "departure-12-40-pm",
+          "type": "contains_any",
+          "values": [
+            "12:40 pm",
+            "twelve forty pm"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken audio clearly preserves Uzbekistan Airways flight 235 from Quetzaltenango to Ayacucho.",
+        "The spoken audio clearly preserves the intended December 8 travel date.",
+        "The spoken audio clearly preserves the intended 12:40 PM departure time."
+      ]
+    },
+    {
+      "id": "travel-china-southern-ayacucho-chiclayo",
+      "industry": "travel",
+      "intended_text": "China Southern flight 236 from Ayacucho to Chiclayo departs on January ninth at 6:45 PM.",
+      "assertions": [
+        {
+          "id": "china-southern-flight-236",
+          "type": "contains_any",
+          "values": [
+            "flight 236",
+            "flight 236"
+          ]
+        },
+        {
+          "id": "ayacucho-to-chiclayo",
+          "type": "contains_any",
+          "values": [
+            "ayacucho to chiclayo"
+          ]
+        },
+        {
+          "id": "date-january-9",
+          "type": "contains_any",
+          "values": [
+            "january ninth",
+            "january 9"
+          ]
+        },
+        {
+          "id": "departure-6-45-pm",
+          "type": "contains_any",
+          "values": [
+            "6:45 pm",
+            "six forty-five pm"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken audio clearly preserves China Southern flight 236 from Ayacucho to Chiclayo.",
+        "The spoken audio clearly preserves the intended January 9 travel date.",
+        "The spoken audio clearly preserves the intended 6:45 PM departure time."
+      ]
+    },
+    {
+      "id": "travel-eva-air-chiclayo-oaxaca",
+      "industry": "travel",
+      "intended_text": "EVA Air flight 237 from Chiclayo to Oaxaca departs on February tenth at 9:15 AM.",
+      "assertions": [
+        {
+          "id": "eva-air-flight-237",
+          "type": "contains_any",
+          "values": [
+            "flight 237",
+            "flight 237"
+          ]
+        },
+        {
+          "id": "chiclayo-to-oaxaca",
+          "type": "contains_any",
+          "values": [
+            "chiclayo to oaxaca"
+          ]
+        },
+        {
+          "id": "date-february-10",
+          "type": "contains_any",
+          "values": [
+            "february tenth",
+            "february 10"
+          ]
+        },
+        {
+          "id": "departure-9-15-am",
+          "type": "contains_any",
+          "values": [
+            "9:15 am",
+            "nine fifteen am"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken audio clearly preserves EVA Air flight 237 from Chiclayo to Oaxaca.",
+        "The spoken audio clearly preserves the intended February 10 travel date.",
+        "The spoken audio clearly preserves the intended 9:15 AM departure time."
+      ]
+    },
+    {
+      "id": "travel-garuda-indonesia-oaxaca-chetumal",
+      "industry": "travel",
+      "intended_text": "Garuda Indonesia flight 238 from Oaxaca to Chetumal departs on March eleventh at 2:30 PM.",
+      "assertions": [
+        {
+          "id": "garuda-indonesia-flight-238",
+          "type": "contains_any",
+          "values": [
+            "flight 238",
+            "flight 238"
+          ]
+        },
+        {
+          "id": "oaxaca-to-chetumal",
+          "type": "contains_any",
+          "values": [
+            "oaxaca to chetumal"
+          ]
+        },
+        {
+          "id": "date-march-11",
+          "type": "contains_any",
+          "values": [
+            "march eleventh",
+            "march 11"
+          ]
+        },
+        {
+          "id": "departure-2-30-pm",
+          "type": "contains_any",
+          "values": [
+            "2:30 pm",
+            "two thirty pm"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken audio clearly preserves Garuda Indonesia flight 238 from Oaxaca to Chetumal.",
+        "The spoken audio clearly preserves the intended March 11 travel date.",
+        "The spoken audio clearly preserves the intended 2:30 PM departure time."
+      ]
+    },
+    {
+      "id": "travel-turkmenistan-airlines-chetumal-iqaluit",
+      "industry": "travel",
+      "intended_text": "Turkmenistan Airlines flight 239 from Chetumal to Iqaluit departs on April twelfth at 11:05 AM.",
+      "assertions": [
+        {
+          "id": "turkmenistan-airlines-flight-239",
+          "type": "contains_any",
+          "values": [
+            "flight 239",
+            "flight 239"
+          ]
+        },
+        {
+          "id": "chetumal-to-iqaluit",
+          "type": "contains_any",
+          "values": [
+            "chetumal to iqaluit"
+          ]
+        },
+        {
+          "id": "date-april-12",
+          "type": "contains_any",
+          "values": [
+            "april twelfth",
+            "april 12"
+          ]
+        },
+        {
+          "id": "departure-11-5-am",
+          "type": "contains_any",
+          "values": [
+            "11:05 am",
+            "eleven oh-five am"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken audio clearly preserves Turkmenistan Airlines flight 239 from Chetumal to Iqaluit.",
+        "The spoken audio clearly preserves the intended April 12 travel date.",
+        "The spoken audio clearly preserves the intended 11:05 AM departure time."
+      ]
+    },
+    {
+      "id": "travel-icelandair-iqaluit-kangerlussuaq",
+      "industry": "travel",
+      "intended_text": "Icelandair flight 240 from Iqaluit to Kangerlussuaq departs on May thirteenth at 4:20 PM.",
+      "assertions": [
+        {
+          "id": "icelandair-flight-240",
+          "type": "contains_any",
+          "values": [
+            "flight 240",
+            "flight 240"
+          ]
+        },
+        {
+          "id": "iqaluit-to-kangerlussuaq",
+          "type": "contains_any",
+          "values": [
+            "iqaluit to kangerlussuaq"
+          ]
+        },
+        {
+          "id": "date-may-13",
+          "type": "contains_any",
+          "values": [
+            "may thirteenth",
+            "may 13"
+          ]
+        },
+        {
+          "id": "departure-4-20-pm",
+          "type": "contains_any",
+          "values": [
+            "4:20 pm",
+            "four twenty pm"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken audio clearly preserves Icelandair flight 240 from Iqaluit to Kangerlussuaq.",
+        "The spoken audio clearly preserves the intended May 13 travel date.",
+        "The spoken audio clearly preserves the intended 4:20 PM departure time."
+      ]
+    },
+    {
+      "id": "travel-ethiopian-airlines-kangerlussuaq-akureyri",
+      "industry": "travel",
+      "intended_text": "Ethiopian Airlines flight 241 from Kangerlussuaq to Akureyri departs on June fourteenth at 7:50 PM.",
+      "assertions": [
+        {
+          "id": "ethiopian-airlines-flight-241",
+          "type": "contains_any",
+          "values": [
+            "flight 241",
+            "flight 241"
+          ]
+        },
+        {
+          "id": "kangerlussuaq-to-akureyri",
+          "type": "contains_any",
+          "values": [
+            "kangerlussuaq to akureyri"
+          ]
+        },
+        {
+          "id": "date-june-14",
+          "type": "contains_any",
+          "values": [
+            "june fourteenth",
+            "june 14"
+          ]
+        },
+        {
+          "id": "departure-7-50-pm",
+          "type": "contains_any",
+          "values": [
+            "7:50 pm",
+            "seven fifty pm"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken audio clearly preserves Ethiopian Airlines flight 241 from Kangerlussuaq to Akureyri.",
+        "The spoken audio clearly preserves the intended June 14 travel date.",
+        "The spoken audio clearly preserves the intended 7:50 PM departure time."
+      ]
+    },
+    {
+      "id": "travel-turkish-airlines-akureyri-longyearbyen",
+      "industry": "travel",
+      "intended_text": "Turkish Airlines flight 242 from Akureyri to Longyearbyen departs on July fifteenth at 10:10 AM.",
+      "assertions": [
+        {
+          "id": "turkish-airlines-flight-242",
+          "type": "contains_any",
+          "values": [
+            "flight 242",
+            "flight 242"
+          ]
+        },
+        {
+          "id": "akureyri-to-longyearbyen",
+          "type": "contains_any",
+          "values": [
+            "akureyri to longyearbyen"
+          ]
+        },
+        {
+          "id": "date-july-15",
+          "type": "contains_any",
+          "values": [
+            "july fifteenth",
+            "july 15"
+          ]
+        },
+        {
+          "id": "departure-10-10-am",
+          "type": "contains_any",
+          "values": [
+            "10:10 am",
+            "ten ten am"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken audio clearly preserves Turkish Airlines flight 242 from Akureyri to Longyearbyen.",
+        "The spoken audio clearly preserves the intended July 15 travel date.",
+        "The spoken audio clearly preserves the intended 10:10 AM departure time."
+      ]
+    },
+    {
+      "id": "travel-latam-longyearbyen-tromso",
+      "industry": "travel",
+      "intended_text": "LATAM flight 243 from Longyearbyen to Tromso departs on August sixteenth at 1:35 PM.",
+      "assertions": [
+        {
+          "id": "latam-flight-243",
+          "type": "contains_any",
+          "values": [
+            "flight 243",
+            "flight 243"
+          ]
+        },
+        {
+          "id": "longyearbyen-to-tromso",
+          "type": "contains_any",
+          "values": [
+            "longyearbyen to tromso"
+          ]
+        },
+        {
+          "id": "date-august-16",
+          "type": "contains_any",
+          "values": [
+            "august sixteenth",
+            "august 16"
+          ]
+        },
+        {
+          "id": "departure-1-35-pm",
+          "type": "contains_any",
+          "values": [
+            "1:35 pm",
+            "one thirty-five pm"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken audio clearly preserves LATAM flight 243 from Longyearbyen to Tromso.",
+        "The spoken audio clearly preserves the intended August 16 travel date.",
+        "The spoken audio clearly preserves the intended 1:35 PM departure time."
+      ]
+    },
+    {
+      "id": "travel-finnair-tromso-jyvaskyla",
+      "industry": "travel",
+      "intended_text": "Finnair flight 244 from Tromso to Jyvaskyla departs on September seventeenth at 3:00 PM.",
+      "assertions": [
+        {
+          "id": "finnair-flight-244",
+          "type": "contains_any",
+          "values": [
+            "flight 244",
+            "flight 244"
+          ]
+        },
+        {
+          "id": "tromso-to-jyvaskyla",
+          "type": "contains_any",
+          "values": [
+            "tromso to jyvaskyla"
+          ]
+        },
+        {
+          "id": "date-september-17",
+          "type": "contains_any",
+          "values": [
+            "september seventeenth",
+            "september 17"
+          ]
+        },
+        {
+          "id": "departure-3-0-pm",
+          "type": "contains_any",
+          "values": [
+            "3:00 pm",
+            "three o'clock pm"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken audio clearly preserves Finnair flight 244 from Tromso to Jyvaskyla.",
+        "The spoken audio clearly preserves the intended September 17 travel date.",
+        "The spoken audio clearly preserves the intended 3:00 PM departure time."
+      ]
+    },
+    {
+      "id": "travel-cathay-pacific-jyvaskyla-rovaniemi",
+      "industry": "travel",
+      "intended_text": "Cathay Pacific flight 245 from Jyvaskyla to Rovaniemi departs on October eighteenth at 8:25 AM.",
+      "assertions": [
+        {
+          "id": "cathay-pacific-flight-245",
+          "type": "contains_any",
+          "values": [
+            "flight 245",
+            "flight 245"
+          ]
+        },
+        {
+          "id": "jyvaskyla-to-rovaniemi",
+          "type": "contains_any",
+          "values": [
+            "jyvaskyla to rovaniemi"
+          ]
+        },
+        {
+          "id": "date-october-18",
+          "type": "contains_any",
+          "values": [
+            "october eighteenth",
+            "october 18"
+          ]
+        },
+        {
+          "id": "departure-8-25-am",
+          "type": "contains_any",
+          "values": [
+            "8:25 am",
+            "eight twenty-five am"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken audio clearly preserves Cathay Pacific flight 245 from Jyvaskyla to Rovaniemi.",
+        "The spoken audio clearly preserves the intended October 18 travel date.",
+        "The spoken audio clearly preserves the intended 8:25 AM departure time."
+      ]
+    },
+    {
+      "id": "travel-singapore-airlines-rovaniemi-kuopio",
+      "industry": "travel",
+      "intended_text": "Singapore Airlines flight 246 from Rovaniemi to Kuopio departs on November nineteenth at 5:55 PM.",
+      "assertions": [
+        {
+          "id": "singapore-airlines-flight-246",
+          "type": "contains_any",
+          "values": [
+            "flight 246",
+            "flight 246"
+          ]
+        },
+        {
+          "id": "rovaniemi-to-kuopio",
+          "type": "contains_any",
+          "values": [
+            "rovaniemi to kuopio"
+          ]
+        },
+        {
+          "id": "date-november-19",
+          "type": "contains_any",
+          "values": [
+            "november nineteenth",
+            "november 19"
+          ]
+        },
+        {
+          "id": "departure-5-55-pm",
+          "type": "contains_any",
+          "values": [
+            "5:55 pm",
+            "five fifty-five pm"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken audio clearly preserves Singapore Airlines flight 246 from Rovaniemi to Kuopio.",
+        "The spoken audio clearly preserves the intended November 19 travel date.",
+        "The spoken audio clearly preserves the intended 5:55 PM departure time."
+      ]
+    },
+    {
+      "id": "travel-qatar-airways-kuopio-visakhapatnam",
+      "industry": "travel",
+      "intended_text": "Qatar Airways flight 247 from Kuopio to Visakhapatnam departs on December twentieth at 12:40 PM.",
+      "assertions": [
+        {
+          "id": "qatar-airways-flight-247",
+          "type": "contains_any",
+          "values": [
+            "flight 247",
+            "flight 247"
+          ]
+        },
+        {
+          "id": "kuopio-to-visakhapatnam",
+          "type": "contains_any",
+          "values": [
+            "kuopio to visakhapatnam"
+          ]
+        },
+        {
+          "id": "date-december-20",
+          "type": "contains_any",
+          "values": [
+            "december twentieth",
+            "december 20"
+          ]
+        },
+        {
+          "id": "departure-12-40-pm",
+          "type": "contains_any",
+          "values": [
+            "12:40 pm",
+            "twelve forty pm"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken audio clearly preserves Qatar Airways flight 247 from Kuopio to Visakhapatnam.",
+        "The spoken audio clearly preserves the intended December 20 travel date.",
+        "The spoken audio clearly preserves the intended 12:40 PM departure time."
+      ]
+    },
+    {
+      "id": "travel-emirates-visakhapatnam-tiruchirappalli",
+      "industry": "travel",
+      "intended_text": "Emirates flight 248 from Visakhapatnam to Tiruchirappalli departs on January twenty-first at 6:45 PM.",
+      "assertions": [
+        {
+          "id": "emirates-flight-248",
+          "type": "contains_any",
+          "values": [
+            "flight 248",
+            "flight 248"
+          ]
+        },
+        {
+          "id": "visakhapatnam-to-tiruchirappalli",
+          "type": "contains_any",
+          "values": [
+            "visakhapatnam to tiruchirappalli"
+          ]
+        },
+        {
+          "id": "date-january-21",
+          "type": "contains_any",
+          "values": [
+            "january twenty-first",
+            "january 21"
+          ]
+        },
+        {
+          "id": "departure-6-45-pm",
+          "type": "contains_any",
+          "values": [
+            "6:45 pm",
+            "six forty-five pm"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken audio clearly preserves Emirates flight 248 from Visakhapatnam to Tiruchirappalli.",
+        "The spoken audio clearly preserves the intended January 21 travel date.",
+        "The spoken audio clearly preserves the intended 6:45 PM departure time."
+      ]
+    },
+    {
+      "id": "finance-apr-payment",
+      "industry": "finance",
+      "intended_text": "Your annual percentage rate is five point nine percent, and your monthly payment is one thousand two hundred fifty dollars.",
+      "assertions": [
+        {
+          "id": "apr-5.9-percent",
+          "type": "contains_any",
+          "values": [
+            "five point nine percent",
+            "5.9 percent"
+          ]
+        },
+        {
+          "id": "payment-1250-dollars",
+          "type": "contains_any",
+          "values": [
+            "one thousand two hundred fifty dollars",
+            "1,250 dollars",
+            "1250 dollars",
+            "1,250"
+          ]
+        },
+        {
+          "id": "forbid-59-percent",
+          "type": "not_contains_any",
+          "values": [
+            "fifty nine percent",
+            "59 percent"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken audio clearly preserves the intended 5.9% annual percentage rate.",
+        "The spoken audio clearly preserves the intended $1,250 monthly payment."
+      ]
+    },
+    {
+      "id": "travel-itinerary",
+      "industry": "travel",
+      "intended_text": "Qantas flight twelve from Sydney to Singapore departs on October seventeenth at six forty-five PM.",
+      "assertions": [
+        {
+          "id": "qantas-flight-12",
+          "type": "contains_any",
+          "values": [
+            "qantas flight twelve",
+            "qantas flight 12",
+            "qantas flight 1 2"
+          ]
+        },
+        {
+          "id": "sydney-to-singapore",
+          "type": "contains_any",
+          "values": [
+            "sydney to singapore"
+          ]
+        },
+        {
+          "id": "october-17",
+          "type": "contains_any",
+          "values": [
+            "october seventeenth",
+            "october 17th",
+            "october 17"
+          ]
+        },
+        {
+          "id": "departure-6.45-pm",
+          "type": "contains_any",
+          "values": [
+            "six forty five pm",
+            "6 45 pm"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken audio clearly preserves Qantas flight 12 from Sydney to Singapore.",
+        "The spoken audio clearly preserves the intended October 17 travel date.",
+        "The spoken audio clearly preserves the intended 6:45 PM departure time."
+      ]
+    },
+    {
+      "id": "insurance-exclusion-deductible",
+      "industry": "insurance",
+      "intended_text": "Your policy excludes flood damage and includes a two-thousand-dollar deductible.",
+      "assertions": [
+        {
+          "id": "flood-excluded",
+          "type": "contains_any",
+          "values": [
+            "excludes flood damage",
+            "flood damage is excluded"
+          ]
+        },
+        {
+          "id": "deductible-2000-dollars",
+          "type": "contains_any",
+          "values": [
+            "two thousand dollar deductible",
+            "2,000 dollar deductible",
+            "2000 dollar deductible",
+            "$2,000 deductible",
+            "deductible is two thousand",
+            "deductible is 2,000",
+            "deductible is 2000"
+          ]
+        },
+        {
+          "id": "forbid-flood-covered",
+          "type": "not_contains_any",
+          "values": [
+            "flood damage is covered",
+            "covers flood damage"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken audio clearly preserves that flood damage is excluded.",
+        "The spoken audio clearly preserves the intended $2,000 deductible."
+      ]
+    },
+    {
+      "id": "pharmacy-oxcarbazepine-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Oxcarbazepine prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-oxcarbazepine-preserved",
+          "type": "contains_any",
+          "values": [
+            "oxcarbazepine"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Oxcarbazepine."
+      ]
+    },
+    {
+      "id": "pharmacy-lamotrigine-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Lamotrigine prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-lamotrigine-preserved",
+          "type": "contains_any",
+          "values": [
+            "lamotrigine"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Lamotrigine."
+      ]
+    },
+    {
+      "id": "pharmacy-topiramate-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Topiramate prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-topiramate-preserved",
+          "type": "contains_any",
+          "values": [
+            "topiramate"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Topiramate."
+      ]
+    },
+    {
+      "id": "pharmacy-zonisamide-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Zonisamide prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-zonisamide-preserved",
+          "type": "contains_any",
+          "values": [
+            "zonisamide"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Zonisamide."
+      ]
+    },
+    {
+      "id": "pharmacy-perampanel-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Perampanel prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-perampanel-preserved",
+          "type": "contains_any",
+          "values": [
+            "perampanel"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Perampanel."
+      ]
+    },
+    {
+      "id": "pharmacy-lacosamide-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Lacosamide prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-lacosamide-preserved",
+          "type": "contains_any",
+          "values": [
+            "lacosamide"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Lacosamide."
+      ]
+    },
+    {
+      "id": "pharmacy-brivaracetam-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Brivaracetam prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-brivaracetam-preserved",
+          "type": "contains_any",
+          "values": [
+            "brivaracetam"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Brivaracetam."
+      ]
+    },
+    {
+      "id": "pharmacy-cenobamate-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Cenobamate prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-cenobamate-preserved",
+          "type": "contains_any",
+          "values": [
+            "cenobamate"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Cenobamate."
+      ]
+    },
+    {
+      "id": "pharmacy-eslicarbazepine-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Eslicarbazepine prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-eslicarbazepine-preserved",
+          "type": "contains_any",
+          "values": [
+            "eslicarbazepine"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Eslicarbazepine."
+      ]
+    },
+    {
+      "id": "pharmacy-rufinamide-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Rufinamide prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-rufinamide-preserved",
+          "type": "contains_any",
+          "values": [
+            "rufinamide"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Rufinamide."
+      ]
+    },
+    {
+      "id": "pharmacy-vigabatrin-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Vigabatrin prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-vigabatrin-preserved",
+          "type": "contains_any",
+          "values": [
+            "vigabatrin"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Vigabatrin."
+      ]
+    },
+    {
+      "id": "pharmacy-tiagabine-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Tiagabine prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-tiagabine-preserved",
+          "type": "contains_any",
+          "values": [
+            "tiagabine"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Tiagabine."
+      ]
+    },
+    {
+      "id": "pharmacy-felbamate-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Felbamate prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-felbamate-preserved",
+          "type": "contains_any",
+          "values": [
+            "felbamate"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Felbamate."
+      ]
+    },
+    {
+      "id": "pharmacy-ezogabine-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Ezogabine prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-ezogabine-preserved",
+          "type": "contains_any",
+          "values": [
+            "ezogabine"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Ezogabine."
+      ]
+    },
+    {
+      "id": "pharmacy-clobazam-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Clobazam prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-clobazam-preserved",
+          "type": "contains_any",
+          "values": [
+            "clobazam"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Clobazam."
+      ]
+    },
+    {
+      "id": "pharmacy-primidone-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Primidone prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-primidone-preserved",
+          "type": "contains_any",
+          "values": [
+            "primidone"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Primidone."
+      ]
+    },
+    {
+      "id": "pharmacy-ethosuximide-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Ethosuximide prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-ethosuximide-preserved",
+          "type": "contains_any",
+          "values": [
+            "ethosuximide"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Ethosuximide."
+      ]
+    },
+    {
+      "id": "pharmacy-divalproex-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Divalproex prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-divalproex-preserved",
+          "type": "contains_any",
+          "values": [
+            "divalproex"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Divalproex."
+      ]
+    },
+    {
+      "id": "pharmacy-carbamazepine-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Carbamazepine prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-carbamazepine-preserved",
+          "type": "contains_any",
+          "values": [
+            "carbamazepine"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Carbamazepine."
+      ]
+    },
+    {
+      "id": "pharmacy-fosphenytoin-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Fosphenytoin prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-fosphenytoin-preserved",
+          "type": "contains_any",
+          "values": [
+            "fosphenytoin"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Fosphenytoin."
+      ]
+    },
+    {
+      "id": "pharmacy-oxybutynin-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Oxybutynin prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-oxybutynin-preserved",
+          "type": "contains_any",
+          "values": [
+            "oxybutynin"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Oxybutynin."
+      ]
+    },
+    {
+      "id": "pharmacy-tolterodine-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Tolterodine prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-tolterodine-preserved",
+          "type": "contains_any",
+          "values": [
+            "tolterodine"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Tolterodine."
+      ]
+    },
+    {
+      "id": "pharmacy-solifenacin-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Solifenacin prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-solifenacin-preserved",
+          "type": "contains_any",
+          "values": [
+            "solifenacin"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Solifenacin."
+      ]
+    },
+    {
+      "id": "pharmacy-mirabegron-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Mirabegron prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-mirabegron-preserved",
+          "type": "contains_any",
+          "values": [
+            "mirabegron"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Mirabegron."
+      ]
+    },
+    {
+      "id": "pharmacy-fesoterodine-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Fesoterodine prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-fesoterodine-preserved",
+          "type": "contains_any",
+          "values": [
+            "fesoterodine"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Fesoterodine."
+      ]
+    },
+    {
+      "id": "pharmacy-darifenacin-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Darifenacin prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-darifenacin-preserved",
+          "type": "contains_any",
+          "values": [
+            "darifenacin"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Darifenacin."
+      ]
+    },
+    {
+      "id": "pharmacy-trospium-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Trospium prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-trospium-preserved",
+          "type": "contains_any",
+          "values": [
+            "trospium"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Trospium."
+      ]
+    },
+    {
+      "id": "pharmacy-vibegron-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Vibegron prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-vibegron-preserved",
+          "type": "contains_any",
+          "values": [
+            "vibegron"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Vibegron."
+      ]
+    },
+    {
+      "id": "pharmacy-finasteride-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Finasteride prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-finasteride-preserved",
+          "type": "contains_any",
+          "values": [
+            "finasteride"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Finasteride."
+      ]
+    },
+    {
+      "id": "pharmacy-dutasteride-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Dutasteride prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-dutasteride-preserved",
+          "type": "contains_any",
+          "values": [
+            "dutasteride"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Dutasteride."
+      ]
+    },
+    {
+      "id": "pharmacy-tamsulosin-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Tamsulosin prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-tamsulosin-preserved",
+          "type": "contains_any",
+          "values": [
+            "tamsulosin"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Tamsulosin."
+      ]
+    },
+    {
+      "id": "pharmacy-silodosin-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Silodosin prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-silodosin-preserved",
+          "type": "contains_any",
+          "values": [
+            "silodosin"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Silodosin."
+      ]
+    },
+    {
+      "id": "pharmacy-alfuzosin-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Alfuzosin prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-alfuzosin-preserved",
+          "type": "contains_any",
+          "values": [
+            "alfuzosin"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Alfuzosin."
+      ]
+    },
+    {
+      "id": "pharmacy-terazosin-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Terazosin prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-terazosin-preserved",
+          "type": "contains_any",
+          "values": [
+            "terazosin"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Terazosin."
+      ]
+    },
+    {
+      "id": "pharmacy-doxazosin-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Doxazosin prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-doxazosin-preserved",
+          "type": "contains_any",
+          "values": [
+            "doxazosin"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Doxazosin."
+      ]
+    },
+    {
+      "id": "pharmacy-vardenafil-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Vardenafil prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-vardenafil-preserved",
+          "type": "contains_any",
+          "values": [
+            "vardenafil"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Vardenafil."
+      ]
+    },
+    {
+      "id": "pharmacy-avanafil-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Avanafil prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-avanafil-preserved",
+          "type": "contains_any",
+          "values": [
+            "avanafil"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Avanafil."
+      ]
+    },
+    {
+      "id": "pharmacy-dapoxetine-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Dapoxetine prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-dapoxetine-preserved",
+          "type": "contains_any",
+          "values": [
+            "dapoxetine"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Dapoxetine."
+      ]
+    },
+    {
+      "id": "pharmacy-dexmethylphenidate-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Dexmethylphenidate prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-dexmethylphenidate-preserved",
+          "type": "contains_any",
+          "values": [
+            "dexmethylphenidate"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Dexmethylphenidate."
+      ]
+    },
+    {
+      "id": "pharmacy-lisdexamfetamine-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Lisdexamfetamine prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-lisdexamfetamine-preserved",
+          "type": "contains_any",
+          "values": [
+            "lisdexamfetamine"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Lisdexamfetamine."
+      ]
+    },
+    {
+      "id": "pharmacy-atomoxetine-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Atomoxetine prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-atomoxetine-preserved",
+          "type": "contains_any",
+          "values": [
+            "atomoxetine"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Atomoxetine."
+      ]
+    },
+    {
+      "id": "pharmacy-viloxazine-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Viloxazine prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-viloxazine-preserved",
+          "type": "contains_any",
+          "values": [
+            "viloxazine"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Viloxazine."
+      ]
+    },
+    {
+      "id": "pharmacy-guanfacine-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Guanfacine prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-guanfacine-preserved",
+          "type": "contains_any",
+          "values": [
+            "guanfacine"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Guanfacine."
+      ]
+    },
+    {
+      "id": "pharmacy-armodafinil-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Armodafinil prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-armodafinil-preserved",
+          "type": "contains_any",
+          "values": [
+            "armodafinil"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Armodafinil."
+      ]
+    },
+    {
+      "id": "pharmacy-solriamfetol-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Solriamfetol prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-solriamfetol-preserved",
+          "type": "contains_any",
+          "values": [
+            "solriamfetol"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Solriamfetol."
+      ]
+    },
+    {
+      "id": "pharmacy-pitolisant-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Pitolisant prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-pitolisant-preserved",
+          "type": "contains_any",
+          "values": [
+            "pitolisant"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Pitolisant."
+      ]
+    },
+    {
+      "id": "pharmacy-memantine-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Memantine prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-memantine-preserved",
+          "type": "contains_any",
+          "values": [
+            "memantine"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Memantine."
+      ]
+    },
+    {
+      "id": "pharmacy-donepezil-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Donepezil prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-donepezil-preserved",
+          "type": "contains_any",
+          "values": [
+            "donepezil"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Donepezil."
+      ]
+    },
+    {
+      "id": "pharmacy-rivastigmine-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Rivastigmine prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-rivastigmine-preserved",
+          "type": "contains_any",
+          "values": [
+            "rivastigmine"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Rivastigmine."
+      ]
+    },
+    {
+      "id": "pharmacy-galantamine-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Galantamine prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-galantamine-preserved",
+          "type": "contains_any",
+          "values": [
+            "galantamine"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Galantamine."
+      ]
+    },
+    {
+      "id": "pharmacy-suvorexant-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Suvorexant prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-suvorexant-preserved",
+          "type": "contains_any",
+          "values": [
+            "suvorexant"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Suvorexant."
+      ]
+    },
+    {
+      "id": "pharmacy-lemborexant-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Lemborexant prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-lemborexant-preserved",
+          "type": "contains_any",
+          "values": [
+            "lemborexant"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Lemborexant."
+      ]
+    },
+    {
+      "id": "pharmacy-daridorexant-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Daridorexant prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-daridorexant-preserved",
+          "type": "contains_any",
+          "values": [
+            "daridorexant"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Daridorexant."
+      ]
+    },
+    {
+      "id": "pharmacy-eszopiclone-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Eszopiclone prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-eszopiclone-preserved",
+          "type": "contains_any",
+          "values": [
+            "eszopiclone"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Eszopiclone."
+      ]
+    },
+    {
+      "id": "pharmacy-zaleplon-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Zaleplon prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-zaleplon-preserved",
+          "type": "contains_any",
+          "values": [
+            "zaleplon"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Zaleplon."
+      ]
+    },
+    {
+      "id": "pharmacy-ramelteon-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Ramelteon prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-ramelteon-preserved",
+          "type": "contains_any",
+          "values": [
+            "ramelteon"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Ramelteon."
+      ]
+    },
+    {
+      "id": "pharmacy-nefazodone-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Nefazodone prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-nefazodone-preserved",
+          "type": "contains_any",
+          "values": [
+            "nefazodone"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Nefazodone."
+      ]
+    },
+    {
+      "id": "pharmacy-tranylcypromine-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Tranylcypromine prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-tranylcypromine-preserved",
+          "type": "contains_any",
+          "values": [
+            "tranylcypromine"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Tranylcypromine."
+      ]
+    },
+    {
+      "id": "pharmacy-phenelzine-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Phenelzine prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-phenelzine-preserved",
+          "type": "contains_any",
+          "values": [
+            "phenelzine"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Phenelzine."
+      ]
+    },
+    {
+      "id": "pharmacy-rasagiline-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Rasagiline prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-rasagiline-preserved",
+          "type": "contains_any",
+          "values": [
+            "rasagiline"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Rasagiline."
+      ]
+    },
+    {
+      "id": "pharmacy-entacapone-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Entacapone prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-entacapone-preserved",
+          "type": "contains_any",
+          "values": [
+            "entacapone"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Entacapone."
+      ]
+    },
+    {
+      "id": "pharmacy-tolcapone-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Tolcapone prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-tolcapone-preserved",
+          "type": "contains_any",
+          "values": [
+            "tolcapone"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Tolcapone."
+      ]
+    },
+    {
+      "id": "pharmacy-pramipexole-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Pramipexole prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-pramipexole-preserved",
+          "type": "contains_any",
+          "values": [
+            "pramipexole"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Pramipexole."
+      ]
+    },
+    {
+      "id": "pharmacy-ropinirole-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Ropinirole prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-ropinirole-preserved",
+          "type": "contains_any",
+          "values": [
+            "ropinirole"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Ropinirole."
+      ]
+    },
+    {
+      "id": "pharmacy-rotigotine-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Rotigotine prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-rotigotine-preserved",
+          "type": "contains_any",
+          "values": [
+            "rotigotine"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Rotigotine."
+      ]
+    },
+    {
+      "id": "pharmacy-apomorphine-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Apomorphine prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-apomorphine-preserved",
+          "type": "contains_any",
+          "values": [
+            "apomorphine"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Apomorphine."
+      ]
+    },
+    {
+      "id": "pharmacy-benztropine-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Benztropine prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-benztropine-preserved",
+          "type": "contains_any",
+          "values": [
+            "benztropine"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Benztropine."
+      ]
+    },
+    {
+      "id": "pharmacy-trihexyphenidyl-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Trihexyphenidyl prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-trihexyphenidyl-preserved",
+          "type": "contains_any",
+          "values": [
+            "trihexyphenidyl"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Trihexyphenidyl."
+      ]
+    },
+    {
+      "id": "pharmacy-riluzole-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Riluzole prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-riluzole-preserved",
+          "type": "contains_any",
+          "values": [
+            "riluzole"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Riluzole."
+      ]
+    },
+    {
+      "id": "pharmacy-edaravone-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Edaravone prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-edaravone-preserved",
+          "type": "contains_any",
+          "values": [
+            "edaravone"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Edaravone."
+      ]
+    },
+    {
+      "id": "pharmacy-dalfampridine-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Dalfampridine prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-dalfampridine-preserved",
+          "type": "contains_any",
+          "values": [
+            "dalfampridine"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Dalfampridine."
+      ]
+    },
+    {
+      "id": "pharmacy-diroximel-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Diroximel prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-diroximel-preserved",
+          "type": "contains_any",
+          "values": [
+            "diroximel"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Diroximel."
+      ]
+    },
+    {
+      "id": "pharmacy-siponimod-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Siponimod prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-siponimod-preserved",
+          "type": "contains_any",
+          "values": [
+            "siponimod"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Siponimod."
+      ]
+    },
+    {
+      "id": "pharmacy-ozanimod-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Ozanimod prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-ozanimod-preserved",
+          "type": "contains_any",
+          "values": [
+            "ozanimod"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Ozanimod."
+      ]
+    },
+    {
+      "id": "pharmacy-ponesimod-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Ponesimod prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-ponesimod-preserved",
+          "type": "contains_any",
+          "values": [
+            "ponesimod"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Ponesimod."
+      ]
+    },
+    {
+      "id": "pharmacy-cladribine-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Cladribine prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-cladribine-preserved",
+          "type": "contains_any",
+          "values": [
+            "cladribine"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Cladribine."
+      ]
+    },
+    {
+      "id": "pharmacy-alemtuzumab-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Alemtuzumab prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-alemtuzumab-preserved",
+          "type": "contains_any",
+          "values": [
+            "alemtuzumab"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Alemtuzumab."
+      ]
+    },
+    {
+      "id": "pharmacy-glatiramer-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Glatiramer prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-glatiramer-preserved",
+          "type": "contains_any",
+          "values": [
+            "glatiramer"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Glatiramer."
+      ]
+    },
+    {
+      "id": "pharmacy-peginterferon-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Peginterferon prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-peginterferon-preserved",
+          "type": "contains_any",
+          "values": [
+            "peginterferon"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Peginterferon."
+      ]
+    },
+    {
+      "id": "pharmacy-rituximab-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Rituximab prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-rituximab-preserved",
+          "type": "contains_any",
+          "values": [
+            "rituximab"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Rituximab."
+      ]
+    },
+    {
+      "id": "pharmacy-obinutuzumab-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Obinutuzumab prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-obinutuzumab-preserved",
+          "type": "contains_any",
+          "values": [
+            "obinutuzumab"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Obinutuzumab."
+      ]
+    },
+    {
+      "id": "pharmacy-ofatumumab-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Ofatumumab prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-ofatumumab-preserved",
+          "type": "contains_any",
+          "values": [
+            "ofatumumab"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Ofatumumab."
+      ]
+    },
+    {
+      "id": "pharmacy-mosunetuzumab-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Mosunetuzumab prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-mosunetuzumab-preserved",
+          "type": "contains_any",
+          "values": [
+            "mosunetuzumab"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Mosunetuzumab."
+      ]
+    },
+    {
+      "id": "pharmacy-epcoritamab-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Epcoritamab prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-epcoritamab-preserved",
+          "type": "contains_any",
+          "values": [
+            "epcoritamab"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Epcoritamab."
+      ]
+    },
+    {
+      "id": "pharmacy-glofitamab-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Glofitamab prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-glofitamab-preserved",
+          "type": "contains_any",
+          "values": [
+            "glofitamab"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Glofitamab."
+      ]
+    },
+    {
+      "id": "pharmacy-blinatumomab-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Blinatumomab prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-blinatumomab-preserved",
+          "type": "contains_any",
+          "values": [
+            "blinatumomab"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Blinatumomab."
+      ]
+    },
+    {
+      "id": "pharmacy-tafasitamab-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Tafasitamab prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-tafasitamab-preserved",
+          "type": "contains_any",
+          "values": [
+            "tafasitamab"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Tafasitamab."
+      ]
+    },
+    {
+      "id": "pharmacy-loncastuximab-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Loncastuximab prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-loncastuximab-preserved",
+          "type": "contains_any",
+          "values": [
+            "loncastuximab"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Loncastuximab."
+      ]
+    },
+    {
+      "id": "pharmacy-polatuzumab-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Polatuzumab prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-polatuzumab-preserved",
+          "type": "contains_any",
+          "values": [
+            "polatuzumab"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Polatuzumab."
+      ]
+    },
+    {
+      "id": "pharmacy-brentuximab-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Brentuximab prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-brentuximab-preserved",
+          "type": "contains_any",
+          "values": [
+            "brentuximab"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Brentuximab."
+      ]
+    },
+    {
+      "id": "pharmacy-gemtuzumab-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Gemtuzumab prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-gemtuzumab-preserved",
+          "type": "contains_any",
+          "values": [
+            "gemtuzumab"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Gemtuzumab."
+      ]
+    },
+    {
+      "id": "pharmacy-inotuzumab-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Inotuzumab prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-inotuzumab-preserved",
+          "type": "contains_any",
+          "values": [
+            "inotuzumab"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Inotuzumab."
+      ]
+    },
+    {
+      "id": "pharmacy-moxetumomab-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Moxetumomab prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-moxetumomab-preserved",
+          "type": "contains_any",
+          "values": [
+            "moxetumomab"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Moxetumomab."
+      ]
+    },
+    {
+      "id": "pharmacy-tagraxofusp-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Tagraxofusp prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-tagraxofusp-preserved",
+          "type": "contains_any",
+          "values": [
+            "tagraxofusp"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Tagraxofusp."
+      ]
+    },
+    {
+      "id": "pharmacy-tebentafusp-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Tebentafusp prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-tebentafusp-preserved",
+          "type": "contains_any",
+          "values": [
+            "tebentafusp"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Tebentafusp."
+      ]
+    },
+    {
+      "id": "pharmacy-mogamulizumab-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Mogamulizumab prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-mogamulizumab-preserved",
+          "type": "contains_any",
+          "values": [
+            "mogamulizumab"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Mogamulizumab."
+      ]
+    },
+    {
+      "id": "pharmacy-daratumumab-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Daratumumab prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-daratumumab-preserved",
+          "type": "contains_any",
+          "values": [
+            "daratumumab"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Daratumumab."
+      ]
+    },
+    {
+      "id": "pharmacy-isatuximab-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Isatuximab prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-isatuximab-preserved",
+          "type": "contains_any",
+          "values": [
+            "isatuximab"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Isatuximab."
+      ]
+    },
+    {
+      "id": "pharmacy-elotuzumab-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Elotuzumab prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-elotuzumab-preserved",
+          "type": "contains_any",
+          "values": [
+            "elotuzumab"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Elotuzumab."
+      ]
+    },
+    {
+      "id": "pharmacy-belantamab-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Belantamab prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-belantamab-preserved",
+          "type": "contains_any",
+          "values": [
+            "belantamab"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Belantamab."
+      ]
+    },
+    {
+      "id": "pharmacy-teclistamab-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Teclistamab prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-teclistamab-preserved",
+          "type": "contains_any",
+          "values": [
+            "teclistamab"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Teclistamab."
+      ]
+    },
+    {
+      "id": "pharmacy-talquetamab-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Talquetamab prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-talquetamab-preserved",
+          "type": "contains_any",
+          "values": [
+            "talquetamab"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Talquetamab."
+      ]
+    },
+    {
+      "id": "pharmacy-abatacept-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Abatacept prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-abatacept-preserved",
+          "type": "contains_any",
+          "values": [
+            "abatacept"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Abatacept."
+      ]
+    },
+    {
+      "id": "pharmacy-tocilizumab-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Tocilizumab prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-tocilizumab-preserved",
+          "type": "contains_any",
+          "values": [
+            "tocilizumab"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Tocilizumab."
+      ]
+    },
+    {
+      "id": "pharmacy-sarilumab-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Sarilumab prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-sarilumab-preserved",
+          "type": "contains_any",
+          "values": [
+            "sarilumab"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Sarilumab."
+      ]
+    },
+    {
+      "id": "pharmacy-canakinumab-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Canakinumab prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-canakinumab-preserved",
+          "type": "contains_any",
+          "values": [
+            "canakinumab"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Canakinumab."
+      ]
+    },
+    {
+      "id": "pharmacy-anakinra-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Anakinra prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-anakinra-preserved",
+          "type": "contains_any",
+          "values": [
+            "anakinra"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Anakinra."
+      ]
+    },
+    {
+      "id": "pharmacy-rilonacept-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Rilonacept prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-rilonacept-preserved",
+          "type": "contains_any",
+          "values": [
+            "rilonacept"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Rilonacept."
+      ]
+    },
+    {
+      "id": "pharmacy-apremilast-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Apremilast prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-apremilast-preserved",
+          "type": "contains_any",
+          "values": [
+            "apremilast"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Apremilast."
+      ]
+    },
+    {
+      "id": "pharmacy-filgotinib-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Filgotinib prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-filgotinib-preserved",
+          "type": "contains_any",
+          "values": [
+            "filgotinib"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Filgotinib."
+      ]
+    },
+    {
+      "id": "pharmacy-peficitinib-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Peficitinib prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-peficitinib-preserved",
+          "type": "contains_any",
+          "values": [
+            "peficitinib"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Peficitinib."
+      ]
+    },
+    {
+      "id": "pharmacy-oxaliplatin-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Oxaliplatin prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-oxaliplatin-preserved",
+          "type": "contains_any",
+          "values": [
+            "oxaliplatin"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Oxaliplatin."
+      ]
+    },
+    {
+      "id": "pharmacy-irinotecan-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Irinotecan prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-irinotecan-preserved",
+          "type": "contains_any",
+          "values": [
+            "irinotecan"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Irinotecan."
+      ]
+    },
+    {
+      "id": "pharmacy-capecitabine-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Capecitabine prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-capecitabine-preserved",
+          "type": "contains_any",
+          "values": [
+            "capecitabine"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Capecitabine."
+      ]
+    },
+    {
+      "id": "pharmacy-gemcitabine-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Gemcitabine prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-gemcitabine-preserved",
+          "type": "contains_any",
+          "values": [
+            "gemcitabine"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Gemcitabine."
+      ]
+    },
+    {
+      "id": "pharmacy-bendamustine-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Bendamustine prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-bendamustine-preserved",
+          "type": "contains_any",
+          "values": [
+            "bendamustine"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Bendamustine."
+      ]
+    },
+    {
+      "id": "pharmacy-bortezomib-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Bortezomib prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-bortezomib-preserved",
+          "type": "contains_any",
+          "values": [
+            "bortezomib"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Bortezomib."
+      ]
+    },
+    {
+      "id": "pharmacy-carfilzomib-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Carfilzomib prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-carfilzomib-preserved",
+          "type": "contains_any",
+          "values": [
+            "carfilzomib"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Carfilzomib."
+      ]
+    },
+    {
+      "id": "pharmacy-ixazomib-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Ixazomib prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-ixazomib-preserved",
+          "type": "contains_any",
+          "values": [
+            "ixazomib"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Ixazomib."
+      ]
+    },
+    {
+      "id": "pharmacy-lenalidomide-prior-auth",
+      "industry": "pharmacy",
+      "intended_text": "Your Lenalidomide prescription requires prior authorization.",
+      "assertions": [
+        {
+          "id": "medication-lenalidomide-preserved",
+          "type": "contains_any",
+          "values": [
+            "lenalidomide"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Lenalidomide."
+      ]
+    },
+    {
+      "id": "pharmacy-thalidomide-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Thalidomide prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-thalidomide-preserved",
+          "type": "contains_any",
+          "values": [
+            "thalidomide"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Thalidomide."
+      ]
+    },
+    {
+      "id": "pharmacy-azacitidine-refill",
+      "industry": "pharmacy",
+      "intended_text": "Your Azacitidine prescription is ready for pickup.",
+      "assertions": [
+        {
+          "id": "medication-azacitidine-preserved",
+          "type": "contains_any",
+          "values": [
+            "azacitidine"
+          ]
+        }
+      ],
+      "semantic_requirements": [
+        "The spoken medication name is clearly recognizable as Azacitidine."
+      ]
+    }
+  ]
+}

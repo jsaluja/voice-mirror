@@ -3,6 +3,62 @@
 Durable engineering notes for this repo -- bugs found, root causes, fixes,
 and known limitations. Keep entries short.
 
+## Stale docstring implied Google ASR transcribes live caller speech (it doesn't)
+
+`src/asr.py` claimed `transcribe_audio()` was "used both for user speech
+input and for the self-listen round-trip check." Only the second half was
+true. `transcribe_audio()` is called from exactly one place
+(`src/pipeline.py: process_turn()`), transcribing our *own* synthesized TTS
+audio as an offline intelligibility proxy. `src/vapi_server.py` never calls
+it -- live calls are transcribed entirely by Vapi's own transcriber before
+reaching our custom-LLM webhook as plain text. TTS is the one path that
+genuinely is shared: both live calls (`synthesize_speech_pcm`, LINEAR16 for
+Vapi's custom-voice webhook) and the offline gate (`synthesize_speech`, MP3)
+call the same `texttospeech.TextToSpeechClient()` with the same voice --
+only the output container differs. Fixed the docstring to state this.
+
+## Dashboard showed disagreeing totals (20 vs 5/3 vs 8 entries)
+
+Root cause: two separate suite/report files (`quality_gate_cases.json` +
+`quality_gate_cases_blocked.json`) were merged back together in the
+dashboard by matching on `intended_text`, and a second code path also pulled
+in *any* historical Weave `process_turn` trace not tied to a current suite
+case (labeled "pronunciation lint"), even if it belonged to an old,
+unrelated ad hoc run. That produced three different, silently-conflated
+case populations: the per-report summary, the flattened per-check table,
+and a merged current+historical call list feeding the dropdown.
+
+Fixed by consolidating to **one suite file, one report file, one case
+list**. `data/quality_gate_cases.json` is now the single canonical suite
+(pharmacy + finance + travel + insurance cases, including the real Vraylar
+TTS failure as an ordinary case rather than a separately-tracked "blocked"
+duplicate). `dashboard.py` now always iterates `release_report["results"]`
+to build every row; Weave traces are looked up only to *enrich* a case
+with audio/attempt evidence and can never add or drop a row. Case-table
+row count, dropdown entry count, and the summary total are now the same
+number by construction. The separate, larger "checks" table (assertion +
+semantic-requirement + voice-preservation rows) is explicitly labeled as a
+different granularity so it's never mistaken for a second case count.
+
+Restoring the pharmacy corpus surfaced real new TTS failures beyond the
+known Vraylar case: Metoprolol Succinate, Atorvastatin, Rybelsus, and
+Farxiga all currently mis-transcribe through the real Google Cloud
+TTS/ASR pipeline (5/10 cases blocked). These are genuine pipeline results,
+not fabricated regressions.
+
+## Text/content checks were incorrectly added to the TTS quality gate
+
+An attempted banking regression supplied manually corrupted text directly to
+TTS and blocked it against different approved facts. TTS and ASR agreed, so this
+was a text/content failure and did not belong in this project. A later attempt to
+add an agent-generation stage also expanded the scope incorrectly.
+
+The quality gate is now strictly `intended_text -> TTS -> listener ASR -> voice
+verdict`. It does not generate or fact-check text. The blocked regression uses a
+real TTS failure: intended `Vraylar` is heard as `regular`. The dashboard shows
+only intended text, listener transcript, pronunciation/fidelity checks, retries,
+and playable audio.
+
 ## Failed pronunciation retry returned a worse final attempt
 
 The Vraylar lint trace exposed a retry regression: the phoneme attempt was

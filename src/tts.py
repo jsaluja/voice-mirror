@@ -7,6 +7,7 @@ from google.cloud import texttospeech
 
 from src.config import GOOGLE_CLOUD_PROJECT, TTS_LANGUAGE_CODE, TTS_VOICE_NAME
 from src.correction_table import CorrectionTable
+from src.tts_cache import get_cached_audio, store_audio
 
 _client = texttospeech.TextToSpeechClient()
 
@@ -62,7 +63,15 @@ def _trace_audio_as_content(output: bytes, **_):
 
 @weave.op(postprocess_output=_trace_audio_as_content)
 def synthesize_speech(text: str, is_ssml: bool = False) -> bytes:
-    """Synthesize speech, returning MP3 audio bytes."""
+    """Synthesize speech, returning MP3 audio bytes.
+
+    Replays cached audio for an exact-text repeat instead of calling Google
+    TTS again -- see src/tts_cache.py for why this is exact-match only.
+    """
+    cached = get_cached_audio(TTS_VOICE_NAME, TTS_LANGUAGE_CODE, "MP3", None, is_ssml, text)
+    if cached is not None:
+        return cached
+
     synth_input = (
         texttospeech.SynthesisInput(ssml=text)
         if is_ssml
@@ -80,6 +89,7 @@ def synthesize_speech(text: str, is_ssml: bool = False) -> bytes:
         audio_config=audio_config,
         timeout=30,
     )
+    store_audio(TTS_VOICE_NAME, TTS_LANGUAGE_CODE, "MP3", None, is_ssml, text, response.audio_content)
     return response.audio_content
 
 
@@ -87,7 +97,15 @@ def synthesize_speech(text: str, is_ssml: bool = False) -> bytes:
 def synthesize_speech_pcm(text: str, is_ssml: bool, sample_rate_hertz: int) -> bytes:
     """Synthesize speech as raw LINEAR16 PCM at an exact sample rate -- the
     format Vapi's custom-voice webhook requires (no container/headers).
+
+    Replays cached audio for an exact-text repeat instead of calling Google
+    TTS again -- this is the live-call cost-saving path (Vapi cannot tell
+    the difference; it just gets PCM bytes back either way).
     """
+    cached = get_cached_audio(TTS_VOICE_NAME, TTS_LANGUAGE_CODE, "LINEAR16", sample_rate_hertz, is_ssml, text)
+    if cached is not None:
+        return cached
+
     synth_input = (
         texttospeech.SynthesisInput(ssml=text)
         if is_ssml
@@ -106,4 +124,5 @@ def synthesize_speech_pcm(text: str, is_ssml: bool, sample_rate_hertz: int) -> b
         audio_config=audio_config,
         timeout=30,
     )
+    store_audio(TTS_VOICE_NAME, TTS_LANGUAGE_CODE, "LINEAR16", sample_rate_hertz, is_ssml, text, response.audio_content)
     return response.audio_content

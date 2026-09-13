@@ -1,26 +1,901 @@
 {
+  "abatacept": {
+    "phoneme_ipa": "əbætəsɛpt",
+    "text_fallback": "uh-BAT-uh-sept"
+  },
+  "abemaciclib": {
+    "phoneme_ipa": "æbəməˈsɪklɪb",
+    "text_fallback": "ab-uh-muh-SIK-lib"
+  },
+  "abrocitinib": {
+    "phoneme_ipa": "əbroʊˈsɪtɪnɪb",
+    "text_fallback": "uh-broh-SIT-ih-nib"
+  },
+  "acalabrutinib": {
+    "phoneme_ipa": "ˌækələˈbruːtənɪb",
+    "text_fallback": "ak-uh-luh-BROO-tuh-nib"
+  },
+  "aducanumab": {
+    "phoneme_ipa": "əˌduːˈkænjuːmæb",
+    "text_fallback": "uh-doo-KAN-yoo-mab"
+  },
+  "alectinib": {
+    "phoneme_ipa": "əˈlɛktɪnɪb",
+    "text_fallback": "Uh-LEK-tih-nib"
+  },
+  "alemtuzumab": {
+    "phoneme_ipa": "əlɛmtuːzəmæb",
+    "text_fallback": "UH-lem-TOO-zoo-mab"
+  },
+  "alfuzosin": {
+    "phoneme_ipa": "ælfjuːzəsɪn",
+    "text_fallback": "AL-FYOO-ZUH-sin"
+  },
+  "amantadine": {
+    "phoneme_ipa": "əˈmænt̬əˌdaɪn",
+    "text_fallback": "uh-MAN-tuh-dyne"
+  },
+  "amoxicillin": {
+    "phoneme_ipa": "əˌmɑksəˈsɪlɪn",
+    "text_fallback": "uh-mahk-suh-SIL-in"
+  },
+  "anakinra": {
+    "phoneme_ipa": "ˌænəˈkɪnrə",
+    "text_fallback": "AN-uh-KIN-ruh"
+  },
+  "anifrolumab": {
+    "phoneme_ipa": "ænɪfroʊˈluːmæb",
+    "text_fallback": "AN-ih-FROH-LOO-mab"
+  },
+  "apixaban": {
+    "phoneme_ipa": "əˈpɪksəbæn",
+    "text_fallback": "Uh-PIX-uh-ban"
+  },
+  "apremilast": {
+    "phoneme_ipa": "əˈprɛmɪlæst",
+    "text_fallback": "uh-PREM-ih-last"
+  },
+  "armodafinil": {
+    "phoneme_ipa": "ɑrmoʊdæfɪnɪl",
+    "text_fallback": "AHR-MOE-DAF-ih-nil"
+  },
+  "asenapine": {
+    "phoneme_ipa": "əsɛnəpaɪn",
+    "text_fallback": "uh-SEN-uh-pine"
+  },
+  "atezolizumab": {
+    "phoneme_ipa": "ætəˈzoʊlɪˌzuːmæb",
+    "text_fallback": "AT-uh-ZOH-lih-ZOO-mab"
+  },
+  "atogepant": {
+    "phoneme_ipa": "ətoʊdʒəpænt",
+    "text_fallback": "uh-TOE-juh-PANT"
+  },
+  "atorvastatin": {
+    "phoneme_ipa": "əˌtɔrvəˈstætɪn",
+    "text_fallback": "uh-TOR-vuh-STAT-in"
+  },
+  "avacopan": {
+    "phoneme_ipa": "ˌævəˈkoʊpæn",
+    "text_fallback": "AV-uh-KO-pan"
+  },
+  "avanafil": {
+    "phoneme_ipa": "ævəˈnæfɪl",
+    "text_fallback": "AE-vuh-NA-fill"
+  },
+  "avatrombopag": {
+    "phoneme_ipa": "ævətrɑmbəpæɡ",
+    "text_fallback": "AH-vuh-TRAHM-buh-pag"
+  },
+  "azacitidine": {
+    "phoneme_ipa": "eɪzəsɪtɪdiːn",
+    "text_fallback": "AY-zuh-SIT-uh-deen"
+  },
+  "baricitinib": {
+    "phoneme_ipa": "ˌbɛrəsɪˈtɪnɪb",
+    "text_fallback": "BAIR-ih-SIT-ih-nib"
+  },
+  "belantamab": {
+    "phoneme_ipa": "bɪˈlæntəmæb",
+    "text_fallback": "Bih-LAN-tuh-mab"
+  },
+  "belimumab": {
+    "phoneme_ipa": "bɛlɪˈmuːmæb",
+    "text_fallback": "Beh-li-MOO-mab"
+  },
+  "bendamustine": {
+    "phoneme_ipa": "bɛndəˈmʌstiːn",
+    "text_fallback": "ben-duh-MUS-teen"
+  },
+  "blinatumomab": {
+    "phoneme_ipa": "blɪnəˈtuməʊmæb",
+    "text_fallback": "BLIN-uh-TOO-moh-mab"
+  },
+  "bortezomib": {
+    "phoneme_ipa": "bɔrtɛˈzoʊmɪb",
+    "text_fallback": "bor-teh-ZOH-mib"
+  },
+  "bremelanotide": {
+    "phoneme_ipa": "brɛmɪləˈnoʊtaɪd",
+    "text_fallback": "BREM-uh-luh-NO-tyde"
+  },
+  "brentuximab": {
+    "phoneme_ipa": "brɛnˈtʌksəmæb",
+    "text_fallback": "bren-TUCKS-uh-mab"
+  },
+  "brexpiprazole": {
+    "phoneme_ipa": "brɛkspɪprəzoʊl",
+    "text_fallback": "brex-PIP-ruh-zohl"
+  },
+  "brivaracetam": {
+    "phoneme_ipa": "ˌbrɪvərəsɛtæm",
+    "text_fallback": "briv-uh-ruh-SET-am"
+  },
+  "brodalumab": {
+    "phoneme_ipa": "bɹoʊdəˈluːmæb",
+    "text_fallback": "Bro-duh-LOO-mab"
+  },
+  "cabozantinib": {
+    "phoneme_ipa": "kæboʊˈzæntɪnɪb",
+    "text_fallback": "KAB-oh-ZAN-tih-nib"
+  },
+  "canakinumab": {
+    "phoneme_ipa": "kænəˈkɪnuːmæb",
+    "text_fallback": "CAN-uh-KIN-oo-mab"
+  },
+  "capecitabine": {
+    "phoneme_ipa": "kæpɪˈsaɪtəbiːn",
+    "text_fallback": "cap-ih-SYTE-uh-been"
+  },
+  "carfilzomib": {
+    "phoneme_ipa": "kɑrfɪlzoʊmɪb",
+    "text_fallback": "KAR-fil-ZOH-mib"
+  },
+  "cariprazine": {
+    "phoneme_ipa": "kæɹɪˈpreɪziːn",
+    "text_fallback": "CARE-ih-PRAY-zeen"
+  },
+  "cenobamate": {
+    "phoneme_ipa": "sɛnoʊbəmeɪt",
+    "text_fallback": "SEH-NO-buh-mayt"
+  },
+  "cladribine": {
+    "phoneme_ipa": "klæˈdrɪbiːn",
+    "text_fallback": "kla-DRIB-een"
+  },
+  "clozapine": {
+    "phoneme_ipa": "kloʊzəpiːn",
+    "text_fallback": "CLOH-zuh-peen"
+  },
+  "crizanlizumab": {
+    "phoneme_ipa": "krɪˌzænlɪˈzuːmæb",
+    "text_fallback": "kriz-an-liz-ZOO-mab"
+  },
+  "dabigatran": {
+    "phoneme_ipa": "dəˈbɪɡətræn",
+    "text_fallback": "duh-BIG-uh-tran"
+  },
+  "dalfampridine": {
+    "phoneme_ipa": "dælfæmˈprəˌdaɪn",
+    "text_fallback": "dal-FAM-pruh-Dine"
+  },
+  "dapoxetine": {
+    "phoneme_ipa": "dəpɑksətin",
+    "text_fallback": "duh-POKS-uh-teen"
+  },
+  "daratumumab": {
+    "phoneme_ipa": "dɑːrəˈtuːmʊmæb",
+    "text_fallback": "DAHR-uh-TOO-moo-mab"
+  },
+  "daridorexant": {
+    "phoneme_ipa": "dɑːrɪˈdoʊrɛksænt",
+    "text_fallback": "DAH-rih-DOH-reks-ant"
+  },
+  "darifenacin": {
+    "phoneme_ipa": "dæɹɪˈfɛnəsɪn",
+    "text_fallback": "DARR-ih-FEN-uh-sin"
+  },
+  "desvenlafaxine": {
+    "phoneme_ipa": "dɛsˌvɛnləˈfækˌsiːn",
+    "text_fallback": "des-ven-luh-FAX-seen"
+  },
+  "deucravacitinib": {
+    "phoneme_ipa": "djuːkrɑːvəˈsɪtɪnɪb",
+    "text_fallback": "DEW-KRAH-vuh-SIT-ih-nib"
+  },
+  "deutetrabenazine": {
+    "phoneme_ipa": "ˌduːtɛtrəˈbɛnəziːn",
+    "text_fallback": "DOO-tet-ruh-BEN-uh-zeen"
+  },
+  "dexlansoprazole": {
+    "phoneme_ipa": "dɛkslænˈsoʊprəzoʊl",
+    "text_fallback": "DEKS-LAN-SO-PRUH-ZOLE"
+  },
+  "diroximel": {
+    "text_fallback": "diroximel"
+  },
+  "donanemab": {
+    "phoneme_ipa": "doʊnænəmæb",
+    "text_fallback": "DOE-NAN-uh-mab"
+  },
+  "donepezil": {
+    "phoneme_ipa": "doʊˈnɛpəzɪl",
+    "text_fallback": "DOH-NEP-uh-zil"
+  },
+  "dulaglutide": {
+    "phoneme_ipa": "duːləˈɡluːtaɪd",
+    "text_fallback": "DOO-luh-GLOO-tide"
+  },
+  "duloxetine": {
+    "phoneme_ipa": "duːˈlɑːksətiːn",
+    "text_fallback": "DOO-LAHKS-uh-teen"
+  },
+  "durvalumab": {
+    "phoneme_ipa": "dərˈvæljuˌmæb",
+    "text_fallback": "DER-VAL-YOO-mab"
+  },
+  "dutasteride": {
+    "phoneme_ipa": "dutæstərˌaɪd",
+    "text_fallback": "doo-TAS-tur-eyed"
+  },
+  "eculizumab": {
+    "phoneme_ipa": "ɛkjuːˈlɪzəmæb",
+    "text_fallback": "Ek-kyoo-LIZ-uh-mab"
+  },
+  "edaravone": {
+    "phoneme_ipa": "ɛdəˈrɑvoʊn",
+    "text_fallback": "EH-duh-RAH-vone"
+  },
+  "edoxaban": {
+    "phoneme_ipa": "ɪdɑksəbæn",
+    "text_fallback": "eh-DAHKS-uh-ban"
+  },
+  "elagolix": {
+    "phoneme_ipa": "ɛləɡoʊlɪks",
+    "text_fallback": "EH-luh-GOH-liks"
+  },
+  "elotuzumab": {
+    "phoneme_ipa": "ɛloʊtuːzəmæb",
+    "text_fallback": "EH-LOH-TOO-ZUH-MAB"
+  },
+  "empagliflozin": {
+    "phoneme_ipa": "ˌɛmpæɡlɪˈfloʊzɪn",
+    "text_fallback": "EM-pag-li-FLO-zin"
+  },
+  "enasidenib": {
+    "phoneme_ipa": "ɛnəsɪˈdənɪb",
+    "text_fallback": "EN-uh-SID-uh-nib"
+  },
+  "entacapone": {
+    "phoneme_ipa": "ɛntəkəpoʊn",
+    "text_fallback": "EN-tuh-kuh-PONE"
+  },
+  "epcoritamab": {
+    "phoneme_ipa": "ɛpkɔrɪˈtɑːmæb",
+    "text_fallback": "EP-kor-ih-TAH-mab"
+  },
+  "eptinezumab": {
+    "phoneme_ipa": "ɛptɪˈnɛzumæb",
+    "text_fallback": "EP-tih-NEZ-oo-mab"
+  },
+  "erenumab": {
+    "phoneme_ipa": "ɪˈrɛnuːmæb",
+    "text_fallback": "ih-REN-oo-mab"
+  },
+  "escitalopram": {
+    "phoneme_ipa": "ɛs sɪˈtæl ə præm",
+    "text_fallback": "ESS-sih-TAL-uh-pram"
+  },
+  "esketamine": {
+    "phoneme_ipa": "ɛskɛˈtəmiːn",
+    "text_fallback": "es-KEH-tuh-meen"
+  },
+  "eslicarbazepine": {
+    "phoneme_ipa": "ɛslɪkɑɹbəzeɪpiːn",
+    "text_fallback": "es-lee-KAR-buh-zay-peen"
+  },
+  "esomeprazole": {
+    "phoneme_ipa": "ˌɛsoʊˈmɛprəzoʊl",
+    "text_fallback": "eh-soh-MEP-ruh-zohl"
+  },
+  "eszopiclone": {
+    "phoneme_ipa": "ɛszoʊpɪkloʊn",
+    "text_fallback": "ES-zoh-PIH-klohn"
+  },
+  "ethosuximide": {
+    "phoneme_ipa": "ɛθoʊˈsʌksɪmaɪd",
+    "text_fallback": "Eth-oh-SUKS-ih-myde"
+  },
   "eyjafjallajokull": {
     "phoneme_ipa": "ˈeɪjaˌfjatlaˈjoʊkʏtl",
     "text_fallback": "ay-ya-fyat-la-yo-kutl"
+  },
+  "ezogabine": {
+    "phoneme_ipa": "ɛzoʊˈɡæbiːn",
+    "text_fallback": "eh-zoh-GA-been"
   },
   "farxiga": {
     "phoneme_ipa": "fɑrsiɡə",
     "text_fallback": "far-SEE-guh"
   },
+  "fedratinib": {
+    "phoneme_ipa": "fɛdˈrætənɪb",
+    "text_fallback": "FED-RAT-ih-nib"
+  },
+  "fesoterodine": {
+    "phoneme_ipa": "ˌfɛsoʊˈtɛroʊˌdaɪn",
+    "text_fallback": "FESS-oh-TER-oh-dyne"
+  },
+  "filgotinib": {
+    "phoneme_ipa": "fɪlˈɡoʊtɪnɪb",
+    "text_fallback": "FIL-GO-TIN-IB"
+  },
+  "fingolimod": {
+    "phoneme_ipa": "fɪŋˈɡoʊlɪmɑd",
+    "text_fallback": "FING-GOH-lih-mahd"
+  },
+  "flibanserin": {
+    "phoneme_ipa": "ˌflɪˈbænsərɪn",
+    "text_fallback": "FLIH-BAN-suhr-in"
+  },
+  "fosphenytoin": {
+    "phoneme_ipa": "fɑsfənɪtɔɪn",
+    "text_fallback": "FAHS-fuh-NI-toyn"
+  },
+  "fostamatinib": {
+    "phoneme_ipa": "ˌfɑstəˈmætənɪb",
+    "text_fallback": "FOSS-tuh-MAT-uh-nib"
+  },
+  "fremanezumab": {
+    "phoneme_ipa": "fɹiːməˈnɛzuːmæb",
+    "text_fallback": "FREE-muh-NEZ-oo-mab"
+  },
+  "galantamine": {
+    "phoneme_ipa": "ɡəlæntəmin",
+    "text_fallback": "guh-LAN-tuh-meen"
+  },
+  "galcanezumab": {
+    "phoneme_ipa": "ˌɡælkəˈnɛzuːmæb",
+    "text_fallback": "gal-kuh-NEZ-oo-mab"
+  },
+  "gemcitabine": {
+    "phoneme_ipa": "ˌdʒɛmsaɪtəˌbin",
+    "text_fallback": "Jem-SY-tuh-been"
+  },
+  "gemtuzumab": {
+    "phoneme_ipa": "dʒɛmˈtuːzʊmæb",
+    "text_fallback": "JEM-TOO-zoo-mab"
+  },
+  "gilteritinib": {
+    "phoneme_ipa": "ˌɡɪltəˈrɪtəˌnɪb",
+    "text_fallback": "gil-tuh-RIT-uh-nib"
+  },
+  "givosiran": {
+    "phoneme_ipa": "dʒɪvoʊˈsɪəræn",
+    "text_fallback": "JIH-vo-SEER-an"
+  },
+  "glatiramer": {
+    "phoneme_ipa": "ɡləˈtɪrəmər",
+    "text_fallback": "gluh-TEER-uh-mer"
+  },
+  "glofitamab": {
+    "phoneme_ipa": "ˌɡloʊfɪˈtæmæb",
+    "text_fallback": "gloh-fih-TA-mab"
+  },
+  "guselkumab": {
+    "phoneme_ipa": "ˌɡuːsɛlˈkuːmæb",
+    "text_fallback": "Goo-sel-KOO-mab"
+  },
+  "hydrochlorothiazide": {
+    "phoneme_ipa": "ˌhaɪdroʊˌklɔːroʊˈθaɪəzaɪd",
+    "text_fallback": "high-droe-klor-oh-THIGH-uh-zide"
+  },
+  "ibrutinib": {
+    "phoneme_ipa": "ɪˈbruːtɪnɪb",
+    "text_fallback": "IH-BROO-tih-nihb"
+  },
+  "inotersen": {
+    "phoneme_ipa": "aɪnoʊtərsən",
+    "text_fallback": "EYE-NO-ter-sen"
+  },
+  "inotuzumab": {
+    "phoneme_ipa": "ɪnoʊtuːzumæb",
+    "text_fallback": "IH-noh-TOO-zoo-mab"
+  },
+  "ipilimumab": {
+    "phoneme_ipa": "ɪpɪˈlɪməmæb",
+    "text_fallback": "IH-pih-LIM-uh-mab"
+  },
+  "irinotecan": {
+    "phoneme_ipa": "aɪrɪnoʊˈtiːkæn",
+    "text_fallback": "EYE-rih-noh-TEE-kan"
+  },
+  "isatuximab": {
+    "phoneme_ipa": "ɪsətʌksɪmæb",
+    "text_fallback": "IH-SUH-TUX-IH-MAB"
+  },
+  "istradefylline": {
+    "phoneme_ipa": "ɪstɹədɪˈfɪlɪn",
+    "text_fallback": "IS-truh-dih-FIL-in"
+  },
+  "ivosidenib": {
+    "phoneme_ipa": "aɪvoʊˈsɪdənɪb",
+    "text_fallback": "EYE-voh-SID-uh-nib"
+  },
+  "ixazomib": {
+    "phoneme_ipa": "ɪɡzæzəmɪb",
+    "text_fallback": "IG-ZAZ-uh-mib"
+  },
+  "ixekizumab": {
+    "phoneme_ipa": "ɪksɪˈkɪzuːmæb",
+    "text_fallback": "ICK-sih-KIZ-oo-mab"
+  },
   "kirkcudbright": {
     "phoneme_ipa": "kərˈkuːbri",
     "text_fallback": "kur-koo-bree"
+  },
+  "lacosamide": {
+    "phoneme_ipa": "ləˈkoʊsəmaɪd",
+    "text_fallback": "luh-CO-suh-myde"
+  },
+  "lasmiditan": {
+    "phoneme_ipa": "læsmɪˈdɪtæn",
+    "text_fallback": "LASS-mi-DI-tan"
+  },
+  "lecanemab": {
+    "phoneme_ipa": "ləˌkænˈɛˌmæb",
+    "text_fallback": "luh-kan-NEM-ab"
+  },
+  "lemborexant": {
+    "phoneme_ipa": "lɛmbəˈrɛksænt",
+    "text_fallback": "LEM-buh-REK-sant"
+  },
+  "lenalidomide": {
+    "phoneme_ipa": "lɛnəˈlɪdoʊmaɪd",
+    "text_fallback": "LEH-nuh-LID-oh-myde"
+  },
+  "lenvatinib": {
+    "phoneme_ipa": "lɛnˈvætɪnɪb",
+    "text_fallback": "len-VAT-ih-nib"
+  },
+  "levetiracetam": {
+    "phoneme_ipa": "lɛvətɪˈɹæsətæm",
+    "text_fallback": "LEV-uh-TIH-RAS-uh-tam"
+  },
+  "levomilnacipran": {
+    "phoneme_ipa": "ˌlɛvoʊmɪlˈnæsɪpræn",
+    "text_fallback": "leh-voh-mil-NAH-sih-pran"
+  },
+  "lisdexamfetamine": {
+    "phoneme_ipa": "lɪsdɛksæmfətəmiːn",
+    "text_fallback": "LISS-dex-AM-fuh-tuh-meen"
+  },
+  "lisinopril": {
+    "phoneme_ipa": "lɪsɪnəprɪl",
+    "text_fallback": "lisinopril"
+  },
+  "lofexidine": {
+    "phoneme_ipa": "loʊfɛksɪdiːn",
+    "text_fallback": "LOW-FEX-ih-deen"
+  },
+  "loncastuximab": {
+    "phoneme_ipa": "lɑnkæsˈtʌksɪmæb",
+    "text_fallback": "lahn-kas-TUX-ih-mab"
+  },
+  "lumasiran": {
+    "phoneme_ipa": "luməˈsɪræn",
+    "text_fallback": "LOO-muh-SIR-an"
+  },
+  "luspatercept": {
+    "phoneme_ipa": "luːspætərsɛpt",
+    "text_fallback": "LUUS-pat-er-sept"
+  },
+  "memantine": {
+    "phoneme_ipa": "məˈmæntiːn",
+    "text_fallback": "muh-MAN-teen"
+  },
+  "metoprolol": {
+    "phoneme_ipa": "mɛtəˈproʊlɑl",
+    "text_fallback": "MEH-tuh-PROH-lahl"
+  },
+  "midostaurin": {
+    "phoneme_ipa": "mɪdoʊˈstɔːrɪn",
+    "text_fallback": "MIH-doh-STAWR-in"
+  },
+  "mirabegron": {
+    "phoneme_ipa": "mɪrəˈbɛɡrɑn",
+    "text_fallback": "MIH-ruh-BEG-rahn"
+  },
+  "mirikizumab": {
+    "phoneme_ipa": "mɪrɪkɪˈzuːmæb",
+    "text_fallback": "MIH-rih-kih-ZOO-mab"
+  },
+  "mogamulizumab": {
+    "phoneme_ipa": "moʊɡəmuːlɪzuːmæb",
+    "text_fallback": "MOH-gah-moo-LIZ-oo-mab"
+  },
+  "momelotinib": {
+    "phoneme_ipa": "moʊmɛloʊtɪnɪb",
+    "text_fallback": "MOH-meh-LOH-tih-nib"
+  },
+  "montelukast": {
+    "phoneme_ipa": "ˌmɑntəˈlukæst",
+    "text_fallback": "MAHN-tuh-LOO-kast"
+  },
+  "mosunetuzumab": {
+    "phoneme_ipa": "moʊsuːnɛˈtuːˌzuːmæb",
+    "text_fallback": "Moe-soo-neh-TOO-zoo-mab"
+  },
+  "moxetumomab": {
+    "phoneme_ipa": "mɑksɪˈtuːmoʊmæb",
+    "text_fallback": "MOKS-eh-TOO-moh-mab"
+  },
+  "natalizumab": {
+    "phoneme_ipa": "nætəlɪzəmæb",
+    "text_fallback": "nat-uh-LIZ-uh-mab"
+  },
+  "nefazodone": {
+    "phoneme_ipa": "ˌnɛfəˈzoʊˌdoʊn",
+    "text_fallback": "neh-fuh-ZOH-dohn"
+  },
+  "nivolumab": {
+    "phoneme_ipa": "nɪvoʊləmæb",
+    "text_fallback": "NIH-VOH-loo-mab"
+  },
+  "nusinersen": {
+    "phoneme_ipa": "nuːˈsɪnərsən",
+    "text_fallback": "NOO-SIN-er-sun"
+  },
+  "obinutuzumab": {
+    "phoneme_ipa": "ˌoʊbɪnəˈtuːzəmæb",
+    "text_fallback": "OH-bih-nuh-TOO-zuh-mab"
+  },
+  "ocrelizumab": {
+    "phoneme_ipa": "oʊkrɪˈlɪzəmæb",
+    "text_fallback": "OH-KRIH-LIZ-uh-mab"
+  },
+  "ofatumumab": {
+    "phoneme_ipa": "oʊfətuməmæb",
+    "text_fallback": "OH-fuh-TOO-muh-mab"
+  },
+  "opicapone": {
+    "phoneme_ipa": "oʊpɪkəpoʊn",
+    "text_fallback": "OH-pih-kuh-POHN"
+  },
+  "osimertinib": {
+    "phoneme_ipa": "oʊsɪmˈɜrtɪnɪb",
+    "text_fallback": "oh-sim-ER-tih-nib"
+  },
+  "ospemifene": {
+    "phoneme_ipa": "ɑːspəmiːfiːn",
+    "text_fallback": "AHS-puh-MEE-feen"
+  },
+  "oxaliplatin": {
+    "phoneme_ipa": "ɑːksəlɪˈplætɪn",
+    "text_fallback": "OX-uh-lih-PLAT-in"
+  },
+  "oxcarbazepine": {
+    "phoneme_ipa": "ˌɑːksˌkɑːrˈbæzəˌpiːn",
+    "text_fallback": "ahks-kar-BAYZ-uh-peen"
+  },
+  "ozanimod": {
+    "phoneme_ipa": "əˈzænɪmɑd",
+    "text_fallback": "uh-ZAN-ih-mawd"
+  },
+  "pacritinib": {
+    "phoneme_ipa": "pæˈkrɪtɪnɪb",
+    "text_fallback": "PAK-RIH-TIN-IB"
+  },
+  "palbociclib": {
+    "phoneme_ipa": "pælboʊˈsɪklɪb",
+    "text_fallback": "pal-boe-SYK-lib"
+  },
+  "paliperidone": {
+    "phoneme_ipa": "pæləˈpɛrɪdoʊn",
+    "text_fallback": "PAL-uh-PER-ih-dohn"
+  },
+  "patisiran": {
+    "phoneme_ipa": "pæˈtɪsɪræn",
+    "text_fallback": "PAH-TISS-ih-ran"
+  },
+  "peficitinib": {
+    "phoneme_ipa": "ˌpɛfɪˈsɪtɪnɪb",
+    "text_fallback": "PEF-ih-SIT-ih-nib"
+  },
+  "peginterferon": {
+    "phoneme_ipa": "pɛɡɪntərˈfɛrɑn",
+    "text_fallback": "PEGG-in-TUR-FER-ahn"
+  },
+  "perampanel": {
+    "phoneme_ipa": "pəˈræmpənɛl",
+    "text_fallback": "Per-AM-puh-nel"
+  },
+  "phenelzine": {
+    "phoneme_ipa": "fɛnɛlzin",
+    "text_fallback": "fen-EL-zeen"
+  },
+  "pimavanserin": {
+    "phoneme_ipa": "pɪməˈvænsərɪn",
+    "text_fallback": "PIH-muh-VAN-ser-in"
+  },
+  "pitolisant": {
+    "phoneme_ipa": "pɪˈtoʊlɪsænt",
+    "text_fallback": "Pih-TOH-lih-sant"
+  },
+  "polatuzumab": {
+    "phoneme_ipa": "poʊləˈtuːzuːmæb",
+    "text_fallback": "POE-luh-TOO-zoo-mab"
+  },
+  "ponesimod": {
+    "phoneme_ipa": "poʊˈnɛsɪmɑd",
+    "text_fallback": "POE-NES-ih-mod"
+  },
+  "pramipexole": {
+    "phoneme_ipa": "præmɪˈpɛksoʊl",
+    "text_fallback": "PRAM-i-PEKS-ole"
+  },
+  "ramelteon": {
+    "phoneme_ipa": "rəˈmɛltiˌɑːn",
+    "text_fallback": "ruh-MEL-tee-awn"
+  },
+  "rasagiline": {
+    "phoneme_ipa": "rəsædʒɪlɪn",
+    "text_fallback": "ruh-SA-jih-lin"
+  },
+  "ravulizumab": {
+    "phoneme_ipa": "ˌrævjəˈlɪzʊmæb",
+    "text_fallback": "RAV-yuh-LIZ-oo-mab"
+  },
+  "regorafenib": {
+    "phoneme_ipa": "ɹɛɡoʊˈɹæfənɪb",
+    "text_fallback": "reh-go-RAF-uh-nib"
+  },
+  "relugolix": {
+    "phoneme_ipa": "rɛluːɡoʊlɪks",
+    "text_fallback": "reh-loo-GOH-licks"
+  },
+  "ribociclib": {
+    "phoneme_ipa": "rɪˈboʊsɪklɪb",
+    "text_fallback": "Rih-BOH-sik-lib"
+  },
+  "rilonacept": {
+    "phoneme_ipa": "raɪˈloʊnəsɛpt",
+    "text_fallback": "RYE-LOH-nuh-sept"
+  },
+  "riluzole": {
+    "phoneme_ipa": "rɪˈluːzoʊl",
+    "text_fallback": "RIH-LOO-ZOLE"
+  },
+  "rimegepant": {
+    "phoneme_ipa": "ɹɪmɛdʒəpænt",
+    "text_fallback": "rih-MEJ-uh-pant"
+  },
+  "risankizumab": {
+    "phoneme_ipa": "rɪˌsæŋkəˈzuːmæb",
+    "text_fallback": "rih-sang-kuh-ZOO-mab"
+  },
+  "risdiplam": {
+    "phoneme_ipa": "rɪsdɪplæm",
+    "text_fallback": "RISS-DIPP-LAM"
+  },
+  "rituximab": {
+    "phoneme_ipa": "ˌrɪˈtʌksəmæb",
+    "text_fallback": "Rih-TUCKS-uh-mab"
+  },
+  "rivaroxaban": {
+    "phoneme_ipa": "rɪvəˈrɑːksəbæn",
+    "text_fallback": "RIV-uh-ROX-uh-ban"
+  },
+  "rivastigmine": {
+    "phoneme_ipa": "rɪvəˈstɪɡmɪn",
+    "text_fallback": "RIV-uh-STIG-min"
+  },
+  "ropinirole": {
+    "phoneme_ipa": "ˌroʊpɪˈnɪroʊl",
+    "text_fallback": "ROH-pih-NEER-ohl"
+  },
+  "rosuvastatin": {
+    "phoneme_ipa": "ˌroʊsuːvəˈstætɪn",
+    "text_fallback": "ROH-soo-vuh-STAT-in"
+  },
+  "rotigotine": {
+    "phoneme_ipa": "ˌroʊtəˈɡoʊtiːn",
+    "text_fallback": "ROH-tuh-GO-teen"
+  },
+  "rufinamide": {
+    "phoneme_ipa": "ruːfɪnəmaɪd",
+    "text_fallback": "ROO-FIN-uh-mide"
+  },
+  "ruxolitinib": {
+    "phoneme_ipa": "rʌksoʊˈlɪtənɪb",
+    "text_fallback": "RUKS-oh-LIT-uh-nib"
   },
   "rybelsus": {
     "phoneme_ipa": "rɑɪˈbɛlsəs",
     "text_fallback": "rye-BELL-sus"
   },
+  "safinamide": {
+    "phoneme_ipa": "səˈfɪnəmaɪd",
+    "text_fallback": "Suh-FIN-uh-mide"
+  },
+  "sarilumab": {
+    "phoneme_ipa": "særɪluːmæb",
+    "text_fallback": "SA-ri-LOO-mab"
+  },
+  "secukinumab": {
+    "phoneme_ipa": "sɛkjuˈkɪnumæb",
+    "text_fallback": "seh-kyoo-KIN-oo-mab"
+  },
+  "semaglutide": {
+    "phoneme_ipa": "sɛməˈɡluːtaɪd",
+    "text_fallback": "seh-muh-GLOO-tyde"
+  },
+  "sertraline": {
+    "phoneme_ipa": "sɝːtrəliːn",
+    "text_fallback": "SER-truh-leen"
+  },
+  "silodosin": {
+    "phoneme_ipa": "sɪˈloʊdəsɪn",
+    "text_fallback": "sih-LOH-duh-sin"
+  },
+  "siponimod": {
+    "phoneme_ipa": "sɪˈpɑnɪmɑd",
+    "text_fallback": "sih-PAHN-ih-mod"
+  },
+  "solifenacin": {
+    "phoneme_ipa": "ˌsoʊlɪˈfɛnəsɪn",
+    "text_fallback": "SOH-luh-FEN-uh-sin"
+  },
+  "solriamfetol": {
+    "phoneme_ipa": "ˌsɑl ri ˈæm fɪ tɔl",
+    "text_fallback": "sahl-ree-AM-fih-tawl"
+  },
+  "succinate": {
+    "phoneme_ipa": "sʌksɪneɪt",
+    "text_fallback": "SUCK-sih-nate"
+  },
+  "suvorexant": {
+    "phoneme_ipa": "suːˈvɔːrɛksænt",
+    "text_fallback": "soo-VOR-eks-ant"
+  },
+  "tafasitamab": {
+    "phoneme_ipa": "tɑfəˈsɪtəmæb",
+    "text_fallback": "TAH-fuh-SIH-tuh-MAB"
+  },
+  "tagraxofusp": {
+    "phoneme_ipa": "tæɡˈræksəfʌsp",
+    "text_fallback": "Tag-RAKS-uh-fuhsp"
+  },
+  "talquetamab": {
+    "phoneme_ipa": "tæl ˈkɛ tə mæb",
+    "text_fallback": "tal-KEH-tuh-mab"
+  },
+  "tebentafusp": {
+    "phoneme_ipa": "təbɛntəfʊsp",
+    "text_fallback": "Tuh-BEN-tuh-foosp"
+  },
+  "teclistamab": {
+    "phoneme_ipa": "tɛkˈlɪstəmæb",
+    "text_fallback": "tek-LIS-tə-mab"
+  },
+  "terazosin": {
+    "phoneme_ipa": "tərˈeɪzoʊsɪn",
+    "text_fallback": "ter-AY-zoh-sin"
+  },
+  "teriflunomide": {
+    "phoneme_ipa": "tɛrɪˈfluːnəˌmaɪd",
+    "text_fallback": "tehr-ih-FLOON-uh-myde"
+  },
+  "tiagabine": {
+    "phoneme_ipa": "taɪæɡəbiːn",
+    "text_fallback": "TIE-AG-uh-BEAN"
+  },
+  "tildrakizumab": {
+    "phoneme_ipa": "tɪldrɑkɪˈzumæb",
+    "text_fallback": "till-drah-kee-ZOO-mab"
+  },
+  "tocilizumab": {
+    "phoneme_ipa": "toʊsɪlɪˈzumæb",
+    "text_fallback": "Toe-sih-lih-ZOO-mab"
+  },
+  "tofacitinib": {
+    "phoneme_ipa": "toʊfəsɪtɪnɪb",
+    "text_fallback": "TOH-fuh-SIT-ih-nib"
+  },
+  "tofersen": {
+    "phoneme_ipa": "toʊfɝsən",
+    "text_fallback": "toh-FUR-sin"
+  },
+  "tolcapone": {
+    "phoneme_ipa": "tɑlˈkæpoʊn",
+    "text_fallback": "TAHL-KAP-ohn"
+  },
+  "tolterodine": {
+    "phoneme_ipa": "tɑltəroʊdaɪn",
+    "text_fallback": "TAHL-tuh-ROH-dyne"
+  },
+  "topiramate": {
+    "phoneme_ipa": "təˈpɪrəˌmeɪt",
+    "text_fallback": "tuh-PIR-uh-mayt"
+  },
+  "tranylcypromine": {
+    "phoneme_ipa": "trænɪlsaɪprəmiːn",
+    "text_fallback": "TRAN-il-SY-pruh-meen"
+  },
+  "trihexyphenidyl": {
+    "phoneme_ipa": "ˌtraɪˌhɛk.siˈfɛn.ə.ˌdɪl",
+    "text_fallback": "Try-hek-sih-FEN-uh-dil"
+  },
+  "trospium": {
+    "phoneme_ipa": "tɹoʊspiəm",
+    "text_fallback": "TROH-SPEE-um"
+  },
   "typesafe": {
     "phoneme_ipa": "taɪpseɪf",
     "text_fallback": "TYPE-sayf"
   },
+  "ubrogepant": {
+    "phoneme_ipa": "juːˈbroʊdʒəpænt",
+    "text_fallback": "YOO-BROH-juh-pant"
+  },
+  "upadacitinib": {
+    "phoneme_ipa": "juːˈpædəˌsɪtənɪb",
+    "text_fallback": "YOO-PAD-uh-sit-uh-nib"
+  },
+  "ustekinumab": {
+    "phoneme_ipa": "juːˈstɛkɪnuːmæb",
+    "text_fallback": "YOO-STEK-ih-noo-mab"
+  },
+  "valbenazine": {
+    "phoneme_ipa": "ˌvælˈbɛnəziːn",
+    "text_fallback": "val-BEN-uh-zeen"
+  },
+  "vardenafil": {
+    "phoneme_ipa": "vɑɹˈdɛnəfɪl",
+    "text_fallback": "VAR-DEN-uh-fil"
+  },
+  "vedolizumab": {
+    "phoneme_ipa": "ˌvɛdoʊˈlɪzəˌmæb",
+    "text_fallback": "VEH-doh-LIZ-uh-mab"
+  },
+  "venetoclax": {
+    "phoneme_ipa": "vɛnəˈtoʊklæks",
+    "text_fallback": "VEH-nuh-TOH-klax"
+  },
+  "vibegron": {
+    "phoneme_ipa": "vaɪbɛɡrɑn",
+    "text_fallback": "VYE-beh-gron"
+  },
+  "vigabatrin": {
+    "phoneme_ipa": "vɪɡæbətrɪn",
+    "text_fallback": "Vih-GAB-uh-trin"
+  },
+  "vilazodone": {
+    "phoneme_ipa": "vɪləˈzoʊdoʊn",
+    "text_fallback": "VIL-uh-ZOH-dohn"
+  },
+  "voclosporin": {
+    "phoneme_ipa": "ˌvɑkloʊˈspɔrɪn",
+    "text_fallback": "VAH-kloh-SPOR-in"
+  },
   "vraylar": {
     "phoneme_ipa": "vɹeɪlɚ",
     "text_fallback": "VRAY-lar"
+  },
+  "vutrisiran": {
+    "phoneme_ipa": "vuːtɹɪˈsiːɹæn",
+    "text_fallback": "VOO-trih-SEE-ran"
+  },
+  "zaleplon": {
+    "phoneme_ipa": "zəˈlɛplɑn",
+    "text_fallback": "ZUH-LEP-lon"
+  },
+  "zanubrutinib": {
+    "phoneme_ipa": "zænuːbrutɪnɪb",
+    "text_fallback": "ZAN-oo-BROO-tih-nib"
+  },
+  "zonisamide": {
+    "phoneme_ipa": "zoʊˈnɪsəmaɪd",
+    "text_fallback": "ZOH-NIS-uh-MYDE"
   }
 }

@@ -1,4 +1,5 @@
 """Central config: env vars + tunables for the self-correct loop."""
+import json
 import os
 
 from dotenv import load_dotenv
@@ -30,14 +31,50 @@ MAX_RETRIES = 2  # bounded retry per plan MVP scope
 
 # Hardcoded trap words (per plan MVP scope) -- only these gate the retry
 # loop. Natural ASR reading variants (dates, abbreviations, compound-word
-# splits) are excluded to avoid false-positive "corrections".
+# splits) are excluded to avoid false-positive "corrections". Pharmacy drug
+# names are trap words so the self-correct loop actually attempts a phoneme
+# fix before the quality gate blocks a release on them -- derived from the
+# suite file below instead of hand-copied, since the drug list is too large
+# (250+) to keep in sync manually without it silently going stale.
+_CASES_PATH = os.path.join(
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "quality_gate_cases.json"
+)
+
+
+def _pharmacy_trap_words() -> set[str]:
+    try:
+        with open(_CASES_PATH) as f:
+            suite = json.load(f)
+    except (OSError, json.JSONDecodeError):
+        return set()
+    words: set[str] = set()
+    for case in suite.get("cases", []):
+        if case.get("industry") != "pharmacy":
+            continue
+        for assertion in case.get("assertions", []):
+            if assertion.get("type") != "contains_any":
+                continue
+            values = [v.strip().lower() for v in assertion.get("values", []) if v.strip()]
+            # A multi-word value is a drug-name variant (e.g. "metoprolol succinate")
+            # only when the same assertion also lists a single-word alternative --
+            # dosage-amount phrasings ("twenty milligrams to forty milligrams") never
+            # do, so those are left whole and not split into generic number/unit words.
+            is_drug_name_assertion = any(" " not in v for v in values)
+            for value in values:
+                if " " not in value:
+                    words.add(value)
+                elif is_drug_name_assertion:
+                    words.update(value.split())
+    return words
+
+
 TRAP_WORDS = {
     w.strip().lower()
     for w in os.environ.get(
-        "TRAP_WORDS", "coreweave,typesafe,marimo,aria,kirkcudbright,eyjafjallajokull,rybelsus,vraylar,farxiga"
+        "TRAP_WORDS", "coreweave,typesafe,marimo,aria,kirkcudbright,eyjafjallajokull"
     ).split(",")
     if w.strip()
-}
+} | _pharmacy_trap_words()
 
 CORRECTION_TABLE_PATH = os.path.join(
     os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
