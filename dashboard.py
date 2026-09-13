@@ -21,14 +21,16 @@ def _():
 @app.cell
 def _(mo):
     mo.md("""
-    # Voice AI Quality Gate
+    # Voice Mirror
 
-    ### Every critical word, verified before a customer ever hears it.
+    ### The self-correcting loop for voice agents.
 
     Pharmacy, finance, insurance, travel — any voice agent that reads back a
     drug name, an account number, a policy ID, or a flight code can mispronounce
-    it. We caught the pronunciation bugs — spelled-out letters, mangled words,
-    dropped syllables — that a human tester would only find after go-live.
+    or hallucinate it, and nobody catches it until a customer churns. Voice
+    Mirror runs every spoken response back through ASR, retries with phonetic
+    overrides until it's right, and escalates to a human when it can't self-fix
+    — permanently, for every future call.
     """)
     return
 
